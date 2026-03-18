@@ -70,12 +70,12 @@ const Navbar = () => {
           <div className="md:hidden bg-blush border-t border-crimson/20 px-6 py-4 space-y-3">
             {navLinks.map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="block text-crimson text-sm font-medium uppercase tracking-[0.15em] hover:text-crimson-dark transition-colors"
                 style={{ fontFamily: "var(--font-nav)" }}
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>
