@@ -39,7 +39,7 @@ const Menu = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl font-display font-bold text-blush tracking-tight"
+              className="text-4xl md:text-5xl font-display font-bold text-blush tracking-tight uppercase"
             >
               Our Menu
             </motion.h1>
