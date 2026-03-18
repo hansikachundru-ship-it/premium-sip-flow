@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className="relative">
       {/* Curvy wave divider */}
       <div className="bg-blush">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+        <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
           <path
-            d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V80H0V40Z"
+            d="M0 20C240 40 480 0 720 20C960 40 1200 0 1440 20V40H0V20Z"
             fill="#B22F36"
           />
         </svg>
@@ -29,11 +29,11 @@ const Footer = () => {
               </p>
             </div>
 
-            {/* Shop */}
+            {/* About */}
             <div>
-              <h4 className="font-display text-sm font-bold uppercase tracking-[0.2em] mb-4">Shop</h4>
+              <h4 className="font-display text-sm font-bold uppercase tracking-[0.2em] mb-4">About</h4>
               <ul className="space-y-2">
-                {["Shop", "Matcha", "Accessories", "Hampers", "Menu", "Café"].map((link) => (
+                {["About", "Shop", "Matcha", "Accessories", "Merch"].map((link) => (
                   <li key={link}>
                     <a href="#" className="font-body text-blush/70 text-sm hover:text-blush transition-colors">{link}</a>
                   </li>
@@ -68,9 +68,12 @@ const Footer = () => {
                   Latcha JP Nagar, Outer Ring Rd, beside Typsy Bull, Rose Garden, JP Nagar Phase 6, J. P. Nagar, Bengaluru, Karnataka 560078
                 </p>
               </div>
-              <div className="flex gap-3 mt-4">
+              <div className="flex items-center gap-3 mt-4">
                 <a href="https://www.instagram.com/siplatcha" target="_blank" rel="noopener noreferrer" className="bg-blush/10 hover:bg-blush/20 rounded-full p-2.5 transition-colors" aria-label="Instagram">
                   <Instagram className="w-5 h-5" />
+                </a>
+                <a href="https://www.instagram.com/siplatcha" target="_blank" rel="noopener noreferrer" className="font-body text-blush/70 text-sm hover:text-blush transition-colors">
+                  @siplatcha
                 </a>
               </div>
             </div>
