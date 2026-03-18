@@ -112,23 +112,28 @@ const CafeSection = () => {
           viewport={{ once: true }}
           className="rounded-2xl overflow-hidden shadow-lg bg-card border border-border"
         >
-          <div className="relative h-52 md:h-64">
-            <iframe
-              src={EMBED_MAP_URL}
-              className="w-full h-full border-0"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Latcha Cafe Location"
+          <a
+            href={GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block relative h-52 md:h-64 bg-muted overflow-hidden group"
+            aria-label="Open directions in Google Maps"
+          >
+            <img
+              src={`https://maps.googleapis.com/maps/api/staticmap?center=12.91,77.59&zoom=15&size=600x300&scale=2&markers=color:red%7C12.91,77.59&key=`}
+              alt="Latcha Cafe location map"
+              className="w-full h-full object-cover opacity-0"
             />
-            <a
-              href={GOOGLE_MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute inset-0"
-              aria-label="Open directions in Google Maps"
-            />
-          </div>
+            <div className="absolute inset-0 flex flex-col items-center justify-center bg-muted">
+              <MapPin className="w-10 h-10 text-crimson mb-2" />
+              <span className="font-display text-sm font-bold text-crimson uppercase tracking-wider">
+                JP Nagar, Bengaluru
+              </span>
+              <span className="font-body text-xs text-foreground/60 mt-1 group-hover:text-crimson transition-colors">
+                Click to open in Google Maps →
+              </span>
+            </div>
+          </a>
           <div className="p-5 flex items-center justify-between">
             <div className="flex items-center gap-2">
               <MapPin className="w-4 h-4 text-crimson" />
