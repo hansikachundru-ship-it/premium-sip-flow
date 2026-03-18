@@ -27,7 +27,7 @@ const Menu = () => {
       <main>
         {/* Hero */}
         <section
-          className="relative py-20 md:py-28 overflow-hidden"
+          className="relative py-10 md:py-14 overflow-hidden"
           style={{
             backgroundImage: `url(${patternCrimson})`,
             backgroundSize: "400px",
@@ -39,7 +39,8 @@ const Menu = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-5xl md:text-7xl font-display font-bold text-blush tracking-tight"
+              className="text-4xl md:text-5xl text-blush tracking-wide uppercase"
+              style={{ fontFamily: "var(--font-handwriting)" }}
             >
               Our Menu
             </motion.h1>
@@ -47,7 +48,7 @@ const Menu = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-4 text-blush/80 text-lg md:text-xl max-w-xl mx-auto"
+              className="mt-2 text-blush/80 text-sm md:text-base whitespace-nowrap"
               style={{ fontFamily: "var(--font-handwriting)" }}
             >
               Handcrafted matcha drinks made with premium Japanese matcha
