@@ -37,7 +37,7 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
           <img
             src={item.image}
             alt={item.name}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain"
             loading="lazy"
           />
         </div>
