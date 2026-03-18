@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Matcha", href: "#" },
   { label: "Accessories", href: "#" },
   { label: "Hampers", href: "#" },
-  { label: "Menu", href: "#" },
+  { label: "Menu", href: "/menu" },
   { label: "Café", href: "/cafe" },
 ];
 
