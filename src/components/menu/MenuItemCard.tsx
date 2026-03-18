@@ -67,14 +67,6 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
         >
           {item.desc}
         </p>
-        {item.sweetness && (
-          <div className="flex items-center gap-2 mt-1.5">
-            <SweetnessBar level={parseSweetness(item.sweetness)} />
-            <span className={`text-[11px] font-body ${isDark ? "text-blush/50" : "text-crimson/50"}`}>
-              {item.sweetness}
-            </span>
-          </div>
-        )}
       </div>
 
       {/* Bottom divider */}

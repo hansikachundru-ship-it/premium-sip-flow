@@ -120,7 +120,6 @@ const Menu = () => {
                 title="Premium Soft Serves"
                 subtitle=""
                 priceLine="Any standard flavor @ ₹249"
-                tagline="The Latcha Club"
                 items={softServes}
                 itemVariant="light"
                 footer={
