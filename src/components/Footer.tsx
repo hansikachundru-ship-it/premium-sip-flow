@@ -1,5 +1,6 @@
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import latchaLogo from "@/assets/latcha-logo-original.png";
+import latchaLogoFooter from "@/assets/latcha-logo-footer.png";
 
 const Footer = () => {
   return (
@@ -23,9 +24,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12">
             {/* Brand */}
             <div className="md:col-span-1">
-              <div className="h-8 md:h-10 mb-4 w-fit">
-                <img src={latchaLogo} alt="Latcha" className="h-full w-auto object-contain" style={{ filter: 'brightness(0) invert(1)', mixBlendMode: 'screen' }} />
-              </div>
+              <img src={latchaLogoFooter} alt="Latcha" className="h-12 md:h-16 w-auto object-contain mb-4 brightness-0 invert" />
               <p className="font-body text-blush/70 text-sm leading-relaxed">
                 India's 1st Premium Matcha & Cafe Chain. Sourced from Uji, Japan. Crafted with intention. Served with grace.
               </p>
