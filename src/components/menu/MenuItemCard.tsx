@@ -44,11 +44,7 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
       ) : (
         <div className={`w-20 h-20 md:w-24 md:h-24 flex-shrink-0 rounded-2xl flex items-center justify-center ${
           isDark ? "bg-blush/10" : "bg-matcha/10"
-        }`}>
-          <span className={`text-lg font-display font-bold ${isDark ? "text-blush/40" : "text-matcha"}`}>
-            {String(item.num).padStart(2, "0")}
-          </span>
-        </div>
+        }`} />
       )}
 
       {/* Content */}
