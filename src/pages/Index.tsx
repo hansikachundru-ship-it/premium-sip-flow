@@ -22,6 +22,7 @@ const Index = () => {
         <ProductVisual />
         <ShopSection />
         <StorySection />
+        <CafeSection />
         <InstagramSection />
       </main>
       <Footer />
