@@ -1,37 +1,34 @@
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import latchaLogo from "@/assets/latcha-logo.png";
-import patternCrimson from "@/assets/pattern-crimson.png";
 
 const Footer = () => {
   return (
     <footer className="relative">
-      {/* Curvy wave divider - tight like reference */}
+      {/* Curvy wave divider */}
       <div className="bg-blush -mb-px">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block" style={{ height: '60px' }}>
           <path
-            d="M0 30C120 50 240 10 360 30C480 50 600 10 720 30C840 50 960 10 1080 30C1200 50 1320 10 1440 30V60H0V30Z"
+            d="M0 60C180 20 360 80 540 40C720 0 900 60 1080 40C1260 20 1380 50 1440 40V80H0V60Z"
             fill="#B22F36"
+          />
+          <path
+            d="M0 70C200 40 400 80 600 55C800 30 1000 70 1200 50C1350 35 1420 55 1440 50V80H0V70Z"
+            fill="#9E272D"
           />
         </svg>
       </div>
 
       <div
-        className="text-blush pt-8 pb-12 px-6 relative"
-        style={{
-          backgroundColor: '#B22F36',
-          backgroundImage: `url(${patternCrimson})`,
-          backgroundSize: '400px',
-          backgroundRepeat: 'repeat',
-          backgroundBlendMode: 'overlay',
-        }}
+        className="text-blush pt-8 pb-12 px-6"
+        style={{ backgroundColor: '#B22F36' }}
       >
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12">
             {/* Brand */}
             <div className="md:col-span-1">
               <img src={latchaLogo} alt="Latcha" className="h-14 w-auto object-contain mb-4 brightness-0 invert" />
               <p className="font-body text-blush/70 text-sm leading-relaxed">
-                India's 1st Premium Matcha & Cafe Chain. Sourced from Uji, Japan. ✿ Crafted with intention. Served with grace.
+                India's 1st Premium Matcha & Cafe Chain. Sourced from Uji, Japan. Crafted with intention. Served with grace.
               </p>
             </div>
 
