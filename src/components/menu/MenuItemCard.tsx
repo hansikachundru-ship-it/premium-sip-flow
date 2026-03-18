@@ -54,9 +54,6 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
       {/* Content */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className={`text-sm font-display font-bold ${isDark ? "text-blush/30" : "text-crimson/25"}`}>
-            {String(item.num).padStart(2, "0")}
-          </span>
           <h3 className={`font-display font-semibold text-sm md:text-base ${isDark ? "text-blush" : "text-crimson"}`}>
             {item.name}
           </h3>
