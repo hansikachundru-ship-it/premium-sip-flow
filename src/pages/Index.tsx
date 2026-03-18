@@ -7,7 +7,6 @@ import ProductVisual from "@/components/ProductVisual";
 import ShopSection from "@/components/ShopSection";
 import StorySection from "@/components/StorySection";
 import InstagramSection from "@/components/InstagramSection";
-import CafeSection from "@/components/CafeSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -22,7 +21,6 @@ const Index = () => {
         <ProductVisual />
         <ShopSection />
         <StorySection />
-        <CafeSection />
         <InstagramSection />
       </main>
       <Footer />

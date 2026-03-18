@@ -2,7 +2,14 @@ import { useState } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import latchaLogo from "@/assets/latcha-logo-original.png";
 
-const navLinks = ["Shop", "Matcha", "Accessories", "Hampers", "Menu", "Café"];
+const navLinks = [
+  { label: "Shop", href: "#" },
+  { label: "Matcha", href: "#" },
+  { label: "Accessories", href: "#" },
+  { label: "Hampers", href: "#" },
+  { label: "Menu", href: "#" },
+  { label: "Café", href: "/cafe" },
+];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
