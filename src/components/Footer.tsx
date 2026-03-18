@@ -1,27 +1,20 @@
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
-import latchaLogo from "@/assets/latcha-logo.png";
+import latchaLogo from "@/assets/latcha-logo-original.png";
 
 const Footer = () => {
   return (
     <footer className="relative">
-      {/* Curvy wave divider */}
+      {/* Deep wave divider */}
       <div className="bg-blush -mb-px">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block" style={{ height: '60px' }}>
+        <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block" style={{ height: '80px' }}>
           <path
-            d="M0 60C180 20 360 80 540 40C720 0 900 60 1080 40C1260 20 1380 50 1440 40V80H0V60Z"
+            d="M0 80C120 30 240 100 420 50C600 0 720 90 900 50C1080 10 1260 70 1440 40V120H0V80Z"
             fill="#B22F36"
-          />
-          <path
-            d="M0 70C200 40 400 80 600 55C800 30 1000 70 1200 50C1350 35 1420 55 1440 50V80H0V70Z"
-            fill="#9E272D"
           />
         </svg>
       </div>
 
-      <div
-        className="text-blush pt-8 pb-12 px-6"
-        style={{ backgroundColor: '#B22F36' }}
-      >
+      <div className="text-blush pt-8 pb-12 px-6" style={{ backgroundColor: '#B22F36' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12">
             {/* Brand */}
