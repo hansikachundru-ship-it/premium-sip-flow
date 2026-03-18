@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="md:col-span-1">
               <img src={latchaLogo} alt="Latcha" className="h-14 w-auto object-contain mb-4 brightness-0 invert" />
               <p className="font-body text-blush/70 text-sm leading-relaxed">
-                India's 1st Premium Matcha & Cafe Chain. Sourced from Uji, Japan. 🌸 Crafted with intention. Served with grace.
+                India's 1st Premium Matcha & Cafe Chain. Sourced from Uji, Japan. ✿ Crafted with intention. Served with grace.
               </p>
             </div>
 
