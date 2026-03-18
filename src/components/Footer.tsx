@@ -1,5 +1,6 @@
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import latchaLogo from "@/assets/latcha-logo-original.png";
+import latchaLogoFooter from "@/assets/latcha-logo-footer.png";
 
 const Footer = () => {
   return (
