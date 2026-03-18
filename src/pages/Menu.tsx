@@ -108,7 +108,6 @@ const Menu = () => {
                 title="Speciality Cloud Lattes"
                 subtitle="Perfect Dessert Matcha Drinks"
                 priceLine="3G Matcha  ·  Regular @ ₹375  ·  Oat Milk @ ₹445"
-                tagline="The Latcha Club"
                 items={cloudLattes}
                 itemVariant="dark"
               />
@@ -121,7 +120,6 @@ const Menu = () => {
                 title="Premium Soft Serves"
                 subtitle=""
                 priceLine="Any standard flavor @ ₹249"
-                tagline="The Latcha Club"
                 items={softServes}
                 itemVariant="light"
                 footer={

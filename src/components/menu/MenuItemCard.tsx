@@ -44,19 +44,12 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
       ) : (
         <div className={`w-20 h-20 md:w-24 md:h-24 flex-shrink-0 rounded-2xl flex items-center justify-center ${
           isDark ? "bg-blush/10" : "bg-matcha/10"
-        }`}>
-          <span className={`text-lg font-display font-bold ${isDark ? "text-blush/40" : "text-matcha"}`}>
-            {String(item.num).padStart(2, "0")}
-          </span>
-        </div>
+        }`} />
       )}
 
       {/* Content */}
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
-          <span className={`text-sm font-display font-bold ${isDark ? "text-blush/30" : "text-crimson/25"}`}>
-            {String(item.num).padStart(2, "0")}
-          </span>
           <h3 className={`font-display font-semibold text-sm md:text-base ${isDark ? "text-blush" : "text-crimson"}`}>
             {item.name}
           </h3>
@@ -74,14 +67,6 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
         >
           {item.desc}
         </p>
-        {item.sweetness && (
-          <div className="flex items-center gap-2 mt-1.5">
-            <SweetnessBar level={parseSweetness(item.sweetness)} />
-            <span className={`text-[11px] font-body ${isDark ? "text-blush/50" : "text-crimson/50"}`}>
-              {item.sweetness}
-            </span>
-          </div>
-        )}
       </div>
 
       {/* Bottom divider */}
