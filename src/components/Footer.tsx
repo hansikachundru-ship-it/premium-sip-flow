@@ -5,19 +5,25 @@ import patternCrimson from "@/assets/pattern-crimson.png";
 const Footer = () => {
   return (
     <footer className="relative">
-      {/* Curvy wave divider */}
-      <div className="bg-blush">
-        <svg viewBox="0 0 1440 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block">
+      {/* Curvy wave divider - tight like reference */}
+      <div className="bg-blush -mb-px">
+        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full block" preserveAspectRatio="none">
           <path
-            d="M0 20C240 40 480 0 720 20C960 40 1200 0 1440 20V40H0V20Z"
+            d="M0 30C120 50 240 10 360 30C480 50 600 10 720 30C840 50 960 10 1080 30C1200 50 1320 10 1440 30V60H0V30Z"
             fill="#B22F36"
           />
         </svg>
       </div>
 
       <div
-        className="bg-crimson text-blush pt-8 pb-12 px-6 relative"
-        style={{ backgroundImage: `url(${patternCrimson})`, backgroundSize: '300px', backgroundRepeat: 'repeat', backgroundBlendMode: 'soft-light' }}
+        className="text-blush pt-8 pb-12 px-6 relative"
+        style={{
+          backgroundColor: '#B22F36',
+          backgroundImage: `url(${patternCrimson})`,
+          backgroundSize: '400px',
+          backgroundRepeat: 'repeat',
+          backgroundBlendMode: 'overlay',
+        }}
       >
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12">
@@ -25,15 +31,15 @@ const Footer = () => {
             <div className="md:col-span-1">
               <img src={latchaLogo} alt="Latcha" className="h-14 w-auto object-contain mb-4 brightness-0 invert" />
               <p className="font-body text-blush/70 text-sm leading-relaxed">
-                India's 1st Premium Matcha & Cafe Chain. Sourced from Uji, Japan. Crafted with intention. Served with grace.
+                India's 1st Premium Matcha & Cafe Chain. Sourced from Uji, Japan. 🌸 Crafted with intention. Served with grace.
               </p>
             </div>
 
-            {/* About */}
+            {/* Shop */}
             <div>
-              <h4 className="font-display text-sm font-bold uppercase tracking-[0.2em] mb-4">About</h4>
+              <h4 className="font-display text-sm font-bold uppercase tracking-[0.2em] mb-4">Shop</h4>
               <ul className="space-y-2">
-                {["About", "Shop", "Matcha", "Accessories", "Merch"].map((link) => (
+                {["Shop", "Matcha", "Accessories", "Hampers", "Menu", "Café"].map((link) => (
                   <li key={link}>
                     <a href="#" className="font-body text-blush/70 text-sm hover:text-blush transition-colors">{link}</a>
                   </li>
