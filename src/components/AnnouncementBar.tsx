@@ -2,9 +2,9 @@ import { useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 const messages = [
-  "🍵 India's 1st Premium Matcha Brand — straight from Uji, Japan!",
-  "✨ FREE shipping on orders above ₹999 — no cap fr fr",
-  "🎁 New Hampers just dropped — perfect for your bestie!",
+  "India's 1st Premium Matcha Brand. Straight from Uji, Japan!",
+  "FREE shipping on orders above Rs.999",
+  "New Hampers just dropped. Perfect for your bestie!",
 ];
 
 const AnnouncementBar = () => {

@@ -8,20 +8,20 @@ import heroDrinks from "@/assets/hero-drinks.png";
 const slides = [
   {
     image: heroProduct,
-    title: "matcha, but make it ✨premium✨",
-    subtitle: "AAA Grade Uji Reserve — First Harvest, No Bitterness",
+    title: "matcha, but make it premium",
+    subtitle: "AAA Grade Uji Reserve. First Harvest, No Bitterness",
     cta: "Shop Matcha",
   },
   {
     image: heroHampers,
-    title: "gift the green goodness 🎁",
-    subtitle: "Curated hampers that slap — perfect for every occasion",
+    title: "gift the green goodness",
+    subtitle: "Curated hampers that slap. Perfect for every occasion",
     cta: "Shop Hampers",
   },
   {
     image: heroDrinks,
-    title: "your new obsession just dropped 🍵",
-    subtitle: "Iced, hot, or blended — matcha your way, bestie",
+    title: "your new obsession just dropped",
+    subtitle: "Iced, hot, or blended. Matcha your way, bestie",
     cta: "View Menu",
   },
 ];

@@ -4,28 +4,28 @@ const categories = [
   {
     title: "Matcha Varieties",
     items: [
-      { name: "Uji Matcha", price: "₹2,400", tag: "bestseller" },
-      { name: "Yame Matcha", price: "₹1,800", tag: null },
-      { name: "Nishio Matcha", price: "₹1,800", tag: "new" },
-      { name: "Chill Trio Bundle", price: "₹5,730", tag: "save 10%" },
+      { name: "Uji Matcha", price: "Rs.2,400", tag: "bestseller" },
+      { name: "Yame Matcha", price: "Rs.1,800", tag: null },
+      { name: "Nishio Matcha", price: "Rs.1,800", tag: "new" },
+      { name: "Chill Trio Bundle", price: "Rs.5,730", tag: "save 10%" },
     ],
   },
   {
     title: "Accessories",
     items: [
-      { name: "Takayama Chasen", price: "₹1,800", tag: null },
-      { name: "Matcha Shaker", price: "₹999", tag: null },
-      { name: "Resin Whisk", price: "₹999", tag: "popular" },
-      { name: "Mini Chasen", price: "₹999", tag: null },
+      { name: "Takayama Chasen", price: "Rs.1,800", tag: null },
+      { name: "Matcha Shaker", price: "Rs.999", tag: null },
+      { name: "Resin Whisk", price: "Rs.999", tag: "popular" },
+      { name: "Mini Chasen", price: "Rs.999", tag: null },
     ],
   },
   {
     title: "Merch",
     items: [
-      { name: "Matcha Addict Cap", price: "₹1,299", tag: "🔥" },
-      { name: "ADAM Tote", price: "₹1,099", tag: null },
-      { name: "Matcha Lover Tote", price: "₹879", tag: null },
-      { name: "Superbrew Tote Bag", price: "₹599", tag: "budget pick" },
+      { name: "Matcha Addict Cap", price: "Rs.1,299", tag: "hot" },
+      { name: "ADAM Tote", price: "Rs.1,099", tag: null },
+      { name: "Matcha Lover Tote", price: "Rs.879", tag: null },
+      { name: "Superbrew Tote Bag", price: "Rs.599", tag: "budget pick" },
     ],
   },
 ];
@@ -41,7 +41,7 @@ const ShopSection = () => {
           className="text-center mb-16"
         >
           <p className="font-display text-matcha text-sm uppercase tracking-[0.3em] mb-3">
-            another day, another matcha 🍵
+            another day, another matcha
           </p>
           <h2 className="font-display text-crimson text-3xl md:text-5xl font-extrabold">
             Shop the vibe
@@ -69,9 +69,8 @@ const ShopSection = () => {
                   transition={{ delay: i * 0.08 }}
                   className="group bg-blush-light rounded-3xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
                 >
-                  {/* Placeholder product area */}
                   <div className="bg-blush-dark/30 rounded-2xl h-36 md:h-44 mb-4 flex items-center justify-center overflow-hidden">
-                    <span className="font-display text-crimson/30 text-4xl">🍵</span>
+                    <span className="font-display text-crimson/20 text-sm uppercase tracking-widest">coming soon</span>
                   </div>
                   <div className="flex items-start justify-between gap-2">
                     <div>
