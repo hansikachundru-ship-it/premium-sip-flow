@@ -2,7 +2,14 @@ import { useState } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import latchaLogo from "@/assets/latcha-logo-original.png";
 
-const navLinks = ["Shop", "Matcha", "Accessories", "Hampers", "Menu", "Café"];
+const navLinks = [
+  { label: "Shop", href: "#" },
+  { label: "Matcha", href: "#" },
+  { label: "Accessories", href: "#" },
+  { label: "Hampers", href: "#" },
+  { label: "Menu", href: "#" },
+  { label: "Café", href: "/cafe" },
+];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -31,12 +38,12 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="text-crimson text-[13px] font-medium uppercase tracking-[0.15em] hover:text-crimson-dark transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[2px] after:bg-crimson after:transition-all hover:after:w-full"
                 style={{ fontFamily: "var(--font-nav)" }}
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>
@@ -63,12 +70,12 @@ const Navbar = () => {
           <div className="md:hidden bg-blush border-t border-crimson/20 px-6 py-4 space-y-3">
             {navLinks.map((link) => (
               <a
-                key={link}
-                href="#"
+                key={link.label}
+                href={link.href}
                 className="block text-crimson text-sm font-medium uppercase tracking-[0.15em] hover:text-crimson-dark transition-colors"
                 style={{ fontFamily: "var(--font-nav)" }}
               >
-                {link}
+                {link.label}
               </a>
             ))}
           </div>
