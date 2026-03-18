@@ -17,8 +17,6 @@ const galleryImages = [
 
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Latcha+JP+Nagar+Bengaluru";
-const EMBED_MAP_URL =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8!2d77.59!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzUnMjQuMCJF!5e0!3m2!1sen!2sin!4v1700000000000";
 
 const flagshipPoints = [
   "Instagram worthy",
