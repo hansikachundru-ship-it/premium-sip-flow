@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
+import latchaLogo from "@/assets/latcha-logo.png";
 
-const navLinks = ["Shop", "Menu", "Café", "Hampers", "Matcha", "Accessories"];
+const navLinks = ["Shop", "Matcha", "Accessories", "Hampers", "Menu", "Café"];
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -19,8 +20,8 @@ const Navbar = () => {
         </button>
 
         {/* Logo */}
-        <a href="/" className="font-display text-crimson text-2xl md:text-3xl font-extrabold tracking-wider uppercase">
-          LATCHA
+        <a href="/" className="flex items-center">
+          <img src={latchaLogo} alt="Latcha" className="h-10 md:h-12 w-auto object-contain" />
         </a>
 
         {/* Desktop links */}

@@ -5,27 +5,27 @@ const benefits = [
   {
     icon: Zap,
     title: "Steady Energy",
-    desc: "Natural caffeine + L-theanine = smooth, focused energy. No jitters, no crash. Just vibes ⚡",
+    desc: "Natural caffeine + L-theanine = smooth, focused energy. No jitters, no crash. Just vibes",
   },
   {
     icon: Flame,
     title: "Enhanced Metabolism",
-    desc: "Boosts your metabolism naturally — matcha really said 'let's glow up from the inside' 🔥",
+    desc: "Boosts your metabolism naturally. Matcha really said let's glow up from the inside",
   },
   {
     icon: Leaf,
     title: "Cellular Detox",
-    desc: "Loaded with antioxidants that help your body detox. It's like a spa day, but sippable 🍃",
+    desc: "Loaded with antioxidants that help your body detox. It's like a spa day, but sippable",
   },
   {
     icon: Sparkles,
     title: "Superbrew",
-    desc: "137x more antioxidants than regular green tea. Yeah, matcha doesn't play around ✨",
+    desc: "137x more antioxidants than regular green tea. Yeah, matcha doesn't play around",
   },
   {
     icon: Heart,
     title: "Overall Wellness",
-    desc: "Calms the mind, boosts immunity, and keeps you feeling your best. Self-care in a cup 💚",
+    desc: "Calms the mind, boosts immunity, and keeps you feeling your best. Self care in a cup",
   },
 ];
 
@@ -48,7 +48,7 @@ const MatchaBenefits = () => {
           transition={{ delay: 0.1 }}
           className="font-display text-crimson text-3xl md:text-5xl font-extrabold mb-16"
         >
-          A full body upgrade! 🧬
+          A full body upgrade
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">

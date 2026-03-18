@@ -13,7 +13,7 @@ const ProductVisual = () => {
           viewport={{ once: true }}
           className="font-display text-crimson text-3xl md:text-5xl font-extrabold mb-4"
         >
-          green never felt this good 💚
+          green never felt this good
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 15 }}
