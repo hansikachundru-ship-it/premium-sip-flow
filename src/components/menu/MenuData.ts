@@ -44,3 +44,13 @@ export const softServes: MenuItem[] = [
   { num: 2, name: "Strawberry Crush Premium Soft Serve", desc: "Creamy perfectly balanced fruity strawberry milk soft serve.", sweetness: "4/5 (Sweet)" },
   { num: 3, name: "Vanilla & Strawberry Swirl Premium Soft Serve", desc: "Creamy perfectly balanced fruity strawberry milk soft serve.", sweetness: "4/5 (Sweet)" },
 ];
+
+export const desserts: MenuItem[] = [
+  { num: 1, name: "Matcha Cookie", desc: "Perfectly balanced matcha cookie with a soft, buttery center." },
+  { num: 2, name: "Matcha Cheesecakes", desc: "Silky matcha cheesecake with a soft, creamy texture and balanced sweetness." },
+];
+
+export const savouryTreats: MenuItem[] = [
+  { num: 1, name: "Onigiri", desc: "Perfectly seasoned Japanese rice ball with a savory, comforting filling." },
+  { num: 2, name: "Toasts", desc: "Crispy toast loaded with bold, balanced flavours." },
+];
