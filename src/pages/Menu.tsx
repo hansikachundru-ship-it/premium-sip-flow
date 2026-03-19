@@ -5,13 +5,15 @@ import Footer from "@/components/Footer";
 import patternBlushLight from "@/assets/pattern-blush-light.png";
 import patternCrimson from "@/assets/pattern-crimson-new.png";
 import MenuItemCard from "@/components/menu/MenuItemCard";
-import { classicLattes, cloudLattes, softServes } from "@/components/menu/MenuData";
+import { classicLattes, cloudLattes, softServes, desserts, savouryTreats } from "@/components/menu/MenuData";
 import { motion, AnimatePresence } from "framer-motion";
 
 const tabs = [
   { id: "classic", label: "Iced Matcha Lattes" },
   { id: "cloud", label: "Cloud Lattes" },
   { id: "soft", label: "Soft Serves" },
+  { id: "desserts", label: "Desserts" },
+  { id: "savoury", label: "Savoury Treats" },
 ] as const;
 
 type TabId = (typeof tabs)[number]["id"];
@@ -130,6 +132,30 @@ const Menu = () => {
                     </p>
                   </div>
                 }
+              />
+            )}
+
+            {activeTab === "desserts" && (
+              <MenuCard
+                key="desserts"
+                variant="crimson"
+                title="Desserts"
+                subtitle="Matcha-infused sweet treats"
+                priceLine=""
+                items={desserts}
+                itemVariant="dark"
+              />
+            )}
+
+            {activeTab === "savoury" && (
+              <MenuCard
+                key="savoury"
+                variant="blush"
+                title="Savoury Treats"
+                subtitle="Light bites with bold flavours"
+                priceLine=""
+                items={savouryTreats}
+                itemVariant="light"
               />
             )}
           </AnimatePresence>
