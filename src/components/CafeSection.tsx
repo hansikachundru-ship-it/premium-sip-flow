@@ -1,18 +1,35 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, ExternalLink } from "lucide-react";
-import { useRef } from "react";
 
 import cafeHero from "@/assets/cafe-hero.jpg";
 import cafeGallery1 from "@/assets/cafe-gallery-1.jpg";
 import cafeGallery2 from "@/assets/cafe-gallery-2.jpg";
 import cafeGallery3 from "@/assets/cafe-gallery-3.jpg";
 import cafeGallery4 from "@/assets/cafe-gallery-4.jpg";
+import cafeGallery5 from "@/assets/cafe-gallery-5.png";
+import cafeGallery6 from "@/assets/cafe-gallery-6.png";
+import cafeGallery7 from "@/assets/cafe-gallery-7.png";
+import cafeGallery8 from "@/assets/cafe-gallery-8.png";
+import cafeGallery9 from "@/assets/cafe-gallery-9.png";
+import cafeGallery10 from "@/assets/cafe-gallery-10.png";
+import cafeGallery11 from "@/assets/cafe-gallery-11.png";
+import cafeGallery12 from "@/assets/cafe-gallery-12.png";
+import cafeGallery13 from "@/assets/cafe-gallery-13.png";
 
 const galleryImages = [
   { src: cafeGallery1, alt: "Friends enjoying matcha together" },
+  { src: cafeGallery5, alt: "Barista pouring matcha latte" },
   { src: cafeGallery2, alt: "Matcha latte art and pastries" },
+  { src: cafeGallery6, alt: "Matcha drinks and soft serve on table" },
   { src: cafeGallery3, alt: "Cozy cafe interior ambience" },
+  { src: cafeGallery7, alt: "Matcha latte with pink mirror" },
   { src: cafeGallery4, alt: "Capturing the matcha moment" },
+  { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
+  { src: cafeGallery9, alt: "Customer with matcha drinks and flowers" },
+  { src: cafeGallery10, alt: "Matcha drinks with flowers" },
+  { src: cafeGallery11, alt: "Strawberry soft serve close-up" },
+  { src: cafeGallery12, alt: "Barista whisking matcha" },
+  { src: cafeGallery13, alt: "Friends cheersing matcha drinks" },
 ];
 
 const GOOGLE_MAPS_URL =
@@ -26,8 +43,6 @@ const flagshipPoints = [
 ];
 
 const CafeSection = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
-
   return (
     <section className="bg-blush-light">
       {/* Hero Image */}
@@ -66,38 +81,44 @@ const CafeSection = () => {
         </div>
       </motion.div>
 
-      {/* Scrollable Gallery */}
-      <div className="py-10 md:py-16 px-6">
-        <motion.p
+      {/* Auto-scrolling Gallery */}
+      <div className="py-10 md:py-16">
+        <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-crimson text-sm uppercase tracking-[0.3em] mb-6 text-center"
+          className="font-display text-crimson text-2xl md:text-4xl font-extrabold mb-8 text-center"
         >
-          Inside the cafe
-        </motion.p>
+          Inside The Cafe
+        </motion.h2>
 
-        <div
-          ref={scrollRef}
-          className="flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          {galleryImages.map((img, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="flex-shrink-0 w-64 h-72 md:w-80 md:h-96 snap-center rounded-2xl overflow-hidden shadow-lg"
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
-              />
-            </motion.div>
-          ))}
+        <div className="overflow-hidden">
+          <motion.div
+            className="flex gap-4"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              x: {
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 40,
+                ease: "linear",
+              },
+            }}
+          >
+            {/* Duplicate images for seamless loop */}
+            {[...galleryImages, ...galleryImages].map((img, i) => (
+              <div
+                key={i}
+                className="flex-shrink-0 w-64 h-72 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-lg"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+          </motion.div>
         </div>
       </div>
 
