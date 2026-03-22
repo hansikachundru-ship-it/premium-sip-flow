@@ -33,16 +33,10 @@ const galleryImages = [
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Latcha+JP+Nagar+Bengaluru";
 
-const flagshipPoints = [
-  "Instagram worthy",
-  "Social and shareable",
-  "Visually striking",
-  "Culturally inspired",
-];
 
 const CafeSection = () => {
   return (
-    <section className="bg-blush-light">
+    <section className="bg-blush">
       {/* Hero Image */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -92,9 +86,9 @@ const CafeSection = () => {
 
         <div className="overflow-hidden relative">
           {/* Left fade */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-blush-light to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-blush to-transparent z-10 pointer-events-none" />
           {/* Right fade */}
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-blush-light to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-blush to-transparent z-10 pointer-events-none" />
           <div
             className="flex gap-4 animate-marquee-gallery"
             style={{ width: "max-content" }}
@@ -187,40 +181,6 @@ const CafeSection = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="md:col-span-2 rounded-2xl border border-border bg-blush p-8 shadow-sm md:p-12"
-        >
-          <p className="mb-2 font-display text-xs uppercase tracking-[0.3em] text-crimson">
-            Interiors
-          </p>
-          <h2 className="mb-6 font-display text-2xl font-extrabold text-crimson md:text-4xl">
-            Our Flagship Store, Bengaluru
-          </h2>
-          <div className="rounded-xl bg-blush-light p-6 md:p-8">
-            <p className="mb-4 font-body text-base text-foreground/80">
-              Latcha is designed to be:
-            </p>
-            <ul className="space-y-2.5">
-              {flagshipPoints.map((point, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + i * 0.08 }}
-                  className="flex items-center gap-3 font-body text-base text-foreground/70"
-                >
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-crimson" />
-                  {point}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
