@@ -91,7 +91,7 @@ const CafeSection = () => {
         </motion.h2>
 
         <div className="overflow-hidden">
-          <motion.div
+          <div
             className="flex gap-4 animate-marquee-gallery"
             style={{ width: "max-content" }}
           >
