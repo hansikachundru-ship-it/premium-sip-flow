@@ -12,6 +12,7 @@ import cookieButterImg from "@/assets/menu/cookie-butter.png";
 import rosyRoseImg from "@/assets/menu/rosy-rose.png";
 import peachCobblerImg from "@/assets/menu/peach-cobbler.png";
 import vanillaSoftServeImg from "@/assets/menu/vanilla-soft-serve.png";
+import strawberrySoftServeImg from "@/assets/menu/strawberry-soft-serve.png";
 
 export interface MenuItem {
   num: number;
@@ -42,7 +43,7 @@ export const cloudLattes: MenuItem[] = [
 
 export const softServes: MenuItem[] = [
   { num: 1, name: "Vanilla Silk Premium Soft Serve", desc: "Creamy perfectly balanced vanilla soft serve.", sweetness: "3/5 (Mild Sweet)", image: vanillaSoftServeImg },
-  { num: 2, name: "Strawberry Crush Premium Soft Serve", desc: "Creamy perfectly balanced fruity strawberry milk soft serve.", sweetness: "4/5 (Sweet)" },
+  { num: 2, name: "Strawberry Crush Premium Soft Serve", desc: "Creamy perfectly balanced fruity strawberry milk soft serve.", sweetness: "4/5 (Sweet)", image: strawberrySoftServeImg },
   { num: 3, name: "Vanilla & Strawberry Swirl Premium Soft Serve", desc: "Creamy perfectly balanced fruity strawberry milk soft serve.", sweetness: "4/5 (Sweet)" },
 ];
 
