@@ -10,7 +10,7 @@ import cafeGallery9 from "@/assets/cafe-gallery-9.png";
 import cafeGallery12 from "@/assets/cafe-gallery-12.png";
 import cafeGallery14 from "@/assets/cafe-gallery-14.png";
 import cafeGallery15 from "@/assets/cafe-gallery-15.png";
-import cafeGallery16 from "@/assets/cafe-gallery-16.png";
+
 import cafeGallery17 from "@/assets/cafe-gallery-17.png";
 import cafeGallery18 from "@/assets/cafe-gallery-18.png";
 
@@ -24,7 +24,7 @@ const galleryImages = [
   { src: cafeGallery15, alt: "Pink strawberry soft serve close-up" },
   { src: cafeGallery9, alt: "Customer with matcha drinks and flowers" },
   { src: cafeGallery18, alt: "Customer enjoying matcha in cafe" },
-  { src: cafeGallery16, alt: "Friends with matcha drinks outdoors" },
+  
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
   
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
