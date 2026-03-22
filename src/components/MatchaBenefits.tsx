@@ -28,7 +28,7 @@ const MatchaBenefits = () => {
                 loop
                 muted
                 playsInline
-                className="w-full h-[300px] md:h-[450px] object-cover"
+                className="w-full h-[380px] md:h-[520px] object-cover"
               />
             </div>
           </motion.div>
