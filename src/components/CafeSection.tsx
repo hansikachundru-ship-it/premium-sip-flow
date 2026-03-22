@@ -7,27 +7,27 @@ import cafeGallery6 from "@/assets/cafe-gallery-6.png";
 import cafeGallery7 from "@/assets/cafe-gallery-7.png";
 import cafeGallery8 from "@/assets/cafe-gallery-8.png";
 import cafeGallery9 from "@/assets/cafe-gallery-9.png";
-import cafeGallery10 from "@/assets/cafe-gallery-10.png";
-import cafeGallery11 from "@/assets/cafe-gallery-11.png";
 import cafeGallery12 from "@/assets/cafe-gallery-12.png";
-import cafeGallery13 from "@/assets/cafe-gallery-13.png";
 import cafeGallery14 from "@/assets/cafe-gallery-14.png";
 import cafeGallery15 from "@/assets/cafe-gallery-15.png";
 import cafeGallery16 from "@/assets/cafe-gallery-16.png";
+import cafeGallery17 from "@/assets/cafe-gallery-17.png";
+import cafeGallery18 from "@/assets/cafe-gallery-18.png";
+import cafeGallery19 from "@/assets/cafe-gallery-19.png";
 
 const galleryImages = [
   { src: cafeGallery12, alt: "Barista whisking matcha" },
   { src: cafeGallery6, alt: "Matcha drinks and soft serve on table" },
   { src: cafeGallery7, alt: "Matcha latte with pink mirror" },
   { src: cafeGallery14, alt: "Barista pouring matcha at counter" },
+  { src: cafeGallery17, alt: "Two matcha lattes on red counter" },
   { src: cafeGallery15, alt: "Pink strawberry soft serve close-up" },
   { src: cafeGallery9, alt: "Customer with matcha drinks and flowers" },
-  { src: cafeGallery10, alt: "Friends holding layered matcha drinks" },
+  { src: cafeGallery18, alt: "Customer enjoying matcha in cafe" },
   { src: cafeGallery16, alt: "Friends with matcha drinks outdoors" },
-  { src: cafeGallery11, alt: "Strawberry soft serve" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
+  { src: cafeGallery19, alt: "Friends cheersing layered matcha drinks" },
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
-  { src: cafeGallery13, alt: "Friends cheersing matcha drinks" },
 ];
 
 const GOOGLE_MAPS_URL =
