@@ -13,7 +13,7 @@ import cafeGallery15 from "@/assets/cafe-gallery-15.png";
 import cafeGallery16 from "@/assets/cafe-gallery-16.png";
 import cafeGallery17 from "@/assets/cafe-gallery-17.png";
 import cafeGallery18 from "@/assets/cafe-gallery-18.png";
-import cafeGallery19 from "@/assets/cafe-gallery-19.png";
+
 
 const galleryImages = [
   { src: cafeGallery12, alt: "Barista whisking matcha" },
@@ -26,7 +26,7 @@ const galleryImages = [
   { src: cafeGallery18, alt: "Customer enjoying matcha in cafe" },
   { src: cafeGallery16, alt: "Friends with matcha drinks outdoors" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
-  { src: cafeGallery19, alt: "Friends cheersing layered matcha drinks" },
+  
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
 ];
 
