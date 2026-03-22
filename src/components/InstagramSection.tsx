@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 
@@ -18,8 +19,6 @@ const reelColors = [
   "bg-crimson/10",
   "bg-matcha/15",
 ];
-
-import React from "react";
 
 const InstagramSection = React.forwardRef<HTMLElement>((_, ref) => {
   const doubled = [...reelLinks, ...reelLinks];
