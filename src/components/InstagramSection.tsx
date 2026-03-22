@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 
@@ -20,12 +19,12 @@ const reelColors = [
   "bg-matcha/15",
 ];
 
-const InstagramSection = React.forwardRef<HTMLElement>((_, ref) => {
+const InstagramSection = () => {
   const doubled = [...reelLinks, ...reelLinks];
   const doubledColors = [...reelColors, ...reelColors];
 
   return (
-    <section ref={ref} className="py-14 md:py-20 bg-blush overflow-hidden">
+    <section className="py-14 md:py-20 bg-blush overflow-hidden">
       <div className="text-center mb-8 px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -76,8 +75,6 @@ const InstagramSection = React.forwardRef<HTMLElement>((_, ref) => {
       </div>
     </section>
   );
-});
-
-InstagramSection.displayName = "InstagramSection";
+};
 
 export default InstagramSection;
