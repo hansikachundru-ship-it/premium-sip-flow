@@ -24,7 +24,7 @@ const galleryImages = [
   { src: cafeGallery15, alt: "Pink strawberry soft serve close-up" },
   { src: cafeGallery9, alt: "Customer with matcha drinks and flowers" },
   { src: cafeGallery18, alt: "Customer enjoying matcha in cafe" },
-  
+  { src: cafeGallery20, alt: "Vanilla soft serve with sprinkles" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
   
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
