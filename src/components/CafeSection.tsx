@@ -42,7 +42,7 @@ const flagshipPoints = [
 
 const CafeSection = () => {
   return (
-    <section className="bg-blush-light">
+    <section className="bg-blush">
       {/* Hero Image */}
       <motion.div
         initial={{ opacity: 0 }}
