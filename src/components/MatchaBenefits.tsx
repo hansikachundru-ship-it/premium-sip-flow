@@ -59,9 +59,7 @@ const MatchaBenefits = () => {
               transition={{ delay: 0.2 }}
               className="font-body text-charcoal/70 text-base md:text-lg mb-8 leading-relaxed space-y-4"
             >
-              <p>At Latcha, we are not just serving matcha. We are introducing India to what matcha is meant to be.</p>
-              <p>Our AAA grade ceremonial matcha is sourced directly from Uji, Japan, the birthplace of matcha. Every cup is crafted to be smooth, balanced, and never overly sweet, making it easy to enjoy every day.</p>
-              <p>Whether you are trying matcha for the first time or turning it into a daily ritual, Latcha makes it approachable, aesthetic, and genuinely enjoyable.</p>
+              <p>At Latcha, we bring you matcha the way it is meant to be. Sourced from Uji, Japan, our AAA grade ceremonial matcha is smooth, vibrant, and crafted for everyday drinking. Whether it is your first cup or your daily ritual, Latcha makes matcha easy to enjoy.</p>
               <p>It is a match if you are looking for:</p>
             </motion.div>
 
