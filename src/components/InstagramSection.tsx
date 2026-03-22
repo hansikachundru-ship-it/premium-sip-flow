@@ -19,7 +19,9 @@ const reelColors = [
   "bg-matcha/15",
 ];
 
-const InstagramSection = () => {
+import React from "react";
+
+const InstagramSection = React.forwardRef<HTMLElement>((_, ref) => {
   const doubled = [...reelLinks, ...reelLinks];
   const doubledColors = [...reelColors, ...reelColors];
 
