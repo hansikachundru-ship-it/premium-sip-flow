@@ -10,6 +10,7 @@ import cafeGallery9 from "@/assets/cafe-gallery-9.png";
 import cafeGallery10 from "@/assets/cafe-gallery-10.png";
 import cafeGallery11 from "@/assets/cafe-gallery-11.png";
 import cafeGallery12 from "@/assets/cafe-gallery-12.png";
+import cafeGallery13 from "@/assets/cafe-gallery-13.png";
 import cafeGallery14 from "@/assets/cafe-gallery-14.png";
 
 const galleryImages = [
