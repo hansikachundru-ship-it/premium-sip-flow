@@ -48,19 +48,18 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-crimson text-3xl md:text-5xl font-extrabold mb-6 leading-tight"
+              className="font-display text-crimson text-2xl md:text-3xl font-extrabold mb-6 leading-tight"
             >
-              More Than a Drink. It's Latcha
+              More Than a Drink.<br />It's Latcha
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="font-body text-charcoal/70 text-base md:text-lg mb-8 leading-relaxed space-y-4"
+              className="font-body text-charcoal/70 text-base md:text-lg mb-8 leading-relaxed"
             >
               <p>At Latcha, we bring you matcha the way it is meant to be. Sourced from Uji, Japan, our AAA grade ceremonial matcha is smooth, vibrant, and crafted for everyday drinking. Whether it is your first cup or your daily ritual, Latcha makes matcha easy to enjoy.</p>
-              <p>It is a match if you are looking for:</p>
             </motion.div>
 
             <div className="space-y-4 mb-10">
