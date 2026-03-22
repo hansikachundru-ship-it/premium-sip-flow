@@ -11,16 +11,18 @@ import cafeGallery10 from "@/assets/cafe-gallery-10.png";
 import cafeGallery11 from "@/assets/cafe-gallery-11.png";
 import cafeGallery12 from "@/assets/cafe-gallery-12.png";
 import cafeGallery13 from "@/assets/cafe-gallery-13.png";
+import cafeGallery14 from "@/assets/cafe-gallery-14.png";
 
 const galleryImages = [
-  { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
+  { src: cafeGallery12, alt: "Barista whisking matcha" },
   { src: cafeGallery6, alt: "Matcha drinks and soft serve on table" },
   { src: cafeGallery7, alt: "Matcha latte with pink mirror" },
-  { src: cafeGallery12, alt: "Barista whisking matcha" },
+  { src: cafeGallery14, alt: "Barista pouring matcha at counter" },
   { src: cafeGallery9, alt: "Customer with matcha drinks and flowers" },
   { src: cafeGallery10, alt: "Matcha drinks with flowers" },
   { src: cafeGallery11, alt: "Strawberry soft serve close-up" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
+  { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
   { src: cafeGallery13, alt: "Friends cheersing matcha drinks" },
 ];
 
@@ -92,7 +94,7 @@ const CafeSection = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 8,
+                duration: 3,
                 ease: "linear",
               },
             }}
