@@ -13,7 +13,7 @@ import cafeGallery15 from "@/assets/cafe-gallery-15.png";
 import cafeGallery16 from "@/assets/cafe-gallery-16.png";
 import cafeGallery17 from "@/assets/cafe-gallery-17.png";
 import cafeGallery18 from "@/assets/cafe-gallery-18.png";
-import cafeGallery19 from "@/assets/cafe-gallery-19.png";
+
 
 const galleryImages = [
   { src: cafeGallery12, alt: "Barista whisking matcha" },
