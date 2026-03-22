@@ -33,12 +33,6 @@ const galleryImages = [
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Latcha+JP+Nagar+Bengaluru";
 
-const flagshipPoints = [
-  "Instagram worthy",
-  "Social and shareable",
-  "Visually striking",
-  "Culturally inspired",
-];
 
 const CafeSection = () => {
   return (
