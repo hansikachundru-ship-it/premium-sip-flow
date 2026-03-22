@@ -2,17 +2,17 @@ import { motion } from "framer-motion";
 import { MapPin, Clock, ExternalLink } from "lucide-react";
 
 import cafeHero from "@/assets/cafe-hero.jpg";
-import cafeGallery5 from "@/assets/cafe-gallery-5.webp";
-import cafeGallery6 from "@/assets/cafe-gallery-6.webp";
-import cafeGallery7 from "@/assets/cafe-gallery-7.webp";
-import cafeGallery8 from "@/assets/cafe-gallery-8.webp";
-import cafeGallery9 from "@/assets/cafe-gallery-9.webp";
-import cafeGallery12 from "@/assets/cafe-gallery-12.webp";
-import cafeGallery14 from "@/assets/cafe-gallery-14.webp";
-import cafeGallery15 from "@/assets/cafe-gallery-15.webp";
-import cafeGallery17 from "@/assets/cafe-gallery-17.webp";
-import cafeGallery18 from "@/assets/cafe-gallery-18.webp";
-import cafeGallery20 from "@/assets/cafe-gallery-20.webp";
+import cafeGallery5 from "@/assets/cafe-gallery-5.png";
+import cafeGallery6 from "@/assets/cafe-gallery-6.png";
+import cafeGallery7 from "@/assets/cafe-gallery-7.png";
+import cafeGallery8 from "@/assets/cafe-gallery-8.png";
+import cafeGallery9 from "@/assets/cafe-gallery-9.png";
+import cafeGallery12 from "@/assets/cafe-gallery-12.png";
+import cafeGallery14 from "@/assets/cafe-gallery-14.png";
+import cafeGallery15 from "@/assets/cafe-gallery-15.png";
+import cafeGallery17 from "@/assets/cafe-gallery-17.png";
+import cafeGallery18 from "@/assets/cafe-gallery-18.png";
+import cafeGallery20 from "@/assets/cafe-gallery-20.png";
 
 
 const galleryImages = [
