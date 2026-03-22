@@ -90,7 +90,11 @@ const CafeSection = () => {
           Inside The Cafe
         </motion.h2>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden relative">
+          {/* Left fade */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-blush-light to-transparent z-10 pointer-events-none" />
+          {/* Right fade */}
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-blush-light to-transparent z-10 pointer-events-none" />
           <div
             className="flex gap-4 animate-marquee-gallery"
             style={{ width: "max-content" }}
