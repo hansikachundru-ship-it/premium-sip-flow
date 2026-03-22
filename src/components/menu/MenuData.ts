@@ -11,6 +11,7 @@ import bananaPuddingImg from "@/assets/menu/banana-pudding.png";
 import cookieButterImg from "@/assets/menu/cookie-butter.png";
 import rosyRoseImg from "@/assets/menu/rosy-rose.png";
 import peachCobblerImg from "@/assets/menu/peach-cobbler.png";
+import vanillaSoftServeImg from "@/assets/menu/vanilla-soft-serve.png";
 
 export interface MenuItem {
   num: number;
