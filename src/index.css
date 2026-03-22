@@ -77,6 +77,15 @@
   animation: marquee 20s linear infinite;
 }
 
+@keyframes marquee-gallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-gallery {
+  animation: marquee-gallery 45s linear infinite;
+}
+
 /* Float animation for product images */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
