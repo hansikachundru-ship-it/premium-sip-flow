@@ -101,7 +101,7 @@ const CafeSection = () => {
             {[...galleryImages, ...galleryImages].map((img, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 w-64 h-72 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-lg"
+                className="flex-shrink-0 w-52 h-60 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
                   src={img.src}
