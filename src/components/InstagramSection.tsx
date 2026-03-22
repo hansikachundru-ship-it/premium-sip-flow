@@ -26,7 +26,7 @@ const InstagramSection = React.forwardRef<HTMLElement>((_, ref) => {
   const doubledColors = [...reelColors, ...reelColors];
 
   return (
-    <section className="py-14 md:py-20 bg-blush overflow-hidden">
+    <section ref={ref} className="py-14 md:py-20 bg-blush overflow-hidden">
       <div className="text-center mb-8 px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
