@@ -12,6 +12,8 @@ import cafeGallery11 from "@/assets/cafe-gallery-11.png";
 import cafeGallery12 from "@/assets/cafe-gallery-12.png";
 import cafeGallery13 from "@/assets/cafe-gallery-13.png";
 import cafeGallery14 from "@/assets/cafe-gallery-14.png";
+import cafeGallery15 from "@/assets/cafe-gallery-15.png";
+import cafeGallery16 from "@/assets/cafe-gallery-16.png";
 
 const galleryImages = [
   { src: cafeGallery12, alt: "Barista whisking matcha" },
@@ -20,10 +22,12 @@ const galleryImages = [
   { src: cafeGallery14, alt: "Barista pouring matcha at counter" },
   { src: cafeGallery9, alt: "Customer with matcha drinks and flowers" },
   { src: cafeGallery10, alt: "Matcha drinks with flowers" },
-  { src: cafeGallery11, alt: "Strawberry soft serve close-up" },
+  { src: cafeGallery15, alt: "Strawberry soft serve close-up" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
-  { src: cafeGallery13, alt: "Friends cheersing matcha drinks" },
+  { src: cafeGallery16, alt: "Friends cheersing matcha drinks" },
+  { src: cafeGallery11, alt: "Strawberry soft serve" },
+  { src: cafeGallery13, alt: "Friends with matcha outdoors" },
 ];
 
 const GOOGLE_MAPS_URL =
@@ -94,7 +98,7 @@ const CafeSection = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 3,
+                duration: 5,
                 ease: "linear",
               },
             }}
