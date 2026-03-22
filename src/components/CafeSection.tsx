@@ -2,10 +2,6 @@ import { motion } from "framer-motion";
 import { MapPin, Clock, ExternalLink } from "lucide-react";
 
 import cafeHero from "@/assets/cafe-hero.jpg";
-import cafeGallery1 from "@/assets/cafe-gallery-1.jpg";
-import cafeGallery2 from "@/assets/cafe-gallery-2.jpg";
-import cafeGallery3 from "@/assets/cafe-gallery-3.jpg";
-import cafeGallery4 from "@/assets/cafe-gallery-4.jpg";
 import cafeGallery5 from "@/assets/cafe-gallery-5.png";
 import cafeGallery6 from "@/assets/cafe-gallery-6.png";
 import cafeGallery7 from "@/assets/cafe-gallery-7.png";
@@ -17,13 +13,9 @@ import cafeGallery12 from "@/assets/cafe-gallery-12.png";
 import cafeGallery13 from "@/assets/cafe-gallery-13.png";
 
 const galleryImages = [
-  { src: cafeGallery1, alt: "Friends enjoying matcha together" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
-  { src: cafeGallery2, alt: "Matcha latte art and pastries" },
   { src: cafeGallery6, alt: "Matcha drinks and soft serve on table" },
-  { src: cafeGallery3, alt: "Cozy cafe interior ambience" },
   { src: cafeGallery7, alt: "Matcha latte with pink mirror" },
-  { src: cafeGallery4, alt: "Capturing the matcha moment" },
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
   { src: cafeGallery9, alt: "Customer with matcha drinks and flowers" },
   { src: cafeGallery10, alt: "Matcha drinks with flowers" },
@@ -109,7 +101,7 @@ const CafeSection = () => {
             {[...galleryImages, ...galleryImages].map((img, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 w-64 h-72 md:w-80 md:h-96 rounded-2xl overflow-hidden shadow-lg"
+                className="flex-shrink-0 w-52 h-60 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-lg"
               >
                 <img
                   src={img.src}
