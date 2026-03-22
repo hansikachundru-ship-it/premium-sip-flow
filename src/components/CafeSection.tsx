@@ -92,16 +92,8 @@ const CafeSection = () => {
 
         <div className="overflow-hidden">
           <motion.div
-            className="flex gap-4"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 5,
-                ease: "linear",
-              },
-            }}
+            className="flex gap-4 animate-marquee-gallery"
+            style={{ width: "max-content" }}
           >
             {[...galleryImages, ...galleryImages].map((img, i) => (
               <div
