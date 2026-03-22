@@ -77,6 +77,8 @@ const InstagramSection = React.forwardRef<HTMLElement>((_, ref) => {
       </div>
     </section>
   );
-};
+});
+
+InstagramSection.displayName = "InstagramSection";
 
 export default InstagramSection;
