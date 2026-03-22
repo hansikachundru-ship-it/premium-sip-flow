@@ -12,6 +12,7 @@ import cookieButterImg from "@/assets/menu/cookie-butter.png";
 import rosyRoseImg from "@/assets/menu/rosy-rose.png";
 import peachCobblerImg from "@/assets/menu/peach-cobbler.png";
 import vanillaSoftServeImg from "@/assets/menu/vanilla-soft-serve.png";
+import strawberrySoftServeImg from "@/assets/menu/strawberry-soft-serve.png";
 
 export interface MenuItem {
   num: number;
