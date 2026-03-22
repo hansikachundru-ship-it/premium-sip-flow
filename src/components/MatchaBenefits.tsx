@@ -39,7 +39,7 @@ const MatchaBenefits = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display text-matcha text-sm uppercase tracking-[0.3em] mb-3"
+              className="font-display text-matcha text-xs uppercase tracking-[0.3em] mb-3"
             >
               The Matcha Upgrade You've Been Missing
             </motion.p>
@@ -57,7 +57,7 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="font-body text-charcoal/70 text-sm md:text-base mb-8 leading-relaxed"
+              className="font-body text-charcoal/70 text-sm md:text-base mb-8 leading-loose"
             >
               <p>At Latcha, we bring you matcha the way it is meant to be. Sourced from Uji, Japan, our AAA grade ceremonial matcha is smooth, vibrant, and crafted for everyday drinking. Whether it is your first cup or your daily ritual, Latcha makes matcha easy to enjoy.</p>
             </motion.div>
