@@ -31,7 +31,6 @@ const MatchaBenefits = () => {
                 preload="metadata"
                 className="w-full h-[380px] md:h-[520px] object-cover"
               />
-              />
             </div>
           </motion.div>
 
