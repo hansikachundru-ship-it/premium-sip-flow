@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Steady energy without caffeine crashes",
-  "Rich in antioxidants for skin & immunity",
-  "Boosts metabolism and supports detox",
-  "Calms the mind with natural L-theanine",
+  "Slow release energy from natural caffeine and L theanine",
+  "High antioxidant content including EGCG for daily wellness",
+  "Better focus and calm without jitters",
+  "Whole leaf nutrition, not just an extract",
 ];
 
 const MatchaBenefits = () => {
@@ -41,7 +41,7 @@ const MatchaBenefits = () => {
               viewport={{ once: true }}
               className="font-display text-matcha text-sm uppercase tracking-[0.3em] mb-3"
             >
-              Not just a drink
+              The Matcha Upgrade You've Been Missing
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -50,17 +50,20 @@ const MatchaBenefits = () => {
               transition={{ delay: 0.1 }}
               className="font-display text-crimson text-3xl md:text-5xl font-extrabold mb-6 leading-tight"
             >
-              A full body upgrade
+              More Than a Drink. It's Latcha
             </motion.h2>
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="font-body text-charcoal/70 text-base md:text-lg mb-8 leading-relaxed"
+              className="font-body text-charcoal/70 text-base md:text-lg mb-8 leading-relaxed space-y-4"
             >
-              Sourced from Uji, Japan — our AAA Grade ceremonial matcha is packed with nutrients that your body actually uses. It's a match if you:
-            </motion.p>
+              <p>At Latcha, we are not just serving matcha. We are introducing India to what matcha is meant to be.</p>
+              <p>Our AAA grade ceremonial matcha is sourced directly from Uji, Japan, the birthplace of matcha. Every cup is crafted to be smooth, balanced, and never overly sweet, making it easy to enjoy every day.</p>
+              <p>Whether you are trying matcha for the first time or turning it into a daily ritual, Latcha makes it approachable, aesthetic, and genuinely enjoyable.</p>
+              <p>It is a match if you are looking for:</p>
+            </motion.div>
 
             <div className="space-y-4 mb-10">
               {benefits.map((benefit, i) => (
