@@ -98,7 +98,7 @@ const CafeSection = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 5,
+                duration: 30,
                 ease: "linear",
               },
             }}
