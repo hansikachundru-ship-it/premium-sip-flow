@@ -1,8 +1,9 @@
+import React from "react";
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import latchaLogo from "@/assets/latcha-logo-original.png";
 import latchaLogoFooter from "@/assets/latcha-logo-footer.png";
 
-const Footer = () => {
+const Footer = React.forwardRef<HTMLElement>((_, ref) => {
   return (
     <footer className="relative">
       {/* Wave divider - smooth even wave from edge to edge */}
