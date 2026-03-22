@@ -5,7 +5,7 @@ import latchaLogoFooter from "@/assets/latcha-logo-footer.png";
 
 const Footer = React.forwardRef<HTMLElement>((_, ref) => {
   return (
-    <footer className="relative">
+    <footer ref={ref} className="relative">
       {/* Wave divider - smooth even wave from edge to edge */}
       <div className="bg-blush -mb-px overflow-hidden">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" className="w-full block" style={{ height: '70px' }}>
