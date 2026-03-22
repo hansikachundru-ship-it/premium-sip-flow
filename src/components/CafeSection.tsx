@@ -26,7 +26,7 @@ const galleryImages = [
   { src: cafeGallery18, alt: "Customer enjoying matcha in cafe" },
   { src: cafeGallery16, alt: "Friends with matcha drinks outdoors" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
-  { src: cafeGallery19, alt: "Friends cheersing layered matcha drinks" },
+  
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
 ];
 
