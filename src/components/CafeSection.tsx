@@ -187,40 +187,6 @@ const CafeSection = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2 }}
-          className="md:col-span-2 rounded-2xl border border-border bg-blush p-8 shadow-sm md:p-12"
-        >
-          <p className="mb-2 font-display text-xs uppercase tracking-[0.3em] text-crimson">
-            Interiors
-          </p>
-          <h2 className="mb-6 font-display text-2xl font-extrabold text-crimson md:text-4xl">
-            Our Flagship Store, Bengaluru
-          </h2>
-          <div className="rounded-xl bg-blush-light p-6 md:p-8">
-            <p className="mb-4 font-body text-base text-foreground/80">
-              Latcha is designed to be:
-            </p>
-            <ul className="space-y-2.5">
-              {flagshipPoints.map((point, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ opacity: 0, x: -15 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + i * 0.08 }}
-                  className="flex items-center gap-3 font-body text-base text-foreground/70"
-                >
-                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-crimson" />
-                  {point}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
