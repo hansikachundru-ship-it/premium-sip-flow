@@ -20,14 +20,14 @@ const galleryImages = [
   { src: cafeGallery6, alt: "Matcha drinks and soft serve on table" },
   { src: cafeGallery7, alt: "Matcha latte with pink mirror" },
   { src: cafeGallery14, alt: "Barista pouring matcha at counter" },
+  { src: cafeGallery15, alt: "Pink strawberry soft serve close-up" },
   { src: cafeGallery9, alt: "Customer with matcha drinks and flowers" },
-  { src: cafeGallery10, alt: "Matcha drinks with flowers" },
-  { src: cafeGallery15, alt: "Strawberry soft serve close-up" },
+  { src: cafeGallery10, alt: "Friends holding layered matcha drinks" },
+  { src: cafeGallery16, alt: "Friends with matcha drinks outdoors" },
+  { src: cafeGallery11, alt: "Strawberry soft serve" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
-  { src: cafeGallery16, alt: "Friends cheersing matcha drinks" },
-  { src: cafeGallery11, alt: "Strawberry soft serve" },
-  { src: cafeGallery13, alt: "Friends with matcha outdoors" },
+  { src: cafeGallery13, alt: "Friends cheersing matcha drinks" },
 ];
 
 const GOOGLE_MAPS_URL =
@@ -72,7 +72,7 @@ const CafeSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.6 }}
-            className="font-body text-blush/80 text-base md:text-lg mt-1"
+            className="font-body mt-1 text-base text-blush/80 md:text-lg"
           >
             JP Nagar, Bengaluru
           </motion.p>
@@ -85,7 +85,7 @@ const CafeSection = () => {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-crimson text-2xl md:text-4xl font-extrabold mb-8 text-center"
+          className="mb-8 text-center font-display text-2xl font-extrabold text-crimson md:text-4xl"
         >
           Inside The Cafe
         </motion.h2>
@@ -98,21 +98,20 @@ const CafeSection = () => {
               x: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 30,
+                duration: 5,
                 ease: "linear",
               },
             }}
           >
-            {/* Duplicate images for seamless loop */}
             {[...galleryImages, ...galleryImages].map((img, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 w-52 h-60 md:w-64 md:h-80 rounded-2xl overflow-hidden shadow-lg"
+                className="h-60 w-52 flex-shrink-0 overflow-hidden rounded-2xl shadow-lg md:h-80 md:w-64"
               >
                 <img
                   src={img.src}
                   alt={img.alt}
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
             ))}
@@ -121,18 +120,17 @@ const CafeSection = () => {
       </div>
 
       {/* Info Grid: Map + Hours + Flagship */}
-      <div className="max-w-6xl mx-auto px-6 pb-16 md:pb-24 grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Google Map Card */}
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 pb-16 md:grid-cols-2 md:pb-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="rounded-2xl overflow-hidden shadow-lg bg-card border border-border"
+          className="overflow-hidden rounded-2xl border border-border bg-card shadow-lg"
         >
           <div className="relative h-52 md:h-64">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8!2d77.59!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzUnMjQuMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
-              className="w-full h-full border-0 pointer-events-none"
+              className="h-full w-full border-0 pointer-events-none"
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -146,9 +144,9 @@ const CafeSection = () => {
               aria-label="Open directions in Google Maps"
             />
           </div>
-          <div className="p-5 flex items-center justify-between">
+          <div className="flex items-center justify-between p-5">
             <div className="flex items-center gap-2">
-              <MapPin className="w-4 h-4 text-crimson" />
+              <MapPin className="h-4 w-4 text-crimson" />
               <span className="font-body text-sm text-foreground">
                 JP Nagar, Bengaluru
               </span>
@@ -157,59 +155,57 @@ const CafeSection = () => {
               href={GOOGLE_MAPS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-display text-xs font-bold text-crimson hover:text-crimson-dark transition-colors uppercase tracking-wider"
+              className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-crimson transition-colors hover:text-crimson-dark"
             >
               Open in Google Maps
-              <ExternalLink className="w-3.5 h-3.5" />
+              <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
         </motion.div>
 
-        {/* Opening Hours Card */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="rounded-2xl shadow-lg bg-crimson text-blush p-8 flex flex-col justify-center"
+          className="flex flex-col justify-center rounded-2xl bg-crimson p-8 text-blush shadow-lg"
         >
-          <div className="flex items-center gap-3 mb-6">
-            <Clock className="w-5 h-5 text-blush/80" />
+          <div className="mb-6 flex items-center gap-3">
+            <Clock className="h-5 w-5 text-blush/80" />
             <h3 className="font-display text-xl font-bold uppercase tracking-wider">
               Opening Hours
             </h3>
           </div>
           <div className="space-y-3 font-body">
-            <div className="flex justify-between items-center border-b border-blush/20 pb-3">
-              <span className="font-semibold text-sm uppercase tracking-wide">
+            <div className="flex items-center justify-between border-b border-blush/20 pb-3">
+              <span className="text-sm font-semibold uppercase tracking-wide">
                 Monday to Sunday
               </span>
               <span className="text-sm text-blush/90">
                 11:00 AM to 1:00 AM
               </span>
             </div>
-            <p className="text-xs text-blush/60 pt-1">
+            <p className="pt-1 text-xs text-blush/60">
               Open every day, including holidays
             </p>
           </div>
         </motion.div>
 
-        {/* Flagship Store Info */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="md:col-span-2 rounded-2xl bg-blush p-8 md:p-12 shadow-sm border border-border"
+          className="md:col-span-2 rounded-2xl border border-border bg-blush p-8 shadow-sm md:p-12"
         >
-          <p className="font-display text-crimson text-xs uppercase tracking-[0.3em] mb-2">
+          <p className="mb-2 font-display text-xs uppercase tracking-[0.3em] text-crimson">
             Interiors
           </p>
-          <h2 className="font-display text-crimson text-2xl md:text-4xl font-extrabold mb-6">
+          <h2 className="mb-6 font-display text-2xl font-extrabold text-crimson md:text-4xl">
             Our Flagship Store, Bengaluru
           </h2>
-          <div className="bg-blush-light rounded-xl p-6 md:p-8">
-            <p className="font-body text-foreground/80 text-base mb-4">
+          <div className="rounded-xl bg-blush-light p-6 md:p-8">
+            <p className="mb-4 font-body text-base text-foreground/80">
               Latcha is designed to be:
             </p>
             <ul className="space-y-2.5">
@@ -220,9 +216,9 @@ const CafeSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.08 }}
-                  className="flex items-center gap-3 font-body text-foreground/70 text-base"
+                  className="flex items-center gap-3 font-body text-base text-foreground/70"
                 >
-                  <span className="w-1.5 h-1.5 rounded-full bg-crimson flex-shrink-0" />
+                  <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-crimson" />
                   {point}
                 </motion.li>
               ))}
