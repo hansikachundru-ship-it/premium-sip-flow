@@ -56,7 +56,7 @@ const StorySection = () => {
             </div>
 
             {/* Founders */}
-            <div className="mt-10">
+            <div className="mt-6">
               <p className="font-display text-crimson text-base font-bold">Rajasree Yarlagadda & Seeya Shree</p>
               <p className="font-body text-charcoal/45 text-sm">Co-founder</p>
             </div>
