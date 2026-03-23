@@ -86,7 +86,7 @@ const Navbar = () => {
 
         {/* Mobile dropdown */}
         {mobileOpen && (
-          <div className="md:hidden bg-crimson border-t border-blush/15 px-6 py-4 space-y-3">
+          <div className="md:hidden bg-blush border-t border-crimson/15 px-6 py-4 space-y-3">
             {navLinks.map((link) => (
               <a
                 key={link.label}
