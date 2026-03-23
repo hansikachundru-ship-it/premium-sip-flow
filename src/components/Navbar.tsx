@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
+import latchaLogoHero from "@/assets/latcha-logo-hero.png";
 
 const navLinks = [
   { label: "Shop", href: "#" },
@@ -25,9 +26,11 @@ const Navbar = () => {
 
           {/* Center logo */}
           <a href="/" className="flex items-center justify-center">
-            <span className="text-blush font-display text-3xl md:text-4xl lg:text-5xl tracking-[0.2em] uppercase font-bold">
-              Latcha
-            </span>
+            <img
+              src={latchaLogoHero}
+              alt="Latcha"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+            />
           </a>
 
           {/* Right - icons + text */}
