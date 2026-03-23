@@ -62,7 +62,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      </div>
 
       {/* Navigation Bar */}
       <nav className="bg-blush sticky top-0 z-50 border-t border-crimson/10">
