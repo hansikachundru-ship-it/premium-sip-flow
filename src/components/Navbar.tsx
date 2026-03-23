@@ -62,7 +62,7 @@ const Navbar = () => {
           {/* Mobile toggle */}
           <div className="md:hidden flex items-center justify-center h-10">
             <button
-              className="text-blush"
+              className="text-crimson"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
