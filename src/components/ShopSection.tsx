@@ -30,12 +30,11 @@ const sections = [
 const ShopSection = () => {
   return (
     <section className="bg-blush">
+      <div className="max-w-6xl mx-auto px-8 md:px-12 lg:px-16">
       {sections.map((item, i) => (
         <div
           key={item.title}
-          className={`grid grid-cols-1 md:grid-cols-2 ${
-            item.reverse ? "" : ""
-          }`}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 md:py-12`}
         >
           {/* Text Side */}
           <motion.div
@@ -43,7 +42,7 @@ const ShopSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col justify-center px-8 md:px-12 lg:px-16 py-6 md:py-8 ${
+            className={`flex flex-col justify-center ${
               item.reverse ? "md:order-2" : "md:order-1"
             }`}
           >
