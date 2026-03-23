@@ -43,7 +43,7 @@ const ShopSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col justify-center px-8 md:px-16 lg:px-20 py-12 md:py-16 ${
+            className={`flex flex-col justify-center px-8 md:px-16 lg:px-20 py-8 md:py-10 ${
               item.reverse ? "md:order-2" : "md:order-1"
             }`}
           >
