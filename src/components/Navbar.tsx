@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="bg-crimson sticky top-0 z-50 border-t border-blush/10">
+      <nav className="bg-blush sticky top-0 z-50 border-t border-crimson/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           {/* Mobile toggle */}
           <div className="md:hidden flex items-center justify-center h-10">
