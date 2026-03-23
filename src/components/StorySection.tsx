@@ -1,26 +1,34 @@
 import { motion } from "framer-motion";
-import founderImg from "@/assets/founder.png";
 
 const StorySection = () => {
   return (
     <section className="py-20 md:py-32 bg-blush px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-16">
-          {/* Left - Text */}
+        <div className="flex flex-col md:flex-row items-start gap-12 md:gap-20">
+          {/* Left - Big Heading */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full md:w-3/5"
+            className="w-full md:w-2/5"
           >
             <p className="font-display text-matcha text-xs uppercase tracking-[0.35em] mb-5">
               Our Origin
             </p>
 
-            <h2 className="font-display text-crimson text-2xl md:text-3xl lg:text-4xl font-bold mb-10">
+            <h2 className="font-display text-crimson text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase leading-[1.1]">
               Born From a Love for Matcha.
             </h2>
+          </motion.div>
 
+          {/* Right - Text */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.15 }}
+            className="w-full md:w-3/5"
+          >
             <div className="space-y-5">
               <p className="font-body text-charcoal/55 text-sm md:text-base leading-relaxed">
                 We'd tried matcha everywhere. New York, Seoul, Tokyo. Every sip felt like a ritual. Then we came back home to India, ordered one at a café, and it tasted like sweetened green dust.
@@ -48,31 +56,10 @@ const StorySection = () => {
             </div>
 
             {/* Founders */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-8">
-              <div>
-                <p className="font-display text-crimson text-base font-bold">Rajasree Yarlagadda</p>
-                <p className="font-body text-charcoal/45 text-sm">Co-founder</p>
-              </div>
-              <div>
-                <p className="font-display text-crimson text-base font-bold">Seeya Shree</p>
-                <p className="font-body text-charcoal/45 text-sm">Co-founder</p>
-              </div>
+            <div className="mt-10">
+              <p className="font-display text-crimson text-base font-bold">Rajasree Yarlagadda & Seeya Shree</p>
+              <p className="font-body text-charcoal/45 text-sm">Co-founder</p>
             </div>
-          </motion.div>
-
-          {/* Right - Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.15 }}
-            className="w-full md:w-2/5 flex items-start justify-center"
-          >
-            <img
-              src={founderImg}
-              alt="Latcha Founders"
-              className="w-full max-w-sm object-cover rounded-3xl shadow-xl"
-            />
           </motion.div>
         </div>
       </div>
