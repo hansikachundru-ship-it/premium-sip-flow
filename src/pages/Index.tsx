@@ -19,7 +19,7 @@ const Index = () => {
         <USPStrip />
         <ProductVisual />
         <ShopSection />
-        <StorySection />
+        
         <InstagramSection />
       </main>
       <Footer />
