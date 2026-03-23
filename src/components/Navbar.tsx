@@ -29,7 +29,7 @@ const Navbar = () => {
             <img
               src={latchaLogoHero}
               alt="Latcha"
-              className="h-12 md:h-16 lg:h-20 w-auto object-contain"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
             />
           </a>
 
