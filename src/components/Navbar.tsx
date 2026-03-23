@@ -18,7 +18,7 @@ const Navbar = () => {
     <>
       {/* Hero Header Band */}
       <div className="bg-crimson relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 md:py-6 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-3 md:py-4 flex items-center justify-between">
           {/* Left text */}
           <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[180px]">
             India's 1st Premium Matcha<br />& Café Chain
@@ -29,7 +29,7 @@ const Navbar = () => {
             <img
               src={latchaLogoHero}
               alt="Latcha"
-              className="h-20 md:h-28 lg:h-32 w-auto object-contain mix-blend-lighten"
+              className="h-14 md:h-18 lg:h-20 w-auto object-contain mix-blend-lighten"
             />
           </a>
 
