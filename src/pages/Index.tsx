@@ -12,7 +12,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-blush">
-      <AnnouncementBar />
+      {/* AnnouncementBar info is now in the Navbar header */}
       <Navbar />
       <main>
         <HeroCarousel />
