@@ -1,40 +1,81 @@
 import { motion } from "framer-motion";
-import founderImg from "@/assets/founder.png";
-import patternBlush from "@/assets/pattern-blush.png";
 
 const StorySection = () => {
   return (
-    <section
-      className="py-20 md:py-28 bg-blush-light px-6 relative"
-      style={{ backgroundImage: `url(${patternBlush})`, backgroundSize: '400px', backgroundRepeat: 'repeat' }}
-    >
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-16 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+    <section className="py-20 md:py-32 bg-blush px-6 md:px-12">
+      <div className="max-w-5xl mx-auto">
+        {/* Section Label */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex-shrink-0"
+          className="font-display text-matcha text-xs uppercase tracking-[0.35em] mb-6 text-center"
         >
-          <img
-            src={founderImg}
-            alt="Amareen, Founder of Latcha"
-            className="w-56 h-56 md:w-72 md:h-72 object-cover rounded-3xl shadow-xl"
-          />
+          Our Origin
+        </motion.p>
+
+        {/* Title */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="font-display text-charcoal/80 text-2xl md:text-4xl font-bold text-center mb-12 md:mb-16"
+        >
+          Born From a Love for Matcha.
+        </motion.h2>
+
+        {/* Story Text */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="max-w-3xl mx-auto space-y-6 text-center"
+        >
+          <p className="font-body text-charcoal/55 text-base md:text-lg leading-relaxed">
+            We'd tried matcha everywhere. New York, Seoul, Tokyo. Every sip felt like a ritual. Then we came back home to India, ordered one at a café, and it tasted like sweetened green dust.
+          </p>
+
+          <p className="font-body text-charcoal/55 text-base md:text-lg leading-relaxed font-medium">
+            That gap bothered us.
+          </p>
+
+          <p className="font-body text-charcoal/55 text-base md:text-lg leading-relaxed">
+            Matcha had taken over the world for good reason. It's extraordinary. But in India, nobody was doing it right. Not even close.
+          </p>
+
+          <p className="font-body text-charcoal/55 text-base md:text-lg leading-relaxed font-semibold">
+            So we built Latcha to change that.
+          </p>
+
+          <p className="font-body text-charcoal/55 text-base md:text-lg leading-relaxed">
+            We go directly to Uji, Japan, the birthplace of matcha, and source only AAA ceremonial grade. No blends. No shortcuts. No compromises. Just the real thing, made approachable for the Indian palate.
+          </p>
+
+          <p className="font-body text-charcoal/55 text-base md:text-lg leading-relaxed italic">
+            Because everyone deserves to know what matcha actually tastes like.
+          </p>
         </motion.div>
 
+        {/* Founders */}
         <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.15 }}
-          className="text-center md:text-left"
+          transition={{ delay: 0.35 }}
+          className="mt-14 md:mt-20 text-center"
         >
-          <p className="font-display text-matcha text-sm uppercase tracking-[0.3em] mb-4">Why Latcha?</p>
-          <blockquote className="font-body text-charcoal text-lg md:text-xl leading-relaxed mb-6 italic">
-            "I created Latcha to bring the best of Japan's matcha to India in a way that moves beyond grades, showcasing nuances of regions, cultivars, and flavors. It's for people who appreciate true quality worthy of their taste."
-          </blockquote>
-          <p className="font-display text-crimson text-lg font-bold">Amareen</p>
-          <p className="font-body text-charcoal/60 text-sm">Founder + CEO</p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-16">
+            <div>
+              <p className="font-display text-crimson text-lg font-bold">Rajasree Yarlagadda</p>
+              <p className="font-body text-charcoal/45 text-sm">Co-founder</p>
+            </div>
+            <div>
+              <p className="font-display text-crimson text-lg font-bold">Seeya Shree</p>
+              <p className="font-body text-charcoal/45 text-sm">Co-founder</p>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
