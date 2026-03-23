@@ -30,11 +30,10 @@ const sections = [
 const ShopSection = () => {
   return (
     <section className="bg-blush">
-      <div className="max-w-6xl mx-auto px-8 md:px-12 lg:px-16">
       {sections.map((item, i) => (
         <div
           key={item.title}
-          className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 md:py-12`}
+          className={`grid grid-cols-1 md:grid-cols-2`}
         >
           {/* Text Side */}
           <motion.div
@@ -42,7 +41,7 @@ const ShopSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col justify-center ${
+            className={`flex flex-col justify-center px-8 md:px-12 lg:px-16 py-6 md:py-8 ${
               item.reverse ? "md:order-2" : "md:order-1"
             }`}
           >
@@ -73,12 +72,11 @@ const ShopSection = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-contain min-h-[200px] md:min-h-[280px] max-h-[400px]"
+              className="w-full h-full object-cover max-h-[350px]"
             />
           </motion.div>
         </div>
       ))}
-      </div>
     </section>
   );
 };
