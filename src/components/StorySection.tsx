@@ -16,7 +16,7 @@ const StorySection = () => {
               Our Origin
             </p>
 
-            <h2 className="font-display text-crimson text-4xl md:text-5xl lg:text-6xl font-extrabold uppercase leading-[1.1]">
+            <h2 className="font-display text-crimson text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-[1.1]">
               Born From a Love for Matcha.
             </h2>
           </motion.div>
