@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 const Cafe = () => {
   return (
     <div className="min-h-screen bg-blush">
-      <AnnouncementBar />
+      
       <Navbar />
       <main>
         <CafeSection />
