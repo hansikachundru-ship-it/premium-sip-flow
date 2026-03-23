@@ -29,7 +29,7 @@ const StorySection = () => {
             transition={{ delay: 0.15 }}
             className="w-full md:w-3/5"
           >
-            <div className="space-y-5">
+            <div className="space-y-3">
               <p className="font-body text-charcoal/55 text-sm md:text-base leading-relaxed">
                 We'd tried matcha everywhere. New York, Seoul, Tokyo. Every sip felt like a ritual. Then we came back home to India, ordered one at a café, and it tasted like sweetened green dust.
               </p>
