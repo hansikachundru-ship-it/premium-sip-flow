@@ -4,7 +4,7 @@ import MatchaBenefits from "@/components/MatchaBenefits";
 import USPStrip from "@/components/USPStrip";
 import ProductVisual from "@/components/ProductVisual";
 import ShopSection from "@/components/ShopSection";
-import StorySection from "@/components/StorySection";
+
 import InstagramSection from "@/components/InstagramSection";
 import Footer from "@/components/Footer";
 
