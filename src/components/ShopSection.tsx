@@ -30,11 +30,10 @@ const sections = [
 const ShopSection = () => {
   return (
     <section className="bg-blush">
-      <div className="max-w-6xl mx-auto px-8 md:px-12 lg:px-16">
       {sections.map((item, i) => (
         <div
           key={item.title}
-          className={`grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 py-8 md:py-12`}
+          className={`grid grid-cols-1 md:grid-cols-2`}
         >
           {/* Text Side */}
           <motion.div
