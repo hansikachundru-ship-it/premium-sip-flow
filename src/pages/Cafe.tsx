@@ -1,4 +1,4 @@
-import AnnouncementBar from "@/components/AnnouncementBar";
+
 import Navbar from "@/components/Navbar";
 import CafeSection from "@/components/CafeSection";
 import Footer from "@/components/Footer";
