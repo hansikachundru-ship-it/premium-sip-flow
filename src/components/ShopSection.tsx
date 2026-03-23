@@ -1,94 +1,84 @@
 import { motion } from "framer-motion";
+import heroProduct from "@/assets/hero-product.png";
+import heroDrinks from "@/assets/hero-drinks.png";
+import heroHampers from "@/assets/hero-hampers.png";
 
-const categories = [
+const sections = [
   {
-    title: "Matcha Varieties",
-    items: [
-      { name: "Uji Matcha", price: "Rs.2,400", tag: "bestseller" },
-      { name: "Yame Matcha", price: "Rs.1,800", tag: null },
-      { name: "Nishio Matcha", price: "Rs.1,800", tag: "new" },
-      { name: "Chill Trio Bundle", price: "Rs.5,730", tag: "save 10%" },
-    ],
+    title: "MATCHA",
+    desc: "Premium AAA ceremonial grade matcha, sourced directly from Uji, Japan. Smooth, vibrant, and crafted for everyday drinking. Whether you whisk it traditional or shake it iced, this is matcha the way it's meant to be.",
+    image: heroProduct,
+    cta: "Shop Matcha",
+    reverse: false,
   },
   {
-    title: "Accessories",
-    items: [
-      { name: "Takayama Chasen", price: "Rs.1,800", tag: null },
-      { name: "Matcha Shaker", price: "Rs.999", tag: null },
-      { name: "Resin Whisk", price: "Rs.999", tag: "popular" },
-      { name: "Mini Chasen", price: "Rs.999", tag: null },
-    ],
+    title: "MATCHA DRINKS",
+    desc: "We offer a range of signature matcha drinks crafted to perfection. From classic iced lattes to indulgent cloud lattes, every sip is smooth, bold, and made with real ceremonial grade matcha. Your new daily ritual starts here.",
+    image: heroDrinks,
+    cta: "Explore Drinks",
+    reverse: true,
   },
   {
-    title: "Merch",
-    items: [
-      { name: "Matcha Addict Cap", price: "Rs.1,299", tag: "hot" },
-      { name: "ADAM Tote", price: "Rs.1,099", tag: null },
-      { name: "Matcha Lover Tote", price: "Rs.879", tag: null },
-      { name: "Superbrew Tote Bag", price: "Rs.599", tag: "budget pick" },
-    ],
+    title: "GIFT HAMPERS",
+    desc: "The perfect matcha gift for every occasion. Our curated hampers bring together premium matcha, accessories, and treats — beautifully packed and ready to impress. Give the gift of good matcha.",
+    image: heroHampers,
+    cta: "Shop Hampers",
+    reverse: false,
   },
 ];
 
 const ShopSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-blush px-6">
-      <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
+    <section className="bg-blush">
+      {sections.map((item, i) => (
+        <div
+          key={item.title}
+          className={`grid grid-cols-1 md:grid-cols-2 min-h-[420px] ${
+            item.reverse ? "" : ""
+          }`}
         >
-          <p className="font-display text-matcha text-sm uppercase tracking-[0.3em] mb-3">
-            another day, another matcha
-          </p>
-          <h2 className="font-display text-crimson text-3xl md:text-5xl font-extrabold">
-            Shop the vibe
-          </h2>
-        </motion.div>
-
-        {categories.map((cat, ci) => (
-          <div key={cat.title} className="mb-14">
-            <motion.h3
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="font-display text-charcoal text-xl md:text-2xl font-bold mb-6"
+          {/* Text Side */}
+          <motion.div
+            initial={{ opacity: 0, x: item.reverse ? 30 : -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className={`flex flex-col justify-center px-8 md:px-16 lg:px-20 py-12 md:py-16 ${
+              item.reverse ? "md:order-2" : "md:order-1"
+            }`}
+          >
+            <h2 className="font-display text-crimson text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide mb-4">
+              {item.title}
+            </h2>
+            <p className="font-body text-charcoal/70 text-sm md:text-base leading-relaxed mb-6 max-w-md">
+              {item.desc}
+            </p>
+            <a
+              href="#"
+              className="inline-block border-2 border-charcoal text-charcoal font-display text-xs md:text-sm font-bold uppercase tracking-widest px-6 py-3 hover:bg-charcoal hover:text-blush transition-colors w-fit"
             >
-              {cat.title}
-            </motion.h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-              {cat.items.map((item, i) => (
-                <motion.a
-                  key={item.name}
-                  href="#"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.08 }}
-                  className="group bg-blush-light rounded-3xl p-5 shadow-md hover:shadow-xl transition-all hover:-translate-y-1"
-                >
-                  <div className="bg-blush-dark/30 rounded-2xl h-36 md:h-44 mb-4 flex items-center justify-center overflow-hidden">
-                    <span className="font-display text-crimson/20 text-sm uppercase tracking-widest">coming soon</span>
-                  </div>
-                  <div className="flex items-start justify-between gap-2">
-                    <div>
-                      <p className="font-body text-charcoal text-sm font-semibold leading-tight">{item.name}</p>
-                      <p className="font-display text-crimson text-base font-bold mt-1">{item.price}</p>
-                    </div>
-                    {item.tag && (
-                      <span className="bg-matcha/15 text-matcha-dark text-[10px] font-bold uppercase px-2 py-1 rounded-full whitespace-nowrap">
-                        {item.tag}
-                      </span>
-                    )}
-                  </div>
-                </motion.a>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+              {item.cta}
+            </a>
+          </motion.div>
+
+          {/* Image Side */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className={`overflow-hidden ${
+              item.reverse ? "md:order-1" : "md:order-2"
+            }`}
+          >
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-full object-cover min-h-[300px] md:min-h-[420px]"
+            />
+          </motion.div>
+        </div>
+      ))}
     </section>
   );
 };
