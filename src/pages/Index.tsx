@@ -17,7 +17,7 @@ const Index = () => {
         <HeroCarousel />
         <MatchaBenefits />
         <USPStrip />
-        <ProductVisual />
+        
         <ShopSection />
         
         <InstagramSection />
