@@ -33,7 +33,7 @@ const ShopSection = () => {
       {sections.map((item, i) => (
         <div
           key={item.title}
-          className={`grid grid-cols-1 md:grid-cols-2 min-h-[420px] ${
+          className={`grid grid-cols-1 md:grid-cols-2 min-h-[280px] ${
             item.reverse ? "" : ""
           }`}
         >
@@ -43,7 +43,7 @@ const ShopSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col justify-center px-8 md:px-16 lg:px-20 py-12 md:py-16 ${
+            className={`flex flex-col justify-center px-8 md:px-16 lg:px-20 py-8 md:py-10 ${
               item.reverse ? "md:order-2" : "md:order-1"
             }`}
           >
@@ -55,7 +55,7 @@ const ShopSection = () => {
             </p>
             <a
               href="#"
-              className="inline-block border-2 border-charcoal text-charcoal font-display text-xs md:text-sm font-bold uppercase tracking-widest px-6 py-3 hover:bg-charcoal hover:text-blush transition-colors w-fit"
+              className="inline-block border-2 border-crimson text-crimson font-display text-xs md:text-sm font-bold uppercase tracking-widest px-6 py-3 hover:bg-crimson hover:text-blush transition-colors w-fit"
             >
               {item.cta}
             </a>
@@ -74,7 +74,7 @@ const ShopSection = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover min-h-[300px] md:min-h-[420px]"
+              className="w-full h-full object-cover min-h-[250px] md:min-h-[320px]"
             />
           </motion.div>
         </div>
