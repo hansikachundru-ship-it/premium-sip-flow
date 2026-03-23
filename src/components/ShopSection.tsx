@@ -33,7 +33,7 @@ const ShopSection = () => {
       {sections.map((item, i) => (
         <div
           key={item.title}
-          className={`grid grid-cols-1 md:grid-cols-2 min-h-[280px] ${
+          className={`grid grid-cols-1 md:grid-cols-2 ${
             item.reverse ? "" : ""
           }`}
         >
