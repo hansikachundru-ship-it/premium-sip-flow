@@ -76,7 +76,7 @@ const Navbar = () => {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-blush text-[12px] font-medium uppercase tracking-[0.2em] hover:text-blush/70 transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1.5px] after:bg-blush after:transition-all hover:after:w-full font-display"
+                className="text-crimson text-[12px] font-medium uppercase tracking-[0.2em] hover:text-crimson-dark transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1.5px] after:bg-crimson after:transition-all hover:after:w-full font-display"
               >
                 {link.label}
               </a>
