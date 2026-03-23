@@ -1,4 +1,3 @@
-import AnnouncementBar from "@/components/AnnouncementBar";
 import Navbar from "@/components/Navbar";
 import HeroCarousel from "@/components/HeroCarousel";
 import MatchaBenefits from "@/components/MatchaBenefits";
@@ -12,7 +11,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen bg-blush">
-      {/* AnnouncementBar info is now in the Navbar header */}
+      
       <Navbar />
       <main>
         <HeroCarousel />
