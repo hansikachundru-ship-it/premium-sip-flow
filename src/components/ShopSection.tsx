@@ -33,7 +33,7 @@ const ShopSection = () => {
       {sections.map((item, i) => (
         <div
           key={item.title}
-          className={`grid grid-cols-1 md:grid-cols-2 min-h-[280px] ${
+          className={`grid grid-cols-1 md:grid-cols-2 ${
             item.reverse ? "" : ""
           }`}
         >
@@ -43,7 +43,7 @@ const ShopSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col justify-center px-8 md:px-16 lg:px-20 py-8 md:py-10 ${
+            className={`flex flex-col justify-center px-8 md:px-12 lg:px-16 py-6 md:py-8 ${
               item.reverse ? "md:order-2" : "md:order-1"
             }`}
           >
@@ -74,7 +74,7 @@ const ShopSection = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover min-h-[250px] md:min-h-[320px]"
+              className="w-full h-full object-cover min-h-[200px] md:min-h-[280px] max-h-[400px]"
             />
           </motion.div>
         </div>
