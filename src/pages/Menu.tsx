@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import patternBlushLight from "@/assets/pattern-blush-light.png";
+import patternBlushLight from "@/assets/pattern-blush-hearts.png";
 import patternCrimson from "@/assets/pattern-crimson-new.png";
 import MenuItemCard from "@/components/menu/MenuItemCard";
 import { classicLattes, cloudLattes, softServes, desserts, savouryTreats } from "@/components/menu/MenuData";
