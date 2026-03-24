@@ -27,23 +27,29 @@ const Menu = () => {
       <Navbar />
 
       <main>
-        {/* Tab Navigation */}
-        <div className="sticky top-0 z-30 bg-blush/95 backdrop-blur-md border-b border-crimson/10">
-          <div className="text-center pt-4 pb-1">
-            <h2 className="text-sm md:text-base font-display font-bold text-crimson uppercase tracking-[0.2em]">Our Menu</h2>
-            <p className="text-xs text-crimson/50 mt-0.5" style={{ fontFamily: "var(--font-handwriting)" }}>
-              Handcrafted matcha drinks made with premium Japanese matcha
-            </p>
+        {/* "Our Menu" Header */}
+        <div className="text-center py-8 md:py-12 bg-blush">
+          <div className="inline-block border-2 border-crimson px-8 md:px-12 py-3 md:py-4">
+            <h1 className="text-2xl md:text-3xl font-display font-bold text-crimson uppercase tracking-[0.15em]">
+              Our Menu
+            </h1>
           </div>
-          <div className="max-w-5xl mx-auto flex justify-center gap-0 px-4 py-3">
+          <p className="text-sm text-crimson/50 mt-3" style={{ fontFamily: "var(--font-handwriting)" }}>
+            Handcrafted matcha drinks made with premium Japanese matcha
+          </p>
+        </div>
+
+        {/* Tab Navigation — flush against menu card */}
+        <div className="sticky top-0 z-30 bg-blush">
+          <div className="max-w-4xl mx-auto flex gap-2 px-4 py-4">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 px-3 md:px-6 py-3 md:py-4 text-xs md:text-sm font-display font-bold uppercase tracking-wider transition-all duration-300 ${
+                className={`flex-1 px-2 md:px-5 py-3 md:py-4 text-[11px] md:text-sm font-display font-bold uppercase tracking-wider transition-all duration-300 ${
                   activeTab === tab.id
-                    ? "bg-crimson text-blush rounded-full shadow-lg"
-                    : "text-crimson/50 hover:text-crimson"
+                    ? "bg-crimson text-blush"
+                    : "bg-crimson/5 text-crimson/60 hover:text-crimson hover:bg-crimson/10"
                 }`}
               >
                 {tab.label}
@@ -52,9 +58,9 @@ const Menu = () => {
           </div>
         </div>
 
-        {/* Menu Card Area — pattern background */}
+        {/* Menu Card Area — directly connected to tabs */}
         <div
-          className="py-12 md:py-20 px-4"
+          className="pb-12 md:pb-20 px-4 pt-0"
           style={{
             backgroundImage: `url(${patternBlushLight})`,
             backgroundSize: "300px",
