@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Slow release energy from natural caffeine and L theanine",
-  "High antioxidant content including EGCG for daily wellness",
-  "Better focus and calm without jitters",
-  "Whole leaf nutrition, not just an extract",
+  "Slow-release energy via natural caffeine + L-theanine — calm focus, no jitters",
+  "High EGCG antioxidants for daily cellular wellness",
+  "Silk-smooth umami finish — works hot, iced, or whisked",
+  "Stone-milled fresh in small batches to preserve the benefits",
 ];
 
 const MatchaBenefits = () => {
