@@ -42,7 +42,7 @@ const MatchaBenefits = () => {
               viewport={{ once: true }}
               className="font-display text-matcha text-xs uppercase tracking-[0.3em] mb-3"
             >
-              The Matcha Upgrade You've Been Missing
+              Not just any Matcha
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
