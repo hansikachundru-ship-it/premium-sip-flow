@@ -6,14 +6,14 @@ import heroHampers from "@/assets/hero-hampers.png";
 const sections = [
   {
     title: "MATCHA",
-    subtitle: "Ceremonial Grade from Uji, Japan",
-    desc: "Premium AAA ceremonial grade matcha, sourced directly from Uji, Japan. Smooth, vibrant, and crafted for everyday drinking. Whether you whisk it traditional or shake it iced, this is matcha the way it's meant to be. Every batch is carefully tested to ensure the highest quality and freshest flavour in every cup.",
+    subtitle: "Latcha's Signature from Uji, Japan",
+    desc: "Latcha's signature Matcha is a blend of Uji's native cultivars Okumidori and Samidori. shade-grown until the leaves are dense with chlorophyll, sweetness, and that deep umami character you can't fake. Stone-milled fresh in small batches and tested to ensure the highest quality and freshness in every cup",
     details: [
       "First harvest stone ground",
       "No additives or sweeteners",
-      "Rich in L theanine and antioxidants",
+      "Rich in L-theanine and antioxidants",
       "Vibrant green colour guaranteed",
-      "Perfect for lattes and whisking",
+      "Perfect for usucha, koicha and modern Lattes",
     ],
     image: heroProduct,
     cta: "Shop Matcha",
@@ -22,12 +22,12 @@ const sections = [
   {
     title: "MATCHA DRINKS",
     subtitle: "Crafted to Perfection",
-    desc: "We offer a range of signature matcha drinks crafted to perfection. From classic iced lattes to indulgent cloud lattes, every sip is smooth, bold, and made with real ceremonial grade matcha. Your new daily ritual starts here. Each drink is carefully balanced for the perfect blend of flavour, texture, and that unmistakable matcha goodness.",
+    desc: "We offer a range of signature matcha drinks crafted to perfection. From classic iced lattes to indulgent cloud lattes, every sip is smooth, bold, and made with real Latcha's Signature Uji Matcha. Your new daily ritual starts here. Each drink is carefully balanced for the perfect blend of flavour, texture, and that unmistakable matcha goodness.",
     details: [
-      "Iced and hot options available",
-      "Made with real ceremonial matcha",
+      "Speciality Premium Matcha Latte",
+      "Made with Latcha's Signature Uji Matcha",
       "Customisable sweetness levels",
-      "Oat, almond, and soy milk options",
+      "Milk Options: Oat Milk made with Australian Oats & Regular Milk",
       "Seasonal specials and signatures",
     ],
     image: heroDrinks,
