@@ -27,36 +27,6 @@ const Menu = () => {
       <Navbar />
 
       <main>
-        {/* Hero */}
-        <section
-          className="relative py-10 md:py-14 overflow-hidden"
-          style={{
-            backgroundImage: `url(${patternCrimson})`,
-            backgroundSize: "400px",
-          }}
-        >
-          <div className="absolute inset-0 bg-crimson/80" />
-          <div className="relative z-10 text-center px-4">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl font-display font-bold text-blush tracking-tight uppercase"
-            >
-              Our Menu
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-2 text-blush/80 text-sm md:text-base whitespace-nowrap"
-              style={{ fontFamily: "var(--font-handwriting)" }}
-            >
-              Handcrafted matcha drinks made with premium Japanese matcha
-            </motion.p>
-          </div>
-        </section>
-
         {/* Tab Navigation */}
         <div className="sticky top-0 z-30 bg-blush/95 backdrop-blur-md border-b border-crimson/10">
           <div className="max-w-4xl mx-auto flex justify-center gap-1 px-4 py-3">
