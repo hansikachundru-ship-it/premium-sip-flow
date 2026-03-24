@@ -60,7 +60,7 @@ const MatchaBenefits = () => {
               transition={{ delay: 0.2 }}
               className="font-body text-charcoal/70 text-sm md:text-base mb-8 leading-loose"
             >
-              <p>At Latcha, we bring you matcha the way it is meant to be. Sourced from Uji, Japan, our AAA grade ceremonial matcha is smooth, vibrant, and crafted for everyday drinking. Whether it is your first cup or your daily ritual, Latcha makes matcha easy to enjoy.</p>
+              <p>Most matcha is bitter, dull, and grown for volume. Ours isn't. Latcha sources exclusively from the Uji region of Japan — where the world's finest matcha has been grown for centuries. — blending two native cultivars, Okumidori and Samidori, for a cup that's layered, silk-smooth, with perfect Umami depth.</p>
             </motion.div>
 
             <div className="space-y-4 mb-10">
