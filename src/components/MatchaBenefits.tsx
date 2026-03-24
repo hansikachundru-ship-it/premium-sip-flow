@@ -23,13 +23,9 @@ const MatchaBenefits = () => {
             className="w-full md:w-1/2"
           >
             <div className="rounded-3xl overflow-hidden shadow-xl">
-              <video
-                src="/videos/matcha-video.mp4"
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
+              <img
+                src={matchaTins}
+                alt="Latcha Matcha Powder tins"
                 className="w-full h-[380px] md:h-[520px] object-cover"
               />
             </div>
