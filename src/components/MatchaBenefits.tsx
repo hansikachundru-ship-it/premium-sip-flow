@@ -3,10 +3,12 @@ import { Check } from "lucide-react";
 import matchaTins from "@/assets/matcha-tins.png";
 
 const benefits = [
-  "Slow-release energy via natural caffeine + L-theanine — calm focus, no jitters",
-  "High EGCG antioxidants for daily cellular wellness",
-  "Silk-smooth umami finish — works hot, iced, or whisked",
-  "Stone-milled fresh in small batches to preserve the benefits",
+  "Pesticide-free",
+  "Zero additives",
+  "No added colour",
+  "Small-batch ground",
+  "AAA Uji Grade",
+  "Smooth & Creamy",
 ];
 
 const MatchaBenefits = () => {
