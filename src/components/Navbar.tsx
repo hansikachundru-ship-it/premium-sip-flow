@@ -6,7 +6,7 @@ const navLinks = [
   { label: "Shop", href: "#" },
   { label: "Matcha", href: "#" },
   { label: "Accessories", href: "#" },
-  { label: "Hampers", href: "#" },
+  { label: "Merch", href: "#" },
   { label: "Menu", href: "/menu" },
   { label: "Café", href: "/cafe" },
 ];
