@@ -51,12 +51,23 @@ const ShopSection = () => {
               item.reverse ? "md:order-2" : "md:order-1"
             }`}
           >
+            <p className="font-body text-crimson/60 text-xs md:text-sm uppercase tracking-widest mb-2">
+              {item.subtitle}
+            </p>
             <h2 className="font-display text-crimson text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide mb-4">
               {item.title}
             </h2>
-            <p className="font-body text-charcoal/70 text-sm md:text-base leading-relaxed mb-6 max-w-md">
+            <p className="font-body text-charcoal/70 text-sm md:text-base leading-relaxed mb-5 max-w-md">
               {item.desc}
             </p>
+            <ul className="font-body text-charcoal/60 text-xs md:text-sm space-y-1.5 mb-6 max-w-md">
+              {item.details.map((detail) => (
+                <li key={detail} className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-crimson/40 flex-shrink-0" />
+                  {detail}
+                </li>
+              ))}
+            </ul>
             <a
               href="#"
               className="inline-block border-2 border-crimson text-crimson font-display text-xs md:text-sm font-bold uppercase tracking-widest px-6 py-3 hover:bg-crimson hover:text-blush transition-colors w-fit"
