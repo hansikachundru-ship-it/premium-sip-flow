@@ -22,13 +22,13 @@ const Menu = () => {
   const [activeTab, setActiveTab] = useState<TabId>("classic");
 
   return (
-    <div className="min-h-screen bg-blush">
+    <div className="min-h-screen" style={{ backgroundImage: `url(${patternBlushLight})`, backgroundSize: "300px", backgroundColor: "hsl(var(--blush))" }}>
       
       <Navbar />
 
       <main>
         {/* "Our Menu" Header */}
-        <div className="text-center py-8 md:py-12 bg-blush">
+        <div className="text-center py-8 md:py-12">
           <div className="inline-block border-2 border-crimson px-8 md:px-12 py-3 md:py-4">
             <h1 className="text-2xl md:text-3xl font-display font-bold text-crimson uppercase tracking-[0.15em]">
               Our Menu
@@ -40,7 +40,7 @@ const Menu = () => {
         </div>
 
         {/* Tab Navigation — flush against menu card */}
-        <div className="sticky top-0 z-30 bg-blush">
+        <div className="sticky top-0 z-30" style={{ backgroundImage: `url(${patternBlushLight})`, backgroundSize: "300px", backgroundColor: "hsl(var(--blush))" }}>
           <div className="max-w-4xl mx-auto flex gap-2 px-4 py-4">
             {tabs.map((tab) => (
               <button
@@ -59,13 +59,7 @@ const Menu = () => {
         </div>
 
         {/* Menu Card Area — directly connected to tabs */}
-        <div
-          className="pb-12 md:pb-20 px-4 pt-0"
-          style={{
-            backgroundImage: `url(${patternBlushLight})`,
-            backgroundSize: "300px",
-          }}
-        >
+        <div className="pb-12 md:pb-20 px-4 pt-0">
           <AnimatePresence mode="wait">
             {activeTab === "classic" && (
               <MenuCard
