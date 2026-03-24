@@ -35,7 +35,7 @@ const CafeSection = () => {
   return (
     <section className="bg-blush">
       {/* Store Locator */}
-      <div className="mx-auto max-w-7xl px-4 pt-24 pb-12 md:pt-28 md:pb-16">
+      <div className="mx-auto max-w-7xl px-4 pt-24 pb-4 md:pt-28 md:pb-6">
 
         {/* Store Locator Layout */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-0 rounded-2xl overflow-hidden shadow-lg bg-crimson min-h-[420px]">
@@ -136,7 +136,7 @@ const CafeSection = () => {
       </div>
 
       {/* Auto-scrolling Gallery */}
-      <div className="py-10 md:py-16">
+      <div className="pt-4 pb-10 md:pt-6 md:pb-16">
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
