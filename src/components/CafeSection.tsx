@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Clock, ExternalLink } from "lucide-react";
+import { MapPin, Clock, ExternalLink, Wifi } from "lucide-react";
 
 import cafeHero from "@/assets/cafe-hero.jpg";
 import cafeGallery5 from "@/assets/cafe-gallery-5.png";
@@ -14,7 +14,6 @@ import cafeGallery17 from "@/assets/cafe-gallery-17.png";
 import cafeGallery18 from "@/assets/cafe-gallery-18.png";
 import cafeGallery20 from "@/assets/cafe-gallery-20.png";
 
-
 const galleryImages = [
   { src: cafeGallery12, alt: "Barista whisking matcha" },
   { src: cafeGallery6, alt: "Matcha drinks and soft serve on table" },
@@ -26,52 +25,116 @@ const galleryImages = [
   { src: cafeGallery18, alt: "Customer enjoying matcha in cafe" },
   { src: cafeGallery20, alt: "Vanilla soft serve with sprinkles" },
   { src: cafeGallery5, alt: "Barista pouring matcha latte" },
-  
   { src: cafeGallery8, alt: "Cute cafe wall decor and shelves" },
 ];
 
 const GOOGLE_MAPS_URL =
   "https://www.google.com/maps/dir/?api=1&destination=Latcha+JP+Nagar+Bengaluru";
 
-
 const CafeSection = () => {
   return (
     <section className="bg-blush">
-      {/* Hero Image */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className="relative w-full h-[50vh] md:h-[70vh] overflow-hidden"
-      >
-        <img
-          src={cafeHero}
-          alt="Latcha Cafe interior, warm and inviting matcha bar"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-charcoal/50 via-transparent to-transparent" />
-        <div className="absolute bottom-8 left-6 md:left-12">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4 }}
-            className="font-display text-blush text-3xl md:text-5xl font-extrabold tracking-tight"
-          >
-            The Latcha Cafe
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.6 }}
-            className="font-body mt-1 text-base text-blush/80 md:text-lg"
-          >
-            JP Nagar, Bengaluru
-          </motion.p>
+      {/* Store Locator Header */}
+      <div className="mx-auto max-w-7xl px-4 pt-28 pb-12 md:pt-32 md:pb-16">
+        <motion.h1
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="font-display text-3xl md:text-5xl font-extrabold text-crimson mb-8 text-center"
+        >
+          Our Cafe
+        </motion.h1>
+
+        {/* Store Locator Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-0 rounded-2xl overflow-hidden shadow-lg border border-border bg-card min-h-[450px]">
+          {/* Left Panel - Store Info */}
+          <div className="md:col-span-2 p-6 flex flex-col">
+            <p className="font-display text-sm font-bold text-foreground/60 uppercase tracking-wider mb-4">
+              Nearby (1)
+            </p>
+
+            {/* Store Card */}
+            <div className="rounded-xl border border-border bg-blush/50 p-4 mb-4">
+              <div className="flex gap-4">
+                <img
+                  src={cafeHero}
+                  alt="Latcha Cafe JP Nagar"
+                  className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
+                />
+                <div className="flex-1 min-w-0">
+                  <h3 className="font-display text-lg font-bold text-foreground">
+                    JP Nagar
+                  </h3>
+                  <p className="font-body text-xs text-foreground/60 mt-0.5">
+                    Bengaluru
+                  </p>
+                  <p className="font-body text-xs font-semibold text-matcha mt-1">
+                    Open
+                  </p>
+                  <div className="flex items-center gap-2 mt-2 text-foreground/40">
+                    <Wifi className="h-3.5 w-3.5" />
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center justify-between mt-4 pt-3 border-t border-border/50">
+                <div className="flex items-center gap-1.5">
+                  <MapPin className="h-3.5 w-3.5 text-foreground/50" />
+                  <span className="font-body text-xs text-foreground/60">JP Nagar, Bengaluru</span>
+                </div>
+                <a
+                  href={GOOGLE_MAPS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-crimson text-blush font-display text-xs font-bold px-4 py-2 rounded-full hover:bg-crimson-dark transition-colors"
+                >
+                  Show Directions
+                </a>
+              </div>
+            </div>
+
+            {/* Opening Hours */}
+            <div className="rounded-xl bg-crimson p-5 text-blush mt-auto">
+              <div className="flex items-center gap-2 mb-3">
+                <Clock className="h-4 w-4 text-blush/80" />
+                <h4 className="font-display text-sm font-bold uppercase tracking-wider">
+                  Opening Hours
+                </h4>
+              </div>
+              <div className="space-y-2 font-body">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs font-semibold uppercase tracking-wide">
+                    Monday – Sunday
+                  </span>
+                  <span className="text-xs text-blush/90">
+                    11:00 AM – 1:00 AM
+                  </span>
+                </div>
+                <p className="text-[10px] text-blush/50">
+                  Open every day, including holidays
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Panel - Map */}
+          <div className="md:col-span-3 relative min-h-[300px]">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8!2d77.59!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzUnMjQuMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
+              className="absolute inset-0 h-full w-full border-0"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Latcha Cafe Location"
+            />
+            <a
+              href={GOOGLE_MAPS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="absolute inset-0 z-10 block md:hidden"
+              aria-label="Open directions in Google Maps"
+            />
+          </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Auto-scrolling Gallery */}
       <div className="py-10 md:py-16">
@@ -85,9 +148,7 @@ const CafeSection = () => {
         </motion.h2>
 
         <div className="overflow-hidden relative">
-          {/* Left fade */}
           <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-blush to-transparent z-10 pointer-events-none" />
-          {/* Right fade */}
           <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-blush to-transparent z-10 pointer-events-none" />
           <div
             className="flex gap-4 animate-marquee-gallery"
@@ -109,80 +170,6 @@ const CafeSection = () => {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Info Grid: Map + Hours + Flagship */}
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 px-6 pb-16 md:grid-cols-2 md:pb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="overflow-hidden rounded-2xl border border-border bg-card shadow-lg"
-        >
-          <div className="relative h-52 md:h-64">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8!2d77.59!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzUnMjQuMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
-              className="h-full w-full border-0 pointer-events-none"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Latcha Cafe Location"
-            />
-            <a
-              href={GOOGLE_MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="absolute inset-0 z-10 block"
-              aria-label="Open directions in Google Maps"
-            />
-          </div>
-          <div className="flex items-center justify-between p-5">
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-crimson" />
-              <span className="font-body text-sm text-foreground">
-                JP Nagar, Bengaluru
-              </span>
-            </div>
-            <a
-              href={GOOGLE_MAPS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-display text-xs font-bold uppercase tracking-wider text-crimson transition-colors hover:text-crimson-dark"
-            >
-              Open in Google Maps
-              <ExternalLink className="h-3.5 w-3.5" />
-            </a>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
-          className="flex flex-col justify-center rounded-2xl bg-crimson p-8 text-blush shadow-lg"
-        >
-          <div className="mb-6 flex items-center gap-3">
-            <Clock className="h-5 w-5 text-blush/80" />
-            <h3 className="font-display text-xl font-bold uppercase tracking-wider">
-              Opening Hours
-            </h3>
-          </div>
-          <div className="space-y-3 font-body">
-            <div className="flex items-center justify-between border-b border-blush/20 pb-3">
-              <span className="text-sm font-semibold uppercase tracking-wide">
-                Monday to Sunday
-              </span>
-              <span className="text-sm text-blush/90">
-                11:00 AM to 1:00 AM
-              </span>
-            </div>
-            <p className="pt-1 text-xs text-blush/60">
-              Open every day, including holidays
-            </p>
-          </div>
-        </motion.div>
-
       </div>
     </section>
   );
