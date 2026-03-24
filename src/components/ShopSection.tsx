@@ -72,7 +72,7 @@ const ShopSection = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover max-h-[350px]"
+              className="w-full h-full object-cover aspect-square md:aspect-auto md:min-h-[420px] lg:min-h-[480px]"
             />
           </motion.div>
         </div>
