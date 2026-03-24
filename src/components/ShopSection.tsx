@@ -6,21 +6,27 @@ import heroHampers from "@/assets/hero-hampers.png";
 const sections = [
   {
     title: "MATCHA",
+    subtitle: "Ceremonial Grade from Uji, Japan",
     desc: "Premium AAA ceremonial grade matcha, sourced directly from Uji, Japan. Smooth, vibrant, and crafted for everyday drinking. Whether you whisk it traditional or shake it iced, this is matcha the way it's meant to be.",
+    details: ["First harvest stone ground", "No additives or sweeteners", "Rich in L theanine and antioxidants"],
     image: heroProduct,
     cta: "Shop Matcha",
     reverse: false,
   },
   {
     title: "MATCHA DRINKS",
+    subtitle: "Crafted to Perfection",
     desc: "We offer a range of signature matcha drinks crafted to perfection. From classic iced lattes to indulgent cloud lattes, every sip is smooth, bold, and made with real ceremonial grade matcha. Your new daily ritual starts here.",
+    details: ["Iced and hot options available", "Made with real ceremonial matcha", "Customisable sweetness levels"],
     image: heroDrinks,
     cta: "Explore Drinks",
     reverse: true,
   },
   {
     title: "GIFT HAMPERS",
-    desc: "The perfect matcha gift for every occasion. Our curated hampers bring together premium matcha, accessories, and treats — beautifully packed and ready to impress. Give the gift of good matcha.",
+    subtitle: "Curated for Every Occasion",
+    desc: "The perfect matcha gift for every occasion. Our curated hampers bring together premium matcha, accessories, and treats, beautifully packed and ready to impress. Give the gift of good matcha.",
+    details: ["Premium packaging included", "Personalised gift notes", "Multiple hamper sizes available"],
     image: heroHampers,
     cta: "Shop Hampers",
     reverse: false,
