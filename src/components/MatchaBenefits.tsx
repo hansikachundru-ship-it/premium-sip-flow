@@ -42,16 +42,16 @@ const MatchaBenefits = () => {
               viewport={{ once: true }}
               className="font-display text-matcha text-xs uppercase tracking-[0.3em] mb-3"
             >
-              Not just any Matcha
+              The Matcha Upgrade You've Been Missing
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-crimson text-2xl md:text-3xl font-extrabold mb-5 leading-tight"
+              className="font-display text-charcoal text-2xl md:text-3xl font-extrabold mb-5 leading-tight"
             >
-              It's Latcha Uji Reserve Matcha
+              Not just any Matcha<br />It's Latcha Uji Reserve Matcha
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 15 }}
