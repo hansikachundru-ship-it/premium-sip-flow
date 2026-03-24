@@ -28,7 +28,7 @@ const Menu = () => {
 
       <main>
         {/* "Our Menu" Header */}
-        <div className="text-center py-8 md:py-12 bg-blush">
+        <div className="text-center py-8 md:py-12">
           <div className="inline-block border-2 border-crimson px-8 md:px-12 py-3 md:py-4">
             <h1 className="text-2xl md:text-3xl font-display font-bold text-crimson uppercase tracking-[0.15em]">
               Our Menu
