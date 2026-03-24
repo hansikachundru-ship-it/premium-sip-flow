@@ -89,7 +89,7 @@ const MatchaBenefits = () => {
               href="#"
               className="inline-block bg-crimson text-blush font-display font-bold text-sm uppercase tracking-wider px-8 py-3.5 rounded-full hover:bg-crimson-dark transition-colors"
             >
-              Shop Now →
+              Shop Matcha →
             </motion.a>
           </div>
         </div>
