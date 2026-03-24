@@ -7,8 +7,14 @@ const sections = [
   {
     title: "MATCHA",
     subtitle: "Ceremonial Grade from Uji, Japan",
-    desc: "Premium AAA ceremonial grade matcha, sourced directly from Uji, Japan. Smooth, vibrant, and crafted for everyday drinking. Whether you whisk it traditional or shake it iced, this is matcha the way it's meant to be.",
-    details: ["First harvest stone ground", "No additives or sweeteners", "Rich in L theanine and antioxidants"],
+    desc: "Premium AAA ceremonial grade matcha, sourced directly from Uji, Japan. Smooth, vibrant, and crafted for everyday drinking. Whether you whisk it traditional or shake it iced, this is matcha the way it's meant to be. Every batch is carefully tested to ensure the highest quality and freshest flavour in every cup.",
+    details: [
+      "First harvest stone ground",
+      "No additives or sweeteners",
+      "Rich in L theanine and antioxidants",
+      "Vibrant green colour guaranteed",
+      "Perfect for lattes and whisking",
+    ],
     image: heroProduct,
     cta: "Shop Matcha",
     reverse: false,
@@ -16,8 +22,14 @@ const sections = [
   {
     title: "MATCHA DRINKS",
     subtitle: "Crafted to Perfection",
-    desc: "We offer a range of signature matcha drinks crafted to perfection. From classic iced lattes to indulgent cloud lattes, every sip is smooth, bold, and made with real ceremonial grade matcha. Your new daily ritual starts here.",
-    details: ["Iced and hot options available", "Made with real ceremonial matcha", "Customisable sweetness levels"],
+    desc: "We offer a range of signature matcha drinks crafted to perfection. From classic iced lattes to indulgent cloud lattes, every sip is smooth, bold, and made with real ceremonial grade matcha. Your new daily ritual starts here. Each drink is carefully balanced for the perfect blend of flavour, texture, and that unmistakable matcha goodness.",
+    details: [
+      "Iced and hot options available",
+      "Made with real ceremonial matcha",
+      "Customisable sweetness levels",
+      "Oat, almond, and soy milk options",
+      "Seasonal specials and signatures",
+    ],
     image: heroDrinks,
     cta: "Explore Drinks",
     reverse: true,
@@ -25,8 +37,14 @@ const sections = [
   {
     title: "GIFT HAMPERS",
     subtitle: "Curated for Every Occasion",
-    desc: "The perfect matcha gift for every occasion. Our curated hampers bring together premium matcha, accessories, and treats, beautifully packed and ready to impress. Give the gift of good matcha.",
-    details: ["Premium packaging included", "Personalised gift notes", "Multiple hamper sizes available"],
+    desc: "The perfect matcha gift for every occasion. Our curated hampers bring together premium matcha, accessories, and treats, beautifully packed and ready to impress. Give the gift of good matcha. Whether it's a birthday, anniversary, or just because, our hampers are designed to make someone's day a whole lot greener.",
+    details: [
+      "Premium packaging included",
+      "Personalised gift notes",
+      "Multiple hamper sizes available",
+      "Accessories and treats included",
+      "Perfect for any celebration",
+    ],
     image: heroHampers,
     cta: "Shop Hampers",
     reverse: false,
@@ -60,9 +78,9 @@ const ShopSection = () => {
             <p className="font-body text-charcoal/70 text-sm md:text-base leading-relaxed mb-5 max-w-md">
               {item.desc}
             </p>
-            <ul className="font-body text-charcoal/60 text-xs md:text-sm space-y-1.5 mb-6 max-w-md">
+            <ul className="font-body text-charcoal/70 text-sm md:text-base space-y-2 mb-6 max-w-md">
               {item.details.map((detail) => (
-                <li key={detail} className="flex items-center gap-2">
+                <li key={detail} className="flex items-center gap-2.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-crimson/40 flex-shrink-0" />
                   {detail}
                 </li>
