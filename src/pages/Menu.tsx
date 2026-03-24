@@ -22,7 +22,7 @@ const Menu = () => {
   const [activeTab, setActiveTab] = useState<TabId>("classic");
 
   return (
-    <div className="min-h-screen bg-blush">
+    <div className="min-h-screen" style={{ backgroundImage: `url(${patternBlushLight})`, backgroundSize: "300px", backgroundColor: "hsl(var(--blush))" }}>
       
       <Navbar />
 
