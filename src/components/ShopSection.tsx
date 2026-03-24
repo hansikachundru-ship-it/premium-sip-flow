@@ -78,9 +78,9 @@ const ShopSection = () => {
             <p className="font-body text-charcoal/70 text-sm md:text-base leading-relaxed mb-5 max-w-md">
               {item.desc}
             </p>
-            <ul className="font-body text-charcoal/60 text-xs md:text-sm space-y-1.5 mb-6 max-w-md">
+            <ul className="font-body text-charcoal/70 text-sm md:text-base space-y-2 mb-6 max-w-md">
               {item.details.map((detail) => (
-                <li key={detail} className="flex items-center gap-2">
+                <li key={detail} className="flex items-center gap-2.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-crimson/40 flex-shrink-0" />
                   {detail}
                 </li>
