@@ -51,7 +51,7 @@ const MatchaBenefits = () => {
               transition={{ delay: 0.1 }}
               className="font-display text-crimson text-2xl md:text-3xl font-extrabold mb-5 leading-tight"
             >
-              More Than a Drink.<br />It's Latcha
+              It's Latcha Uji Reserve Matcha
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 15 }}
