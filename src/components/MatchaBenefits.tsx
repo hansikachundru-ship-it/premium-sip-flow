@@ -2,10 +2,10 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 
 const benefits = [
-  "Slow release energy from natural caffeine and L theanine",
-  "High antioxidant content including EGCG for daily wellness",
-  "Better focus and calm without jitters",
-  "Whole leaf nutrition, not just an extract",
+  "Slow-release energy via natural caffeine + L-theanine — calm focus, no jitters",
+  "High EGCG antioxidants for daily cellular wellness",
+  "Silk-smooth umami finish — works hot, iced, or whisked",
+  "Stone-milled fresh in small batches to preserve the benefits",
 ];
 
 const MatchaBenefits = () => {
@@ -42,7 +42,7 @@ const MatchaBenefits = () => {
               viewport={{ once: true }}
               className="font-display text-matcha text-xs uppercase tracking-[0.3em] mb-3"
             >
-              The Matcha Upgrade You've Been Missing
+              Not just any Matcha
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ const MatchaBenefits = () => {
               transition={{ delay: 0.1 }}
               className="font-display text-crimson text-2xl md:text-3xl font-extrabold mb-5 leading-tight"
             >
-              More Than a Drink.<br />It's Latcha
+              It's Latcha Uji Reserve Matcha
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 15 }}
@@ -60,7 +60,7 @@ const MatchaBenefits = () => {
               transition={{ delay: 0.2 }}
               className="font-body text-charcoal/70 text-sm md:text-base mb-8 leading-loose"
             >
-              <p>At Latcha, we bring you matcha the way it is meant to be. Sourced from Uji, Japan, our AAA grade ceremonial matcha is smooth, vibrant, and crafted for everyday drinking. Whether it is your first cup or your daily ritual, Latcha makes matcha easy to enjoy.</p>
+              <p>Most matcha is bitter, dull, and grown for volume. Ours isn't. Latcha sources exclusively from the Uji region of Japan — where the world's finest matcha has been grown for centuries. — blending two native cultivars, Okumidori and Samidori, for a cup that's layered, silk-smooth, with perfect Umami depth.</p>
             </motion.div>
 
             <div className="space-y-4 mb-10">
@@ -89,7 +89,7 @@ const MatchaBenefits = () => {
               href="#"
               className="inline-block bg-crimson text-blush font-display font-bold text-sm uppercase tracking-wider px-8 py-3.5 rounded-full hover:bg-crimson-dark transition-colors"
             >
-              Shop Now →
+              Shop Matcha →
             </motion.a>
           </div>
         </div>
