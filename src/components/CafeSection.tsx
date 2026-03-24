@@ -136,7 +136,7 @@ const CafeSection = () => {
       </div>
 
       {/* Auto-scrolling Gallery */}
-      <div className="py-10 md:py-16">
+      <div className="pt-4 pb-10 md:pt-6 md:pb-16">
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
