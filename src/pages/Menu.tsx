@@ -40,7 +40,7 @@ const Menu = () => {
         </div>
 
         {/* Tab Navigation — flush against menu card */}
-        <div className="sticky top-0 z-30 bg-blush">
+        <div className="sticky top-0 z-30" style={{ backgroundImage: `url(${patternBlushLight})`, backgroundSize: "300px", backgroundColor: "hsl(var(--blush))" }}>
           <div className="max-w-4xl mx-auto flex gap-2 px-4 py-4">
             {tabs.map((tab) => (
               <button
