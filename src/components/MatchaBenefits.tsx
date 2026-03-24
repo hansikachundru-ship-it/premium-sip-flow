@@ -49,7 +49,7 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-crimson text-xl md:text-2xl lg:text-3xl font-extrabold mb-5 leading-tight whitespace-nowrap"
+              className="font-display text-crimson text-2xl md:text-3xl font-extrabold mb-5 leading-tight"
             >
               Not just any Matcha<br />It's Latcha Uji Reserve Matcha
             </motion.h2>
