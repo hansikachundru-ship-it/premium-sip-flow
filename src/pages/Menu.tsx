@@ -59,13 +59,7 @@ const Menu = () => {
         </div>
 
         {/* Menu Card Area — directly connected to tabs */}
-        <div
-          className="pb-12 md:pb-20 px-4 pt-0"
-          style={{
-            backgroundImage: `url(${patternBlushLight})`,
-            backgroundSize: "300px",
-          }}
-        >
+        <div className="pb-12 md:pb-20 px-4 pt-0">
           <AnimatePresence mode="wait">
             {activeTab === "classic" && (
               <MenuCard
