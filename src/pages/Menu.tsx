@@ -3,7 +3,6 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import patternBlushLight from "@/assets/pattern-blush-light.png";
-import patternCrimson from "@/assets/pattern-crimson-new.png";
 import MenuItemCard from "@/components/menu/MenuItemCard";
 import { classicLattes, cloudLattes, softServes, desserts, savouryTreats } from "@/components/menu/MenuData";
 import { motion, AnimatePresence } from "framer-motion";
@@ -27,36 +26,6 @@ const Menu = () => {
       <Navbar />
 
       <main>
-        {/* Hero */}
-        <section
-          className="relative py-10 md:py-14 overflow-hidden"
-          style={{
-            backgroundImage: `url(${patternCrimson})`,
-            backgroundSize: "400px",
-          }}
-        >
-          <div className="absolute inset-0 bg-crimson/80" />
-          <div className="relative z-10 text-center px-4">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-4xl md:text-5xl font-display font-bold text-blush tracking-tight uppercase"
-            >
-              Our Menu
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-2 text-blush/80 text-sm md:text-base whitespace-nowrap"
-              style={{ fontFamily: "var(--font-handwriting)" }}
-            >
-              Handcrafted matcha drinks made with premium Japanese matcha
-            </motion.p>
-          </div>
-        </section>
-
         {/* Tab Navigation */}
         <div className="sticky top-0 z-30 bg-blush/95 backdrop-blur-md border-b border-crimson/10">
           <div className="max-w-4xl mx-auto flex justify-center gap-1 px-4 py-3">
@@ -185,12 +154,13 @@ const MenuCard = ({
   title,
   subtitle,
   priceLine,
-  tagline,
   items,
   itemVariant,
   footer,
 }: MenuCardProps) => {
   const isCrimson = variant === "crimson";
+  // Use the first item's image as the hero image for the category
+  const heroImage = items.find((item) => item.image)?.image;
 
   return (
     <motion.div
@@ -198,7 +168,7 @@ const MenuCard = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35 }}
-      className="max-w-3xl mx-auto"
+      className="max-w-4xl mx-auto"
     >
       <div
         className={`relative rounded-3xl border-2 overflow-hidden shadow-2xl ${
@@ -206,12 +176,6 @@ const MenuCard = ({
             ? "bg-crimson border-crimson-dark/30"
             : "bg-blush border-crimson/15"
         }`}
-        style={{
-          backgroundImage: isCrimson
-            ? `url(${patternCrimson})`
-            : undefined,
-          backgroundSize: isCrimson ? "400px" : undefined,
-        }}
       >
         {/* Overlay for crimson variant */}
         {isCrimson && <div className="absolute inset-0 bg-crimson/90" />}
@@ -219,14 +183,7 @@ const MenuCard = ({
         <div className="relative z-10 px-6 md:px-10 py-10 md:py-14">
           {/* Header */}
           <div className="text-center mb-8">
-            {tagline && (
-              <span className={`text-xs uppercase tracking-[0.25em] font-body ${
-                isCrimson ? "text-blush/50" : "text-crimson/50"
-              }`}>
-                {tagline}
-              </span>
-            )}
-            <h2 className={`text-3xl md:text-4xl font-display font-bold mt-1 ${
+            <h2 className={`text-2xl md:text-3xl font-display font-bold ${
               isCrimson ? "text-blush" : "text-crimson"
             }`}>
               • {title} •
@@ -239,22 +196,39 @@ const MenuCard = ({
                 {subtitle}
               </p>
             )}
-            <div className={`mt-3 flex items-center justify-center gap-3 text-sm font-body ${
-              isCrimson ? "text-blush/60" : "text-crimson/70"
-            }`}>
-              <span>{priceLine}</span>
-            </div>
-            {/* Decorative divider */}
-            <div className={`w-24 h-[2px] mx-auto mt-5 rounded-full ${
-              isCrimson ? "bg-blush/30" : "bg-crimson/20"
-            }`} />
+            {priceLine && (
+              <div className={`mt-2 text-sm font-body ${
+                isCrimson ? "text-blush/60" : "text-crimson/70"
+              }`}>
+                <span>{priceLine}</span>
+              </div>
+            )}
           </div>
 
-          {/* Menu Items */}
-          <div className="space-y-0">
-            {items.map((item, i) => (
-              <MenuItemCard key={item.num} item={item} index={i} variant={itemVariant} />
-            ))}
+          {/* Two-column layout: image left, items right */}
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Hero image */}
+            {heroImage && (
+              <div className="md:w-2/5 flex-shrink-0">
+                <div className={`rounded-2xl overflow-hidden aspect-[3/4] ${
+                  isCrimson ? "bg-blush/10" : "bg-crimson/5"
+                }`}>
+                  <img
+                    src={heroImage}
+                    alt={title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Menu items list */}
+            <div className={`flex-1 ${heroImage ? "" : "w-full"}`}>
+              {items.map((item, i) => (
+                <MenuItemCard key={item.num} item={item} index={i} variant={itemVariant} />
+              ))}
+            </div>
           </div>
 
           {/* Footer */}
