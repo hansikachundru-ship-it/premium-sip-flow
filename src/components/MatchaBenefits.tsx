@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
+import matchaTins from "@/assets/matcha-tins.png";
 
 const benefits = [
   "Slow-release energy via natural caffeine + L-theanine — calm focus, no jitters",
