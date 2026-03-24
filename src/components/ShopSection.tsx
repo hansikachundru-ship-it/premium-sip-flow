@@ -46,7 +46,7 @@ const sections = [
       "Perfect for any celebration",
     ],
     image: heroHampers,
-    cta: "Shop Hampers",
+    cta: "Shop Merch",
     reverse: false,
   },
 ];
