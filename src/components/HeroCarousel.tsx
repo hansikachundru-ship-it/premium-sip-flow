@@ -37,7 +37,7 @@ const HeroCarousel = () => {
                 className="font-display text-blush text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4"
                 style={{ textTransform: "none" }}
               >
-                Matcha,<br />But Make It<br />Premium
+                Matcha,<br />But&nbsp;Make&nbsp;It<br />Premium
               </motion.h1>
               <motion.p
                 initial={{ y: 20, opacity: 0 }}
