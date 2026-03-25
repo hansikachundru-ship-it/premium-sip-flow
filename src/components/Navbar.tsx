@@ -18,14 +18,14 @@ const Navbar = () => {
     <>
       {/* Hero Header Band */}
       <div className="bg-crimson relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 md:px-10 py-3 md:py-4 flex items-start justify-between">
+        <div className="max-w-7xl mx-auto px-6 md:px-10 py-3 md:py-4 flex items-center justify-between">
           {/* Left text */}
-          <p className="hidden md:block text-blush/70 text-[13px] uppercase tracking-[0.15em] leading-tight font-body max-w-[200px] lg:max-w-[220px] font-light pt-[2px]">
+          <p className="hidden md:block text-blush/70 text-sm lg:text-base uppercase tracking-[0.15em] leading-tight font-body max-w-[200px] lg:max-w-[220px] font-light">
             India's 1st Premium Matcha<br />& Café Chain
           </p>
 
           {/* Center logo */}
-          <a href="/" className="flex items-center justify-center">
+          <a href="/" className="flex items-center justify-center -mt-2">
             <img
               src={latchaLogoHero}
               alt="Latcha"
@@ -34,8 +34,8 @@ const Navbar = () => {
           </a>
 
           {/* Right - icons + text */}
-          <div className="flex items-start gap-4 pt-[2px]">
-            <p className="hidden md:block text-blush/70 text-[13px] uppercase tracking-[0.15em] leading-tight font-body text-right max-w-[200px] lg:max-w-[220px] font-light">
+          <div className="flex items-center gap-4">
+            <p className="hidden md:block text-blush/70 text-sm lg:text-base uppercase tracking-[0.15em] leading-tight font-body text-right max-w-[200px] lg:max-w-[220px] font-light">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
             <div className="flex items-center gap-3">
