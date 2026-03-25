@@ -65,7 +65,7 @@ const ShopSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col justify-center px-8 md:px-12 lg:px-16 py-6 md:py-8 ${
+            className={`flex flex-col justify-center px-10 md:px-16 lg:px-20 xl:px-24 py-6 md:py-8 ${
               item.reverse ? "md:order-2" : "md:order-1"
             }`}
           >
@@ -75,7 +75,7 @@ const ShopSection = () => {
             <h2 className="font-display text-crimson text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide mb-4">
               {item.title}
             </h2>
-            <p className="font-body text-charcoal/70 text-sm md:text-base leading-relaxed mb-5 max-w-md">
+            <p className="font-body text-charcoal/70 text-sm md:text-base leading-relaxed mb-5 text-justify">
               {item.desc}
             </p>
             <ul className="font-body text-charcoal/70 text-sm md:text-base space-y-2 mb-6 max-w-md">
