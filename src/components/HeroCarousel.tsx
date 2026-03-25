@@ -34,7 +34,7 @@ const HeroCarousel = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="font-display text-blush text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4"
+                className="font-display text-blush text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-4"
                 style={{ textTransform: "none" }}
               >
                 Matcha,<br />But&nbsp;Make&nbsp;It<br />Premium
@@ -68,14 +68,14 @@ const HeroCarousel = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="relative h-[70vh] md:h-[80vh] flex items-center bg-crimson"
           >
-            <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-center px-10 md:px-24 lg:px-32 py-12 gap-6 md:gap-8 overflow-hidden">
+            <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-center px-10 md:px-16 lg:px-20 py-12 gap-6 md:gap-12 overflow-hidden">
               {/* Left text */}
               <div className="flex-1 max-w-xl">
                 <motion.h1
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="font-display text-blush text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4"
+                  className="font-display text-blush text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-4"
                 >
                   Experience Latcha IRL here in Bangalore, JP&nbsp;Nagar
                 </motion.h1>
@@ -103,7 +103,7 @@ const HeroCarousel = () => {
                 initial={{ x: 40, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="flex-1 flex justify-center md:justify-end min-h-0"
+                className="flex-1 flex justify-center md:justify-end min-h-0 md:pr-6 lg:pr-10"
               >
                 <img
                   src={heroCafeStorefront}
