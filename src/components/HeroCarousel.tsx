@@ -1,28 +1,21 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import heroProduct from "@/assets/hero-product.png";
-import heroHampers from "@/assets/hero-hampers.png";
-import heroDrinks from "@/assets/hero-drinks.png";
+import heroMatchaBg from "@/assets/hero-matcha-bg.png";
+import heroCafeStorefront from "@/assets/hero-cafe-storefront.png";
 
 const slides = [
   {
-    image: heroProduct,
+    backgroundImage: heroMatchaBg,
     title: "matcha, but make it premium",
-    subtitle: "AAA Grade Uji Reserve. First Harvest, No Bitterness",
+    subtitle: "First Spring Harvest | Stone Milled | Smooth & Creamy",
     cta: "Shop Matcha",
   },
   {
-    image: heroHampers,
-    title: "gift the green goodness",
-    subtitle: "Curated hampers that slap. Perfect for every occasion",
-    cta: "Shop Hampers",
-  },
-  {
-    image: heroDrinks,
-    title: "your new obsession just dropped",
-    subtitle: "Iced, hot, or blended. Matcha your way, bestie",
-    cta: "View Menu",
+    backgroundImage: heroCafeStorefront,
+    title: "experience latcha IRL here in bangalore, JP nagar",
+    subtitle: "matcha your way to our flagship store with your besties",
+    cta: "Visit Café",
   },
 ];
 
@@ -39,19 +32,27 @@ const HeroCarousel = () => {
       <AnimatePresence mode="wait">
         <motion.div
           key={current}
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -80 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className="flex flex-col md:flex-row items-center min-h-[70vh] md:min-h-[80vh]"
+          className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center"
         >
-          {/* Text */}
-          <div className="flex-1 px-6 md:px-16 py-12 md:py-0 text-center md:text-left order-2 md:order-1">
+          {/* Full background image */}
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${slides[current].backgroundImage})` }}
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40" />
+
+          {/* Text content */}
+          <div className="relative z-10 px-6 md:px-16 py-12 text-center max-w-3xl mx-auto">
             <motion.h1
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="font-display text-blush text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4"
+              className="font-display text-blush text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 uppercase"
             >
               {slides[current].title}
             </motion.h1>
@@ -59,7 +60,7 @@ const HeroCarousel = () => {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="font-body text-blush/80 text-base md:text-lg mb-8 max-w-md mx-auto md:mx-0"
+              className="font-body text-blush/80 text-base md:text-lg mb-8 max-w-md mx-auto uppercase tracking-wide"
             >
               {slides[current].subtitle}
             </motion.p>
@@ -72,18 +73,6 @@ const HeroCarousel = () => {
             >
               {slides[current].cta}
             </motion.a>
-          </div>
-
-          {/* Image */}
-          <div className="flex-1 flex items-center justify-center p-8 md:p-12 order-1 md:order-2">
-            <motion.img
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.15, duration: 0.6 }}
-              src={slides[current].image}
-              alt={slides[current].title}
-              className="w-64 h-64 md:w-96 md:h-96 object-cover rounded-3xl shadow-2xl animate-float"
-            />
           </div>
         </motion.div>
       </AnimatePresence>
