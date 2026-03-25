@@ -3,7 +3,7 @@ import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import latchaLogoHero from "@/assets/latcha-logo-hero.png";
 
 const navLinks = [
-  { label: "Shop", href: "#" },
+  { label: "Shop", href: "/shop" },
   { label: "Matcha", href: "#" },
   { label: "Accessories", href: "#" },
   { label: "Merch", href: "#" },
