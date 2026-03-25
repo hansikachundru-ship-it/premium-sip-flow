@@ -37,7 +37,7 @@ const HeroCarousel = () => {
                 className="font-display text-blush text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4"
                 style={{ textTransform: "none" }}
               >
-                matcha, but make it <span className="uppercase">PREMIUM</span>
+                Matcha, But Make It Premium
               </motion.h1>
               <motion.p
                 initial={{ y: 20, opacity: 0 }}
@@ -92,7 +92,7 @@ const HeroCarousel = () => {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.55, duration: 0.5 }}
-                  href="/cafe"
+                  href="/menu"
                   className="inline-block bg-blush text-crimson font-display font-bold text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-blush-dark transition-colors uppercase tracking-wider"
                 >
                   Check Menu
