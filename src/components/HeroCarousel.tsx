@@ -34,7 +34,7 @@ const HeroCarousel = () => {
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.6 }}
-                className="font-display text-blush text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-4"
+                className="font-display text-blush text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-4"
                 style={{ textTransform: "none" }}
               >
                 Matcha,<br />But&nbsp;Make&nbsp;It<br />Premium
@@ -75,9 +75,9 @@ const HeroCarousel = () => {
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="font-display text-blush text-4xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-4"
+                  className="font-display text-blush text-3xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-4"
                 >
-                  Experience Latcha IRL here in Bangalore, JP&nbsp;Nagar
+                  Experience Latcha IRL&nbsp;here&nbsp;in Bangalore, JP&nbsp;Nagar
                 </motion.h1>
                 <motion.p
                   initial={{ y: 20, opacity: 0 }}
