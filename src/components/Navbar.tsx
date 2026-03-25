@@ -4,9 +4,9 @@ import latchaLogoHero from "@/assets/latcha-logo-hero.png";
 
 const navLinks = [
   { label: "Shop", href: "/shop" },
-  { label: "Matcha", href: "#" },
-  { label: "Accessories", href: "#" },
-  { label: "Merch", href: "#" },
+  { label: "Matcha", href: "/shop#matcha" },
+  { label: "Accessories", href: "/shop#accessories" },
+  { label: "Merch", href: "/shop#merch" },
   { label: "Menu", href: "/menu" },
   { label: "Café", href: "/cafe" },
 ];
