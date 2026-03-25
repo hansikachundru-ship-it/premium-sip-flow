@@ -34,11 +34,11 @@ const Navbar = () => {
           </a>
 
           {/* Right - icons + text */}
-          <div className="flex items-end gap-4 pb-3">
-            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light pb-2">
+          <div className="flex items-start gap-4 pb-6">
+            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
-            <div className="flex items-center gap-3 pb-2">
+            <div className="flex items-center gap-3">
               <button className="text-blush/70 hover:text-blush transition-colors" aria-label="Search">
                 <Search className="w-4 h-4" />
               </button>
