@@ -77,7 +77,7 @@ const HeroCarousel = () => {
                   transition={{ delay: 0.2, duration: 0.6 }}
                   className="font-display text-blush text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4"
                 >
-                  Experience Latcha IRL here in Bangalore, JP Nagar
+                  Experience Latcha IRL here in Bangalore, JP&nbsp;Nagar
                 </motion.h1>
                 <motion.p
                   initial={{ y: 20, opacity: 0 }}
@@ -86,7 +86,7 @@ const HeroCarousel = () => {
                   className="font-body text-blush/80 text-base md:text-lg mb-8 max-w-md tracking-wide"
                   style={{ textTransform: "none" }}
                 >
-                  Matcha your way to our flagship store with your besties
+                  Matcha Your Way To Our Flagship Store With Your Besties
                 </motion.p>
                 <motion.a
                   initial={{ y: 20, opacity: 0 }}
