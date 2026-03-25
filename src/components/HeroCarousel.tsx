@@ -77,7 +77,7 @@ const HeroCarousel = () => {
                   transition={{ delay: 0.2, duration: 0.6 }}
                   className="font-display text-blush text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4 uppercase"
                 >
-                  experience latcha IRL here in bangalore, JP nagar
+                  Experience Latcha IRL here in Bangalore, JP Nagar
                 </motion.h1>
                 <motion.p
                   initial={{ y: 20, opacity: 0 }}
