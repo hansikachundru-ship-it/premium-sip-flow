@@ -75,9 +75,9 @@ const HeroCarousel = () => {
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="font-display text-blush text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4 uppercase"
+                  className="font-display text-blush text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight mb-4"
                 >
-                  experience latcha IRL here in bangalore, JP nagar
+                  Experience Latcha IRL here in Bangalore, JP Nagar
                 </motion.h1>
                 <motion.p
                   initial={{ y: 20, opacity: 0 }}
@@ -108,6 +108,8 @@ const HeroCarousel = () => {
                 <img
                   src={heroCafeStorefront}
                   alt="Latcha café storefront"
+                  loading="lazy"
+                  decoding="async"
                   className="w-full max-w-md md:max-w-lg rounded-2xl object-cover shadow-2xl"
                 />
               </motion.div>
