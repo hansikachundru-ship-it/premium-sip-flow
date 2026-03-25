@@ -8,6 +8,7 @@ import Index from "./pages/Index.tsx";
 
 const Cafe = lazy(() => import("./pages/Cafe.tsx"));
 const Menu = lazy(() => import("./pages/Menu.tsx"));
+const Shop = lazy(() => import("./pages/Shop.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/cafe" element={<Cafe />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/shop" element={<Shop />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
