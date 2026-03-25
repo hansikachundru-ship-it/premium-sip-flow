@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="bg-crimson relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-3 md:py-4 flex items-end justify-between">
           {/* Left text */}
-          <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[160px] font-light pb-0.5">
+          <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[160px] font-light pb-3">
             India's 1st Premium Matcha<br />& Café Chain
           </p>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
 
           {/* Right - icons + text */}
           <div className="flex items-end gap-4 pb-1">
-            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light">
+            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light pb-2">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
             <div className="flex items-center gap-3">
