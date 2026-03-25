@@ -24,7 +24,7 @@ const Navbar = () => {
           </p>
 
           {/* Center logo */}
-          <a href="/" className="flex items-center justify-center -mt-2">
+          <a href="/" className="flex items-center justify-center">
             <img
               src={latchaLogoHero}
               alt="Latcha"
