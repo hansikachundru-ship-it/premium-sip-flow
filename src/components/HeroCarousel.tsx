@@ -13,7 +13,7 @@ const HeroCarousel = () => {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-crimson">
+    <section className="relative overflow-hidden bg-crimson h-[70vh] md:h-[80vh]">
       <AnimatePresence mode="wait">
         {current === 0 ? (
           <motion.div
@@ -22,7 +22,7 @@ const HeroCarousel = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="relative min-h-[70vh] md:min-h-[80vh] flex items-center"
+            className="relative h-[70vh] md:h-[80vh] flex items-center"
           >
             <div
               className="absolute inset-0 bg-cover bg-center"
@@ -66,9 +66,9 @@ const HeroCarousel = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="relative min-h-[70vh] md:min-h-[80vh] flex items-center bg-crimson"
+            className="relative h-[70vh] md:h-[80vh] flex items-center bg-crimson"
           >
-            <div className="relative z-10 w-full flex flex-col md:flex-row items-center px-6 md:px-16 py-12 gap-8 md:gap-12">
+            <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-center px-6 md:px-16 py-12 gap-8 md:gap-12 overflow-hidden">
               {/* Left text */}
               <div className="flex-1 max-w-lg">
                 <motion.h1
@@ -103,14 +103,14 @@ const HeroCarousel = () => {
                 initial={{ x: 40, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
-                className="flex-1 flex justify-center md:justify-end"
+                className="flex-1 flex justify-center md:justify-end min-h-0"
               >
                 <img
                   src={heroCafeStorefront}
                   alt="Latcha café storefront"
                   loading="lazy"
                   decoding="async"
-                  className="w-full max-w-md md:max-w-lg rounded-2xl object-cover shadow-2xl"
+                  className="max-h-[40vh] md:max-h-[60vh] w-auto rounded-2xl object-cover shadow-2xl"
                 />
               </motion.div>
             </div>
