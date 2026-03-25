@@ -110,7 +110,7 @@ const HeroCarousel = () => {
                   alt="Latcha café storefront"
                   loading="lazy"
                   decoding="async"
-                  className="max-h-[40vh] md:max-h-[60vh] w-auto md:w-[340px] lg:w-[420px] rounded-2xl object-cover shadow-2xl"
+                  className="max-h-[40vh] md:max-h-[60vh] w-auto rounded-2xl object-cover shadow-2xl"
                 />
               </motion.div>
             </div>
