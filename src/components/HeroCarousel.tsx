@@ -29,7 +29,7 @@ const HeroCarousel = () => {
               style={{ backgroundImage: `url(${heroMatchaBg})` }}
             />
             <div className="absolute inset-0 bg-black/40" />
-            <div className="relative z-10 px-6 md:px-16 py-12 max-w-2xl">
+            <div className="relative z-10 px-10 md:px-24 lg:px-32 py-12 max-w-2xl">
               <motion.h1
                 initial={{ y: 30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -68,9 +68,9 @@ const HeroCarousel = () => {
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="relative h-[70vh] md:h-[80vh] flex items-center bg-crimson"
           >
-            <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-center px-6 md:px-16 py-12 gap-8 md:gap-12 overflow-hidden">
+            <div className="relative z-10 w-full h-full flex flex-col md:flex-row items-center px-10 md:px-24 lg:px-32 py-12 gap-6 md:gap-8 overflow-hidden">
               {/* Left text */}
-              <div className="flex-1 max-w-lg">
+              <div className="flex-1 max-w-xl">
                 <motion.h1
                   initial={{ y: 30, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
