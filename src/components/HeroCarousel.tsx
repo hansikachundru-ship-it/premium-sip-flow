@@ -86,7 +86,7 @@ const HeroCarousel = () => {
                   className="font-body text-blush/80 text-base md:text-lg mb-8 max-w-md tracking-wide"
                   style={{ textTransform: "none" }}
                 >
-                  matcha your way to our flagship store with your besties
+                  Matcha your way to our flagship store with your besties
                 </motion.p>
                 <motion.a
                   initial={{ y: 20, opacity: 0 }}
