@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import heroMatchaBg from "@/assets/hero-matcha-bg.png";
-import heroCafeStorefront from "@/assets/hero-cafe-storefront.png";
+import heroMatchaBg from "@/assets/hero-matcha-bg.webp";
+import heroCafeStorefront from "@/assets/hero-cafe-storefront.webp";
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
