@@ -82,7 +82,7 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.7 }}
-              href="#"
+              href="/shop#matcha"
               className="inline-block border-2 border-crimson text-crimson font-display font-bold text-sm uppercase tracking-wider px-8 py-3.5 rounded-full hover:bg-crimson hover:text-blush transition-colors"
             >
               Shop Matcha
