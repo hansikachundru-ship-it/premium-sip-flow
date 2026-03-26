@@ -10,7 +10,7 @@ interface ReelItem {
 const reelItems: ReelItem[] = [
   { link: "https://www.instagram.com/reels/DTi_Y3vk6fq/", video: "/videos/reel-preview.mp4" },
   { link: "https://www.instagram.com/reel/DUsv4NyklRe/", video: "/videos/reel-preview-2.mp4" },
-  { link: "https://www.instagram.com/reel/DT-R4MWkmSL/" },
+  { link: "https://www.instagram.com/reels/DTr-ClgkXXh/", video: "/videos/reel-preview-3.mp4" },
   { link: "https://www.instagram.com/reel/DVi4HQ5Enb1/" },
   { link: "https://www.instagram.com/reel/DWA-p1zkYg5/" },
   { link: "https://www.instagram.com/reel/DV6i3uDD1Nm/" },
