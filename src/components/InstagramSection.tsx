@@ -56,7 +56,7 @@ const InstagramSection = () => {
   }, []);
 
   // Double the items for seamless loop
-  const allReels = [...reelLinks, ...reelLinks];
+  const allReels = [...reelItems, ...reelItems];
   const allColors = [...reelColors, ...reelColors];
 
   return (
@@ -91,12 +91,23 @@ const InstagramSection = () => {
           {allReels.map((reel, i) => (
             <a
               key={i}
-              href={reel}
+              href={reel.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${allColors[i % allColors.length]} rounded-2xl w-44 h-60 md:w-52 md:h-72 lg:w-56 lg:h-80 flex-shrink-0 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300`}
+              className={`${allColors[i % allColors.length]} rounded-2xl w-44 h-60 md:w-52 md:h-72 lg:w-56 lg:h-80 flex-shrink-0 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300 overflow-hidden relative`}
             >
-              <Instagram className="w-7 h-7 md:w-8 md:h-8 text-crimson/40" />
+              {reel.video ? (
+                <video
+                  src={reel.video}
+                  muted
+                  autoPlay
+                  loop
+                  playsInline
+                  className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                />
+              ) : (
+                <Instagram className="w-7 h-7 md:w-8 md:h-8 text-crimson/40" />
+              )}
             </a>
           ))}
         </div>
