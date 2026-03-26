@@ -1,6 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import latchaLogoHero from "@/assets/latcha-logo-hero.png";
+import { useCartStore } from "@/stores/cartStore";
+import SearchOverlay from "@/components/SearchOverlay";
+import CartDrawer from "@/components/CartDrawer";
+import AuthModal from "@/components/AuthModal";
+import { supabase } from "@/integrations/supabase/client";
 
 const navLinks = [
   { label: "Shop", href: "/shop" },
@@ -13,6 +19,31 @@ const navLinks = [
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [authOpen, setAuthOpen] = useState(false);
+  const [user, setUser] = useState<any>(null);
+  const { openCart, totalItems } = useCartStore();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+    });
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleProfileClick = () => {
+    if (user) {
+      navigate("/account");
+    } else {
+      setAuthOpen(true);
+    }
+  };
+
+  const itemCount = totalItems();
 
   return (
     <>
@@ -20,7 +51,7 @@ const Navbar = () => {
       <div className="bg-crimson relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-10 py-3 md:py-4 flex items-end justify-between">
           {/* Left text */}
-          <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[160px] font-light pb-3">
+          <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[160px] font-light pb-1">
             India's 1st Premium Matcha<br />& Café Chain
           </p>
 
@@ -35,20 +66,20 @@ const Navbar = () => {
 
           {/* Right - icons + text */}
           <div className="flex items-end gap-4 pb-1">
-            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light pb-2">
+            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light pb-0">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
             <div className="flex items-center gap-3">
-              <button className="text-blush/70 hover:text-blush transition-colors" aria-label="Search">
+              <button onClick={() => setSearchOpen(true)} className="text-blush/70 hover:text-blush transition-colors" aria-label="Search">
                 <Search className="w-4 h-4" />
               </button>
-              <button className="text-blush/70 hover:text-blush transition-colors hidden md:block" aria-label="Account">
+              <button onClick={handleProfileClick} className="text-blush/70 hover:text-blush transition-colors hidden md:block" aria-label="Account">
                 <User className="w-4 h-4" />
               </button>
-              <button className="text-blush/70 hover:text-blush transition-colors relative" aria-label="Cart">
+              <button onClick={openCart} className="text-blush/70 hover:text-blush transition-colors relative" aria-label="Cart">
                 <ShoppingBag className="w-4 h-4" />
                 <span className="absolute -top-1.5 -right-1.5 bg-blush text-crimson text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">
-                  0
+                  {itemCount}
                 </span>
               </button>
             </div>
@@ -96,9 +127,19 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <button
+              onClick={handleProfileClick}
+              className="block text-crimson text-sm font-medium uppercase tracking-[0.15em] hover:text-crimson-dark transition-colors font-display"
+            >
+              {user ? "My Account" : "Log In"}
+            </button>
           </div>
         )}
       </nav>
+
+      <SearchOverlay isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+      <CartDrawer />
+      <AuthModal isOpen={authOpen} onClose={() => setAuthOpen(false)} />
     </>
   );
 };
