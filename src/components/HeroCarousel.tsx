@@ -52,7 +52,7 @@ const HeroCarousel = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.55, duration: 0.5 }}
-                href="#"
+                href="/shop#matcha"
                 className="inline-block bg-blush text-crimson font-display font-bold text-sm md:text-base px-8 py-3.5 rounded-full hover:bg-blush-dark transition-colors uppercase tracking-wider"
               >
                 Shop Matcha
