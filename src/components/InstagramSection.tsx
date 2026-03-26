@@ -23,8 +23,6 @@ const reelColors = [
   "bg-matcha/20",
   "bg-crimson/10",
   "bg-matcha/15",
-  "bg-crimson/15",
-  "bg-matcha/10",
 ];
 
 const InstagramSection = () => {
