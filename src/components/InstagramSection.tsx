@@ -2,15 +2,20 @@ import { motion } from "framer-motion";
 import { Instagram } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-const reelLinks = [
-  "https://www.instagram.com/reel/DTi_Y3vk6fq/",
-  "https://www.instagram.com/reel/DUsv4NyklRe/",
-  "https://www.instagram.com/reel/DT-R4MWkmSL/",
-  "https://www.instagram.com/reel/DVi4HQ5Enb1/",
-  "https://www.instagram.com/reel/DWA-p1zkYg5/",
-  "https://www.instagram.com/reel/DV6i3uDD1Nm/",
-  "https://www.instagram.com/reel/DTi_Y3vk6fq/",
-  "https://www.instagram.com/reel/DUsv4NyklRe/",
+interface ReelItem {
+  link: string;
+  video?: string;
+}
+
+const reelItems: ReelItem[] = [
+  { link: "https://www.instagram.com/reels/DTi_Y3vk6fq/", video: "/videos/reel-preview.mp4" },
+  { link: "https://www.instagram.com/reel/DUsv4NyklRe/" },
+  { link: "https://www.instagram.com/reel/DT-R4MWkmSL/" },
+  { link: "https://www.instagram.com/reel/DVi4HQ5Enb1/" },
+  { link: "https://www.instagram.com/reel/DWA-p1zkYg5/" },
+  { link: "https://www.instagram.com/reel/DV6i3uDD1Nm/" },
+  { link: "https://www.instagram.com/reels/DTi_Y3vk6fq/", video: "/videos/reel-preview.mp4" },
+  { link: "https://www.instagram.com/reel/DUsv4NyklRe/" },
 ];
 
 const reelColors = [
