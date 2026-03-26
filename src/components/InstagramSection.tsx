@@ -11,11 +11,9 @@ const reelItems: ReelItem[] = [
   { link: "https://www.instagram.com/reels/DTi_Y3vk6fq/", video: "/videos/reel-preview.mp4" },
   { link: "https://www.instagram.com/reel/DUsv4NyklRe/", video: "/videos/reel-preview-2.mp4" },
   { link: "https://www.instagram.com/reels/DTr-ClgkXXh/", video: "/videos/reel-preview-3.mp4" },
-  { link: "https://www.instagram.com/reel/DVi4HQ5Enb1/" },
   { link: "https://www.instagram.com/reel/DWA-p1zkYg5/", video: "/videos/reel-preview-4.mp4" },
   { link: "https://www.instagram.com/reel/DVi4HQ5Enb1/", video: "/videos/reel-preview-5.mp4" },
-  { link: "https://www.instagram.com/reels/DTi_Y3vk6fq/", video: "/videos/reel-preview.mp4" },
-  { link: "https://www.instagram.com/reel/DUsv4NyklRe/" },
+  { link: "https://www.instagram.com/reel/DVaxgZskSIT/", video: "/videos/reel-preview-6.mp4" },
 ];
 
 const reelColors = [
