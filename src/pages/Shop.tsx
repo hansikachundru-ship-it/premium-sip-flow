@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import shopCardBg from "@/assets/shop-card-bg.png";
+import shopCardTexture from "@/assets/shop-card-texture.png";
 import { useCartStore } from "@/stores/cartStore";
 
 interface Product {
@@ -69,21 +69,30 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       transition={{ delay: index * 0.1, duration: 0.5 }}
       className="group flex flex-col"
     >
-      <div className="aspect-square rounded-2xl overflow-hidden flex items-center justify-center p-8 relative">
-        <img src={shopCardBg} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="relative w-full h-full rounded-xl flex items-center justify-center">
-          <span className="font-display text-blush/40 text-sm uppercase tracking-widest">Product Image</span>
+      {/* Outer red card with texture */}
+      <div className="rounded-3xl overflow-hidden bg-crimson relative">
+        <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+        <div className="relative p-3 pb-6">
+          {/* Inner blush pink panel */}
+          <div className="bg-blush/30 rounded-2xl p-3">
+            {/* Red product image placeholder */}
+            <div className="aspect-square rounded-xl overflow-hidden bg-crimson/90 relative flex items-center justify-center">
+              <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
+              <span className="relative font-display text-blush/70 text-sm uppercase tracking-widest font-bold">Product Image</span>
+            </div>
+          </div>
+          {/* Card bottom info */}
+          <div className="mt-4 text-center px-2 pb-1">
+            <h3 className="font-display text-blush font-bold text-sm md:text-base leading-tight">{product.name}</h3>
+            <p className="font-body text-blush/80 text-sm mt-1">{product.priceDisplay}</p>
+            <button
+              onClick={() => addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay })}
+              className="mt-3 border-2 border-blush text-blush font-display text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full hover:bg-blush hover:text-crimson transition-colors duration-300"
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="mt-4 text-center">
-        <h3 className="font-display text-crimson font-bold text-sm md:text-base leading-tight">{product.name}</h3>
-        <p className="font-body text-crimson/60 text-sm mt-1">{product.priceDisplay}</p>
-        <button
-          onClick={() => addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay })}
-          className="mt-3 border-2 border-crimson text-crimson font-display text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full hover:bg-crimson hover:text-blush transition-colors duration-300"
-        >
-          Add to Cart
-        </button>
       </div>
     </motion.div>
   );
