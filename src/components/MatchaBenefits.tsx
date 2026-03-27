@@ -38,7 +38,8 @@ const MatchaBenefits = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="font-display text-matcha text-xs tracking-[0.3em] mb-3"
+              className="text-matcha text-xs tracking-[0.3em] mb-3"
+              style={{ fontFamily: "'General Sans', sans-serif" }}
             >
               The Matcha Upgrade You've Been Missing
             </motion.p>

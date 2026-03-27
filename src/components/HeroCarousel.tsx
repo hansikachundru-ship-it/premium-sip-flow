@@ -43,8 +43,8 @@ const HeroCarousel = () => {
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}
-                className="font-body text-blush/80 text-base md:text-lg mb-8 max-w-md tracking-wide"
-                style={{ textTransform: "none" }}
+                className="text-blush/80 text-base md:text-lg mb-8 max-w-md tracking-wide"
+                style={{ textTransform: "none", fontFamily: "'General Sans', sans-serif" }}
               >
                 First Spring Harvest | Stone Milled | Smooth & Creamy
               </motion.p>
