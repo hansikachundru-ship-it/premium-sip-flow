@@ -67,6 +67,11 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
         >
           {item.desc}
         </p>
+        {item.sweetness && (
+          <p className={`text-[10px] md:text-xs mt-1 font-body font-semibold ${isDark ? "text-blush/50" : "text-crimson/50"}`}>
+            Sweetness: {item.sweetness}
+          </p>
+        )}
       </div>
 
       {/* Bottom divider */}
