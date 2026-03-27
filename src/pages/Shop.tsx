@@ -1,9 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import shopCardTexture from "@/assets/shop-card-texture.png";
+import matchaProduct1 from "@/assets/matcha-product-1.png";
+import matchaProduct2 from "@/assets/matcha-product-2.png";
+import matchaProduct3 from "@/assets/matcha-product-3.png";
 import { useCartStore } from "@/stores/cartStore";
 
 interface Product {
@@ -11,6 +15,7 @@ interface Product {
   name: string;
   price: number;
   priceDisplay: string;
+  image?: string;
 }
 
 interface ShopCategory {
@@ -24,9 +29,9 @@ const shopData: ShopCategory[] = [
     id: "matcha",
     title: "Shop Matcha",
     products: [
-      { id: "m1", name: "Uji Okumidori Ceremonial Matcha", price: 1499, priceDisplay: "Rs. 1,499" },
-      { id: "m2", name: "Uji Samidori Ceremonial Matcha", price: 1699, priceDisplay: "Rs. 1,699" },
-      { id: "m3", name: "Uji Premium Blend Ceremonial Matcha", price: 1299, priceDisplay: "Rs. 1,299" },
+      { id: "m1", name: "Latcha Matcha Powder", price: 1499, priceDisplay: "Rs. 1,499", image: matchaProduct1 },
+      { id: "m2", name: "Latcha Matcha Powder", price: 1699, priceDisplay: "Rs. 1,699", image: matchaProduct2 },
+      { id: "m3", name: "Latcha Matcha Powder", price: 1299, priceDisplay: "Rs. 1,299", image: matchaProduct3 },
     ],
   },
   {
@@ -67,9 +72,8 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="group flex flex-col"
+      className="group flex flex-col min-w-[260px] sm:min-w-[280px]"
     >
-      {/* Outer red card with texture */}
       <div className="rounded-3xl overflow-hidden bg-crimson relative shadow-lg shadow-crimson/20 flex flex-col h-full">
         <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" />
         
@@ -77,7 +81,15 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
         <div className="relative p-3 pb-0">
           <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-crimson/90 relative flex items-center justify-center border border-blush/20">
             <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
-            <span className="relative font-display text-blush/70 text-sm uppercase tracking-widest font-bold">Product Image</span>
+            {product.image ? (
+              <img
+                src={product.image}
+                alt={product.name}
+                className="relative w-[75%] h-[85%] object-contain drop-shadow-lg"
+              />
+            ) : (
+              <span className="relative font-display text-blush/70 text-sm uppercase tracking-widest font-bold">Product Image</span>
+            )}
           </div>
         </div>
 
@@ -97,24 +109,64 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
   );
 };
 
-const ShopCategorySection = ({ category }: { category: ShopCategory }) => (
-  <div id={category.id} className="mb-12 md:mb-16 scroll-mt-20">
-    <motion.h2
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      className="font-display text-crimson text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide mb-8 md:mb-12 text-center"
-    >
-      {category.title}
-    </motion.h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
-      {category.products.map((product, i) => (
-        <ProductCard key={product.id} product={product} index={i} />
-      ))}
+const ShopCategorySection = ({ category }: { category: ShopCategory }) => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (!scrollRef.current) return;
+    const scrollAmount = 320;
+    scrollRef.current.scrollBy({
+      left: direction === "left" ? -scrollAmount : scrollAmount,
+      behavior: "smooth",
+    });
+  };
+
+  return (
+    <div id={category.id} className="mb-12 md:mb-16 scroll-mt-20">
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="font-display text-crimson text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-wide mb-8 md:mb-12 text-center"
+      >
+        {category.title}
+      </motion.h2>
+      <div className="relative">
+        {/* Left Arrow */}
+        <button
+          onClick={() => scroll("left")}
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-3 md:-translate-x-5 z-10 w-10 h-10 rounded-full bg-blush border-2 border-crimson text-crimson flex items-center justify-center hover:bg-crimson hover:text-blush transition-colors shadow-md"
+          aria-label="Scroll left"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </button>
+
+        {/* Cards row */}
+        <div
+          ref={scrollRef}
+          className="flex gap-6 md:gap-8 overflow-x-auto scrollbar-hide px-2 snap-x snap-mandatory"
+          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        >
+          {category.products.map((product, i) => (
+            <div key={product.id} className="flex-1 min-w-[260px] sm:min-w-[280px] snap-start">
+              <ProductCard product={product} index={i} />
+            </div>
+          ))}
+        </div>
+
+        {/* Right Arrow */}
+        <button
+          onClick={() => scroll("right")}
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-3 md:translate-x-5 z-10 w-10 h-10 rounded-full bg-blush border-2 border-crimson text-crimson flex items-center justify-center hover:bg-crimson hover:text-blush transition-colors shadow-md"
+          aria-label="Scroll right"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 const Shop = () => {
   const location = useLocation();
