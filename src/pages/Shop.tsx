@@ -174,32 +174,13 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
           <h3 className="font-display text-crimson font-bold text-sm md:text-base leading-tight text-center min-h-[2.5rem] flex items-center">{product.name}</h3>
           <p className="font-body text-crimson/80 text-sm mt-1">{product.priceDisplay}</p>
 
-          {/* Quantity + Add to Cart row */}
-          <div className="mt-3 flex items-center gap-3 w-full">
-            <div className="flex items-center bg-crimson/5 rounded-lg overflow-hidden border border-crimson/15">
-              <button
-                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                className="px-2.5 py-1.5 text-crimson hover:bg-crimson/10 transition-colors"
-                aria-label="Decrease quantity"
-              >
-                <Minus className="w-3.5 h-3.5" />
-              </button>
-              <span className="px-3 py-1.5 font-body text-crimson text-sm font-medium min-w-[2rem] text-center">{quantity}</span>
-              <button
-                onClick={() => setQuantity((q) => q + 1)}
-                className="px-2.5 py-1.5 text-crimson hover:bg-crimson/10 transition-colors"
-                aria-label="Increase quantity"
-              >
-                <Plus className="w-3.5 h-3.5" />
-              </button>
-            </div>
-            <button
-              onClick={handleAddToCart}
-              className="flex-1 border-2 border-crimson text-crimson font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full hover:bg-crimson hover:text-blush transition-colors duration-300"
-            >
-              Add to Cart
-            </button>
-          </div>
+          {/* Add to Cart button */}
+          <button
+            onClick={handleAddToCart}
+            className="mt-3 w-full border-2 border-crimson text-crimson font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full hover:bg-crimson hover:text-blush transition-colors duration-300"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </motion.div>
