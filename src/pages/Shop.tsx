@@ -22,7 +22,7 @@ interface ShopCategory {
 const shopData: ShopCategory[] = [
   {
     id: "matcha",
-    title: "Shop our ceremonial matcha",
+    title: "Shop Matcha",
     products: [
       { id: "m1", name: "Uji Okumidori Ceremonial Matcha", price: 1499, priceDisplay: "Rs. 1,499" },
       { id: "m2", name: "Uji Samidori Ceremonial Matcha", price: 1699, priceDisplay: "Rs. 1,699" },
@@ -31,7 +31,7 @@ const shopData: ShopCategory[] = [
   },
   {
     id: "bundles",
-    title: "Shop our bundles",
+    title: "Shop Bundles",
     products: [
       { id: "b1", name: "Matcha Starter Kit", price: 2499, priceDisplay: "Rs. 2,499" },
       { id: "b2", name: "Matcha Lover's Bundle", price: 3299, priceDisplay: "Rs. 3,299" },
@@ -40,7 +40,7 @@ const shopData: ShopCategory[] = [
   },
   {
     id: "accessories",
-    title: "Shop our accessories",
+    title: "Shop Accessories",
     products: [
       { id: "a1", name: "Bamboo Chasen Whisk", price: 899, priceDisplay: "Rs. 899" },
       { id: "a2", name: "Ceramic Chawan Bowl", price: 1199, priceDisplay: "Rs. 1,199" },
@@ -49,7 +49,7 @@ const shopData: ShopCategory[] = [
   },
   {
     id: "merch",
-    title: "Shop our merch",
+    title: "Shop Merch",
     products: [
       { id: "r1", name: "Latcha Signature Tote Bag", price: 699, priceDisplay: "Rs. 699" },
       { id: "r2", name: "Latcha Ceramic Tumbler", price: 1099, priceDisplay: "Rs. 1,099" },
