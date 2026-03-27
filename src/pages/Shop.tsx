@@ -101,6 +101,8 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
               <img
                 src={images[currentImage]}
                 alt={product.name}
+                loading="eager"
+                decoding="sync"
                 className="relative w-full h-full object-cover"
               />
             ) : (

@@ -1,9 +1,16 @@
 import { X, Plus, Minus, ShoppingBag } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useCartStore } from "@/stores/cartStore";
 
 const CartDrawer = () => {
   const { items, isOpen, closeCart, updateQuantity, removeItem, totalPrice } = useCartStore();
+  const navigate = useNavigate();
+
+  const handleCheckout = () => {
+    closeCart();
+    navigate("/checkout");
+  };
 
   return (
     <AnimatePresence>
@@ -42,8 +49,12 @@ const CartDrawer = () => {
                 <div className="space-y-4">
                   {items.map((item) => (
                     <div key={item.id} className="flex gap-4 py-3 border-b border-crimson/10">
-                      <div className="w-16 h-16 rounded-lg bg-crimson/10 flex items-center justify-center flex-shrink-0">
-                        <ShoppingBag className="w-6 h-6 text-crimson/30" />
+                      <div className="w-16 h-16 rounded-lg bg-crimson/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                        {item.image ? (
+                          <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded-lg" />
+                        ) : (
+                          <ShoppingBag className="w-6 h-6 text-crimson/30" />
+                        )}
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="font-display text-crimson text-sm font-bold leading-tight truncate">{item.name}</h3>
@@ -85,7 +96,10 @@ const CartDrawer = () => {
                     Rs. {totalPrice().toLocaleString("en-IN")}
                   </span>
                 </div>
-                <button className="w-full bg-crimson text-blush font-display font-bold text-sm uppercase tracking-widest py-3.5 rounded-full hover:bg-crimson-dark transition-colors">
+                <button
+                  onClick={handleCheckout}
+                  className="w-full bg-crimson text-blush font-display font-bold text-sm uppercase tracking-widest py-3.5 rounded-full hover:bg-crimson-dark transition-colors"
+                >
                   Proceed to Checkout
                 </button>
               </div>
