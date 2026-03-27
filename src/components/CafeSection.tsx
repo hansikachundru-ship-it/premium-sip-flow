@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock, ExternalLink, Wifi } from "lucide-react";
 
-import cafeHero from "@/assets/cafe-hero.jpg";
+import cafeHero from "@/assets/cafe-real.png";
 import cafeGallery5 from "@/assets/cafe-gallery-5.png";
 import cafeGallery6 from "@/assets/cafe-gallery-6.png";
 import cafeGallery7 from "@/assets/cafe-gallery-7.png";

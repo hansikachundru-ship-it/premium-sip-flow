@@ -64,7 +64,7 @@ const InstagramSection = () => {
           viewport={{ once: true }}
           className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 whitespace-nowrap"
         >
-          we're kinda cute on the 'gram
+          We're kinda cute on the 'gram
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 15 }}

@@ -24,21 +24,21 @@ export interface MenuItem {
 }
 
 export const classicLattes: MenuItem[] = [
-  { num: 1, name: "Pure Iced Matcha Latte", desc: "Premium grade matcha shaken with milk. Unsweetened, clean, and bold.", image: pureImg },
-  { num: 2, name: "Honey Iced Matcha Latte", desc: "Premium grade matcha lightly sweetened with natural honey.", image: honeyImg },
-  { num: 3, name: "Vanilla Silk Iced Matcha Latte", desc: "Premium grade matcha with a subtle hint of French vanilla.", image: vanillaSilkImg },
-  { num: 4, name: "Strawberry Iced Matcha Latte", desc: "Lightly sweet, fruity, and smooth with premium grade matcha.", image: strawberryImg },
-  { num: 5, name: "Blueberry Vanilla Iced Matcha Latte", desc: "A perfect balance of Premium Matcha, Blueberry & Vanilla.", image: blueberryImg },
-  { num: 6, name: "Raspberry Iced Matcha Latte", desc: "Subtle tangy & fruity punch of raspberry with premium matcha.", image: raspberryImg },
-  { num: 7, name: "Mango Iced Matcha Latte", desc: "A perfect combination of tropical mango paired with premium matcha for a refreshing sip.", image: mangoImg, badge: "Best Seller" },
-  { num: 8, name: "Toffee Caramel Iced Matcha Latte", desc: "Rich toffee caramel blended with premium matcha.", image: caramelToffeeImg },
+  { num: 1, name: "Pure Iced Matcha Latte", desc: "Uji Reserve Matcha shaken with milk. Unsweetened, clean, and bold.", image: pureImg, sweetness: "0/5" },
+  { num: 2, name: "Honey Iced Matcha Latte", desc: "Uji Reserve Matcha lightly sweetened with natural honey.", image: honeyImg, sweetness: "2/5" },
+  { num: 3, name: "Vanilla Silk Iced Matcha Latte", desc: "Uji Reserve Matcha with a subtle hint of French vanilla.", image: vanillaSilkImg, sweetness: "2/5" },
+  { num: 4, name: "Strawberry Iced Matcha Latte", desc: "Lightly sweet, fruity, and smooth strawberry with Uji Reserve Matcha.", image: strawberryImg, sweetness: "2/5" },
+  { num: 5, name: "Blueberry Vanilla Iced Matcha Latte", desc: "A perfect balance of Uji Reserve Matcha, Blueberry & Vanilla.", image: blueberryImg, sweetness: "2/5" },
+  { num: 6, name: "Raspberry Iced Matcha Latte", desc: "Subtle tangy & fruity punch of raspberry with Uji Reserve Matcha.", image: raspberryImg, sweetness: "2/5" },
+  { num: 7, name: "Mango Iced Matcha Latte", desc: "A perfect combination of tropical mango paired with Uji Reserve Matcha.", image: mangoImg, badge: "Best Seller", sweetness: "3/5" },
+  { num: 8, name: "Caramel Toffee Iced Matcha Latte", desc: "Rich toffee caramel blended with Uji Reserve Matcha.", image: caramelToffeeImg, sweetness: "3/5" },
 ];
 
 export const cloudLattes: MenuItem[] = [
-  { num: 1, name: "Banana Pudding Cloud Iced Matcha Latte", desc: "Creamy banana, soft biscuit notes, and smooth premium matcha.", sweetness: "4/5 (Medium Sweet)", badge: "Best Seller", image: bananaPuddingImg },
-  { num: 2, name: "Cookie Butter Cloud Iced Matcha Latte", desc: "Buttery cookie cream swirled with smooth premium matcha.", sweetness: "5/5 (Sweet)", badge: "Best Seller", image: cookieButterImg },
-  { num: 3, name: "Rosy Cloud Iced Matcha Latte", desc: "Delicate rose notes cloud layered over smooth premium matcha.", sweetness: "3/5 (Mild Sweet)", image: rosyRoseImg },
-  { num: 4, name: "Peach Cobbler Cloud Iced Matcha Latte", desc: "Juicy peach cobbler dessert notes layered over smooth premium matcha.", sweetness: "3/5 (Mild Sweet)", image: peachCobblerImg },
+  { num: 1, name: "Banana Pudding Cloud Iced Matcha Latte", desc: "Creamy banana, soft biscuit notes, and smooth Uji Reserve Matcha.", sweetness: "4/5 (Medium Sweet)", badge: "Best Seller", image: bananaPuddingImg },
+  { num: 2, name: "Cookie Butter Cloud Iced Matcha Latte", desc: "Buttery cookie cream swirled with smooth Uji Reserve Matcha.", sweetness: "5/5 (Sweet)", badge: "Best Seller", image: cookieButterImg },
+  { num: 3, name: "Rosy Cloud Iced Matcha Latte", desc: "Delicate rose notes cloud layered over smooth Uji Reserve Matcha.", sweetness: "3/5 (Mild Sweet)", image: rosyRoseImg },
+  { num: 4, name: "Peach Cobbler Cloud Iced Matcha Latte", desc: "Juicy peach cobbler dessert notes layered over Uji Reserve Matcha.", sweetness: "3/5 (Mild Sweet)", image: peachCobblerImg },
 ];
 
 export const softServes: MenuItem[] = [

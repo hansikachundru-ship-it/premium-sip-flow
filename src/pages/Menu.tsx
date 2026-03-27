@@ -29,11 +29,9 @@ const Menu = () => {
       <main>
         {/* "Our Menu" Header */}
         <div className="text-center py-8 md:py-12">
-          <div className="inline-block border-2 border-crimson px-8 md:px-12 py-3 md:py-4">
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-display font-extrabold text-crimson tracking-wide">
-              our menu
+          <h1 className="text-2xl md:text-3xl lg:text-4xl font-display font-extrabold text-crimson tracking-wide">
+              Our Menu
             </h1>
-          </div>
           <p className="text-sm text-crimson mt-3 font-display font-bold uppercase tracking-wider">
             Handcrafted matcha drinks made with premium Japanese matcha
           </p>
