@@ -9,6 +9,7 @@ const Account = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [orders, setOrders] = useState<any[]>([]);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
@@ -16,18 +17,44 @@ const Account = () => {
         navigate("/");
       } else {
         setUser(session.user);
+        fetchOrders(session.user.id);
       }
       setLoading(false);
     });
 
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) navigate("/");
-      else setUser(session.user);
+      else {
+        setUser(session.user);
+        fetchOrders(session.user.id);
+      }
       setLoading(false);
     });
 
     return () => subscription.unsubscribe();
   }, [navigate]);
+
+  const fetchOrders = async (userId: string) => {
+    const { data: ordersData } = await supabase
+      .from("orders")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false });
+
+    if (ordersData && ordersData.length > 0) {
+      const orderIds = ordersData.map((o: any) => o.id);
+      const { data: itemsData } = await supabase
+        .from("order_items")
+        .select("*")
+        .in("order_id", orderIds);
+
+      const ordersWithItems = ordersData.map((o: any) => ({
+        ...o,
+        items: (itemsData || []).filter((i: any) => i.order_id === o.id),
+      }));
+      setOrders(ordersWithItems);
+    }
+  };
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
@@ -64,7 +91,41 @@ const Account = () => {
               <Package className="w-5 h-5 text-crimson" />
               <h2 className="font-display text-crimson text-base font-bold uppercase tracking-wider">Order History</h2>
             </div>
-            <p className="font-body text-crimson/40 text-sm">No orders yet. Start shopping to see your orders here!</p>
+            {orders.length === 0 ? (
+              <p className="font-body text-crimson/40 text-sm">No orders yet. Start shopping to see your orders here!</p>
+            ) : (
+              <div className="space-y-4">
+                {orders.map((order: any) => (
+                  <div key={order.id} className="border border-crimson/10 rounded-xl p-4 bg-blush">
+                    <div className="flex justify-between items-start mb-3">
+                      <div>
+                        <p className="font-display text-crimson text-xs font-bold uppercase tracking-wider">
+                          Order #{order.id.slice(0, 8)}
+                        </p>
+                        <p className="font-body text-crimson/50 text-xs mt-1">
+                          {new Date(order.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
+                        </p>
+                      </div>
+                      <span className="bg-matcha/20 text-matcha-dark font-display text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                        {order.status}
+                      </span>
+                    </div>
+                    <div className="space-y-1">
+                      {order.items?.map((item: any, i: number) => (
+                        <div key={i} className="flex justify-between font-body text-crimson/70 text-xs">
+                          <span>{item.product_name} × {item.quantity}</span>
+                          <span>Rs. {(item.price * item.quantity).toLocaleString("en-IN")}</span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex justify-between mt-2 pt-2 border-t border-crimson/10 font-display text-crimson text-xs font-bold">
+                      <span>Total</span>
+                      <span>Rs. {Number(order.total_amount).toLocaleString("en-IN")}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Saved Addresses */}
