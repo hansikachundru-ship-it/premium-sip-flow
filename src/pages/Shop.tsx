@@ -70,28 +70,27 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       className="group flex flex-col"
     >
       {/* Outer red card with texture */}
-      <div className="rounded-3xl overflow-hidden bg-crimson relative">
+      <div className="rounded-3xl overflow-hidden bg-crimson relative shadow-lg shadow-crimson/20 flex flex-col h-full">
         <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" />
-        <div className="relative p-3 pb-6">
-          {/* Inner blush pink panel */}
-          <div className="bg-blush/30 rounded-2xl p-3">
-            {/* Red product image placeholder */}
-            <div className="aspect-square rounded-xl overflow-hidden bg-crimson/90 relative flex items-center justify-center">
-              <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
-              <span className="relative font-display text-blush/70 text-sm uppercase tracking-widest font-bold">Product Image</span>
-            </div>
+        
+        {/* Top red section — product image area */}
+        <div className="relative p-3 pb-0">
+          <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-crimson/90 relative flex items-center justify-center border border-blush/20">
+            <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
+            <span className="relative font-display text-blush/70 text-sm uppercase tracking-widest font-bold">Product Image</span>
           </div>
-          {/* Card bottom info */}
-          <div className="mt-4 text-center px-2 pb-1">
-            <h3 className="font-display text-blush font-bold text-sm md:text-base leading-tight">{product.name}</h3>
-            <p className="font-body text-blush/80 text-sm mt-1">{product.priceDisplay}</p>
-            <button
-              onClick={() => addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay })}
-              className="mt-3 border-2 border-blush text-blush font-display text-xs font-bold uppercase tracking-widest px-5 py-2 rounded-full hover:bg-blush hover:text-crimson transition-colors duration-300"
-            >
-              Add to Cart
-            </button>
-          </div>
+        </div>
+
+        {/* Bottom blush section — info area */}
+        <div className="relative mt-3 bg-blush rounded-t-2xl p-5 flex flex-col items-center flex-1">
+          <h3 className="font-display text-crimson font-bold text-sm md:text-base leading-tight text-center min-h-[2.5rem] flex items-center">{product.name}</h3>
+          <p className="font-body text-crimson/80 text-sm mt-1">{product.priceDisplay}</p>
+          <button
+            onClick={() => addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay })}
+            className="mt-3 border-2 border-crimson text-crimson font-display text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full hover:bg-crimson hover:text-blush transition-colors duration-300"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </motion.div>
