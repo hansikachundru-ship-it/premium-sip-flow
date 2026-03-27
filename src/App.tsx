@@ -10,6 +10,7 @@ const Cafe = lazy(() => import("./pages/Cafe.tsx"));
 const Menu = lazy(() => import("./pages/Menu.tsx"));
 const Shop = lazy(() => import("./pages/Shop.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
+const Checkout = lazy(() => import("./pages/Checkout.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/menu" element={<Menu />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/account" element={<Account />} />
+            <Route path="/checkout" element={<Checkout />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
