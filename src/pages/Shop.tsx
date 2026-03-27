@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, Minus, Plus, ShoppingBag, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import shopCardTexture from "@/assets/shop-card-texture.png";
@@ -69,7 +69,10 @@ const shopData: ShopCategory[] = [
 
 const ProductCard = ({ product, index }: { product: Product; index: number }) => {
   const addItem = useCartStore((s) => s.addItem);
+  const openCart = useCartStore((s) => s.openCart);
   const [currentImage, setCurrentImage] = useState(0);
+  const [quantity, setQuantity] = useState(1);
+  const [showAdded, setShowAdded] = useState(false);
   const images = product.images;
   const hasMultipleImages = images && images.length > 1;
 
@@ -82,6 +85,15 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
     setCurrentImage((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  const handleAddToCart = () => {
+    for (let i = 0; i < quantity; i++) {
+      addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay, image: product.images?.[0] });
+    }
+    setShowAdded(true);
+    setTimeout(() => setShowAdded(false), 2000);
+    setQuantity(1);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -90,6 +102,22 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       transition={{ delay: index * 0.1, duration: 0.5 }}
       className="group flex flex-col w-full max-w-[320px]"
     >
+      {/* Toast notification */}
+      <AnimatePresence>
+        {showAdded && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="mb-3 flex items-center gap-2 bg-crimson text-blush rounded-full px-4 py-2 mx-auto shadow-lg"
+          >
+            <Check className="w-4 h-4" />
+            <span className="font-body text-xs font-medium">Added to cart! 🛍️</span>
+            <button onClick={() => { openCart(); setShowAdded(false); }} className="ml-2 underline text-xs font-body">View Cart</button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <div className="rounded-3xl overflow-hidden bg-crimson relative shadow-lg shadow-crimson/20 flex flex-col h-full">
         <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" />
 
@@ -101,8 +129,8 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
               <img
                 src={images[currentImage]}
                 alt={product.name}
-                loading="eager"
-                decoding="sync"
+                loading="lazy"
+                decoding="async"
                 className="relative w-full h-full object-cover"
               />
             ) : (
@@ -142,15 +170,36 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
         </div>
 
         {/* Bottom blush section */}
-        <div className="relative bg-blush rounded-t-2xl p-5 flex flex-col items-center flex-1">
+        <div className="relative bg-blush rounded-t-2xl p-4 md:p-5 flex flex-col items-center flex-1">
           <h3 className="font-display text-crimson font-bold text-sm md:text-base leading-tight text-center min-h-[2.5rem] flex items-center">{product.name}</h3>
           <p className="font-body text-crimson/80 text-sm mt-1">{product.priceDisplay}</p>
-          <button
-            onClick={() => addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay, image: product.images?.[0] })}
-            className="mt-3 border-2 border-crimson text-crimson font-display text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full hover:bg-crimson hover:text-blush transition-colors duration-300"
-          >
-            Add to Cart
-          </button>
+
+          {/* Quantity + Add to Cart row */}
+          <div className="mt-3 flex items-center gap-3 w-full">
+            <div className="flex items-center bg-crimson/5 rounded-lg overflow-hidden border border-crimson/15">
+              <button
+                onClick={() => setQuantity((q) => Math.max(1, q - 1))}
+                className="px-2.5 py-1.5 text-crimson hover:bg-crimson/10 transition-colors"
+                aria-label="Decrease quantity"
+              >
+                <Minus className="w-3.5 h-3.5" />
+              </button>
+              <span className="px-3 py-1.5 font-body text-crimson text-sm font-medium min-w-[2rem] text-center">{quantity}</span>
+              <button
+                onClick={() => setQuantity((q) => q + 1)}
+                className="px-2.5 py-1.5 text-crimson hover:bg-crimson/10 transition-colors"
+                aria-label="Increase quantity"
+              >
+                <Plus className="w-3.5 h-3.5" />
+              </button>
+            </div>
+            <button
+              onClick={handleAddToCart}
+              className="flex-1 border-2 border-crimson text-crimson font-display text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full hover:bg-crimson hover:text-blush transition-colors duration-300"
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
       </div>
     </motion.div>

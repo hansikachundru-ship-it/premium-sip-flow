@@ -78,9 +78,11 @@ const Navbar = () => {
               </button>
               <button onClick={openCart} className="text-blush/70 hover:text-blush transition-colors relative" aria-label="Cart">
                 <ShoppingBag className="w-4 h-4" />
-                <span className="absolute -top-1.5 -right-1.5 bg-blush text-crimson text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">
-                  {itemCount}
-                </span>
+                {itemCount > 0 && (
+                  <span className="absolute -top-1.5 -right-1.5 bg-blush text-crimson text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center animate-in zoom-in-50 duration-200">
+                    {itemCount}
+                  </span>
+                )}
               </button>
             </div>
           </div>
