@@ -144,7 +144,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
           <h3 className="font-display text-crimson font-bold text-sm md:text-base leading-tight text-center min-h-[2.5rem] flex items-center">{product.name}</h3>
           <p className="font-body text-crimson/80 text-sm mt-1">{product.priceDisplay}</p>
           <button
-            onClick={() => addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay })}
+            onClick={() => addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay, image: product.images?.[0] })}
             className="mt-3 border-2 border-crimson text-crimson font-display text-xs font-bold uppercase tracking-widest px-6 py-2 rounded-full hover:bg-crimson hover:text-blush transition-colors duration-300"
           >
             Add to Cart
