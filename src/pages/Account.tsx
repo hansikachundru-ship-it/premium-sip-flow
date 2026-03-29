@@ -66,19 +66,19 @@ const Account = () => {
   return (
     <div className="min-h-screen bg-blush">
       <Navbar />
-      <main className="pt-8 pb-16 px-6 md:px-12 lg:px-20 max-w-4xl mx-auto">
-        <h1 className="font-display text-crimson text-2xl md:text-3xl font-extrabold uppercase tracking-wide mb-8">
+      <main className="pt-6 sm:pt-8 pb-12 sm:pb-16 px-4 sm:px-6 md:px-12 lg:px-20 max-w-4xl mx-auto">
+        <h1 className="font-display text-crimson text-xl sm:text-2xl md:text-3xl font-extrabold uppercase tracking-wide mb-5 sm:mb-8">
           My Account
         </h1>
 
-        <div className="space-y-6">
+        <div className="space-y-4 sm:space-y-6">
           {/* Personal Details */}
-          <div className="bg-blush-light rounded-2xl p-6 border border-crimson/10">
-            <div className="flex items-center gap-3 mb-4">
-              <User className="w-5 h-5 text-crimson" />
-              <h2 className="font-display text-crimson text-base font-bold uppercase tracking-wider">Personal Details</h2>
+          <div className="bg-blush-light rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-crimson/10">
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
+              <User className="w-4 h-4 sm:w-5 sm:h-5 text-crimson" />
+              <h2 className="font-display text-crimson text-sm sm:text-base font-bold uppercase tracking-wider">Personal Details</h2>
             </div>
-            <div className="space-y-2 font-body text-crimson/70 text-sm">
+            <div className="space-y-1.5 sm:space-y-2 font-body text-crimson/70 text-xs sm:text-sm">
               <p><span className="font-medium text-crimson">Name:</span> {user?.user_metadata?.full_name || "Not set"}</p>
               <p><span className="font-medium text-crimson">Email:</span> {user?.email}</p>
               <p><span className="font-medium text-crimson">Phone:</span> {user?.user_metadata?.phone || "Not set"}</p>
@@ -86,39 +86,39 @@ const Account = () => {
           </div>
 
           {/* Order History */}
-          <div className="bg-blush-light rounded-2xl p-6 border border-crimson/10">
-            <div className="flex items-center gap-3 mb-4">
-              <Package className="w-5 h-5 text-crimson" />
-              <h2 className="font-display text-crimson text-base font-bold uppercase tracking-wider">Order History</h2>
+          <div className="bg-blush-light rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-crimson/10">
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
+              <Package className="w-4 h-4 sm:w-5 sm:h-5 text-crimson" />
+              <h2 className="font-display text-crimson text-sm sm:text-base font-bold uppercase tracking-wider">Order History</h2>
             </div>
             {orders.length === 0 ? (
-              <p className="font-body text-crimson/40 text-sm">No orders yet. Start shopping to see your orders here!</p>
+              <p className="font-body text-crimson/40 text-xs sm:text-sm">No orders yet. Start shopping to see your orders here!</p>
             ) : (
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 {orders.map((order: any) => (
-                  <div key={order.id} className="border border-crimson/10 rounded-xl p-4 bg-blush">
-                    <div className="flex justify-between items-start mb-3">
+                  <div key={order.id} className="border border-crimson/10 rounded-lg sm:rounded-xl p-3 sm:p-4 bg-blush">
+                    <div className="flex justify-between items-start mb-2 sm:mb-3">
                       <div>
-                        <p className="font-display text-crimson text-xs font-bold uppercase tracking-wider">
+                        <p className="font-display text-crimson text-[10px] sm:text-xs font-bold uppercase tracking-wider">
                           Order #{order.id.slice(0, 8)}
                         </p>
-                        <p className="font-body text-crimson/50 text-xs mt-1">
+                        <p className="font-body text-crimson/50 text-[10px] sm:text-xs mt-0.5 sm:mt-1">
                           {new Date(order.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
                         </p>
                       </div>
-                      <span className="bg-matcha/20 text-matcha-dark font-display text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                      <span className="bg-matcha/20 text-matcha-dark font-display text-[8px] sm:text-[10px] font-bold uppercase tracking-wider px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
                         {order.status}
                       </span>
                     </div>
-                    <div className="space-y-1">
+                    <div className="space-y-0.5 sm:space-y-1">
                       {order.items?.map((item: any, i: number) => (
-                        <div key={i} className="flex justify-between font-body text-crimson/70 text-xs">
+                        <div key={i} className="flex justify-between font-body text-crimson/70 text-[10px] sm:text-xs">
                           <span>{item.product_name} × {item.quantity}</span>
                           <span>Rs. {(item.price * item.quantity).toLocaleString("en-IN")}</span>
                         </div>
                       ))}
                     </div>
-                    <div className="flex justify-between mt-2 pt-2 border-t border-crimson/10 font-display text-crimson text-xs font-bold">
+                    <div className="flex justify-between mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-crimson/10 font-display text-crimson text-[10px] sm:text-xs font-bold">
                       <span>Total</span>
                       <span>Rs. {Number(order.total_amount).toLocaleString("en-IN")}</span>
                     </div>
@@ -129,20 +129,20 @@ const Account = () => {
           </div>
 
           {/* Saved Addresses */}
-          <div className="bg-blush-light rounded-2xl p-6 border border-crimson/10">
-            <div className="flex items-center gap-3 mb-4">
-              <MapPin className="w-5 h-5 text-crimson" />
-              <h2 className="font-display text-crimson text-base font-bold uppercase tracking-wider">Saved Addresses</h2>
+          <div className="bg-blush-light rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-crimson/10">
+            <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-crimson" />
+              <h2 className="font-display text-crimson text-sm sm:text-base font-bold uppercase tracking-wider">Saved Addresses</h2>
             </div>
-            <p className="font-body text-crimson/40 text-sm">No addresses saved yet.</p>
+            <p className="font-body text-crimson/40 text-xs sm:text-sm">No addresses saved yet.</p>
           </div>
 
           {/* Logout */}
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 border-2 border-crimson text-crimson font-display text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-full hover:bg-crimson hover:text-blush transition-colors"
+            className="flex items-center gap-2 border-2 border-crimson text-crimson font-display text-[10px] sm:text-xs font-bold uppercase tracking-widest px-5 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-crimson hover:text-blush transition-colors"
           >
-            <LogOut className="w-4 h-4" />
+            <LogOut className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
             Log Out
           </button>
         </div>
