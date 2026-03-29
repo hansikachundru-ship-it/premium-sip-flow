@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Clock, ExternalLink, Wifi } from "lucide-react";
+import { MapPin, Clock, Wifi } from "lucide-react";
 
 import cafeHero from "@/assets/cafe-real.png";
 import cafeGallery5 from "@/assets/cafe-gallery-5.png";
@@ -35,12 +35,12 @@ const CafeSection = () => {
   return (
     <section className="bg-blush">
       {/* Store Locator */}
-      <div className="mx-auto max-w-7xl px-4 pt-4 pb-4 md:pt-6 md:pb-6">
+      <div className="mx-auto max-w-7xl px-3 sm:px-4 pt-4 pb-4 md:pt-6 md:pb-6">
 
         {/* Store Locator Layout */}
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-0 rounded-2xl overflow-hidden shadow-lg bg-crimson min-h-[420px]">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-0 rounded-2xl overflow-hidden shadow-lg bg-crimson min-h-[auto] md:min-h-[420px]">
           {/* Left Panel - Store Info */}
-          <div className="md:col-span-2 p-6 flex flex-col gap-3">
+          <div className="md:col-span-2 p-4 sm:p-6 flex flex-col gap-3">
             {/* Search Bar */}
             <div className="relative mb-2">
               <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-blush/60" />
@@ -52,15 +52,15 @@ const CafeSection = () => {
             </div>
 
             {/* Store Card */}
-            <div className="rounded-xl border border-blush/20 bg-blush/10 p-4">
-              <div className="flex gap-4">
+            <div className="rounded-xl border border-blush/20 bg-blush/10 p-3 sm:p-4">
+              <div className="flex gap-3 sm:gap-4">
                 <img
                   src={cafeHero}
                   alt="Latcha Cafe JP Nagar"
-                  className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover flex-shrink-0"
                 />
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-display text-lg font-bold text-blush">
+                  <h3 className="font-display text-base sm:text-lg font-bold text-blush">
                     JP Nagar
                   </h3>
                   <p className="font-body text-xs text-blush/70 mt-0.5">
@@ -74,16 +74,16 @@ const CafeSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between mt-4 pt-3 border-t border-blush/15">
-                <div className="flex items-center gap-1.5">
-                  <MapPin className="h-3.5 w-3.5 text-blush/50" />
-                  <span className="font-body text-xs text-blush/70">JP Nagar, Bengaluru</span>
+              <div className="flex items-center justify-between mt-3 sm:mt-4 pt-3 border-t border-blush/15 gap-2">
+                <div className="flex items-center gap-1.5 min-w-0">
+                  <MapPin className="h-3.5 w-3.5 text-blush/50 flex-shrink-0" />
+                  <span className="font-body text-[10px] sm:text-xs text-blush/70 truncate">JP Nagar, Bengaluru</span>
                 </div>
                 <a
                   href={GOOGLE_MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-blush text-crimson font-display text-xs font-bold px-4 py-2 rounded-full hover:bg-blush-dark transition-colors"
+                  className="inline-flex items-center gap-1.5 bg-blush text-crimson font-display text-[10px] sm:text-xs font-bold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full hover:bg-blush-dark transition-colors whitespace-nowrap flex-shrink-0"
                 >
                   Show Directions
                 </a>
@@ -91,19 +91,19 @@ const CafeSection = () => {
             </div>
 
             {/* Opening Hours */}
-            <div className="rounded-xl bg-blush p-5 text-crimson">
+            <div className="rounded-xl bg-blush p-4 sm:p-5 text-crimson">
               <div className="flex items-center gap-2 mb-3">
                 <Clock className="h-4 w-4 text-crimson/80" />
-                <h4 className="font-display text-sm font-bold uppercase tracking-wider">
+                <h4 className="font-display text-xs sm:text-sm font-bold uppercase tracking-wider">
                   Opening Hours
                 </h4>
               </div>
               <div className="space-y-2 font-body">
                 <div className="flex items-center justify-between">
-                  <span className="text-xs font-semibold uppercase tracking-wide">
+                  <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide">
                     Monday – Sunday
                   </span>
-                  <span className="text-xs text-crimson/80">
+                  <span className="text-[10px] sm:text-xs text-crimson/80">
                     11:00 AM – 1:00 AM
                   </span>
                 </div>
@@ -115,7 +115,7 @@ const CafeSection = () => {
           </div>
 
           {/* Right Panel - Map */}
-          <div className="md:col-span-3 relative min-h-[300px]">
+          <div className="md:col-span-3 relative min-h-[250px] sm:min-h-[300px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.8!2d77.59!3d12.91!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU0JzM2LjAiTiA3N8KwMzUnMjQuMCJF!5e0!3m2!1sen!2sin!4v1700000000000"
               className="absolute inset-0 h-full w-full border-0"
@@ -136,27 +136,27 @@ const CafeSection = () => {
       </div>
 
       {/* Auto-scrolling Gallery */}
-      <div className="pt-4 pb-10 md:pt-6 md:pb-16">
+      <div className="pt-4 pb-8 sm:pb-10 md:pt-6 md:pb-16">
         <motion.h2
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-8 text-center font-display text-2xl font-extrabold text-crimson md:text-4xl"
+          className="mb-6 sm:mb-8 text-center font-display text-xl sm:text-2xl font-extrabold text-crimson md:text-4xl"
         >
           Inside The Cafe
         </motion.h2>
 
         <div className="overflow-hidden relative">
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-blush to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-blush to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-r from-blush to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-8 sm:w-16 bg-gradient-to-l from-blush to-transparent z-10 pointer-events-none" />
           <div
-            className="flex gap-4 animate-marquee-gallery"
+            className="flex gap-3 sm:gap-4 animate-marquee-gallery"
             style={{ width: "max-content" }}
           >
             {[...galleryImages, ...galleryImages].map((img, i) => (
               <div
                 key={i}
-                className="h-60 w-52 flex-shrink-0 overflow-hidden rounded-2xl shadow-lg md:h-80 md:w-64"
+                className="h-44 w-36 sm:h-60 sm:w-52 flex-shrink-0 overflow-hidden rounded-xl sm:rounded-2xl shadow-lg md:h-80 md:w-64"
               >
                 <img
                   src={img.src}

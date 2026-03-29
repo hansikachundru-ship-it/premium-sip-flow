@@ -29,7 +29,7 @@ const InstagramSection = () => {
   const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const animRef = useRef<number>();
-  const speed = 0.5; // px per frame
+  const speed = 0.5;
 
   useEffect(() => {
     const track = trackRef.current;
@@ -39,7 +39,6 @@ const InstagramSection = () => {
       setOffset((prev) => {
         const halfWidth = track.scrollWidth / 2;
         const next = prev + speed;
-        // When we've scrolled through the first set, seamlessly reset
         return next >= halfWidth ? 0 : next;
       });
       animRef.current = requestAnimationFrame(animate);
@@ -51,18 +50,17 @@ const InstagramSection = () => {
     };
   }, []);
 
-  // Double the items for seamless loop
   const allReels = [...reelItems, ...reelItems];
   const allColors = [...reelColors, ...reelColors];
 
   return (
-    <section className="py-16 md:py-24 bg-blush overflow-hidden">
-      <div className="text-center mb-10 md:mb-14 px-6">
+    <section className="py-10 sm:py-16 md:py-24 bg-blush overflow-hidden">
+      <div className="text-center mb-8 sm:mb-10 md:mb-14 px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-3 whitespace-nowrap"
+          className="font-display text-crimson text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold mb-2 sm:mb-3"
         >
           We're kinda cute on the 'gram
         </motion.h2>
@@ -71,17 +69,17 @@ const InstagramSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="font-body text-blush text-sm md:text-base lg:text-lg"
+          className="font-body text-blush text-xs sm:text-sm md:text-base lg:text-lg"
         >
           Join our community to stay updated with our creations
         </motion.p>
       </div>
 
       {/* Smooth circular carousel */}
-      <div className="overflow-hidden mb-10 md:mb-14">
+      <div className="overflow-hidden mb-8 sm:mb-10 md:mb-14">
         <div
           ref={trackRef}
-          className="flex gap-4 md:gap-5 will-change-transform"
+          className="flex gap-3 sm:gap-4 md:gap-5 will-change-transform"
           style={{ transform: `translateX(-${offset}px)` }}
         >
           {allReels.map((reel, i) => (
@@ -90,7 +88,7 @@ const InstagramSection = () => {
               href={reel.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${allColors[i % allColors.length]} rounded-2xl w-44 h-60 md:w-52 md:h-72 lg:w-56 lg:h-80 flex-shrink-0 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300 overflow-hidden relative`}
+              className={`${allColors[i % allColors.length]} rounded-xl sm:rounded-2xl w-32 h-44 sm:w-44 sm:h-60 md:w-52 md:h-72 lg:w-56 lg:h-80 flex-shrink-0 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300 overflow-hidden relative`}
             >
               {reel.video ? (
                 <video
@@ -99,24 +97,24 @@ const InstagramSection = () => {
                   autoPlay
                   loop
                   playsInline
-                  className="absolute inset-0 w-full h-full object-cover rounded-2xl"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl sm:rounded-2xl"
                 />
               ) : (
-                <Instagram className="w-7 h-7 md:w-8 md:h-8 text-crimson/40" />
+                <Instagram className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-crimson/40" />
               )}
             </a>
           ))}
         </div>
       </div>
 
-      <div className="text-center">
+      <div className="text-center px-4">
         <a
           href="https://www.instagram.com/siplatcha"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-crimson text-blush font-display font-bold text-sm md:text-base px-10 py-4 rounded-full hover:bg-crimson-dark transition-colors uppercase tracking-wider"
+          className="inline-flex items-center gap-2 bg-crimson text-blush font-display font-bold text-xs sm:text-sm md:text-base px-6 sm:px-10 py-3 sm:py-4 rounded-full hover:bg-crimson-dark transition-colors uppercase tracking-wider"
         >
-          <Instagram className="w-5 h-5 md:w-6 md:h-6" />
+          <Instagram className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
           Follow us on Instagram
         </a>
       </div>

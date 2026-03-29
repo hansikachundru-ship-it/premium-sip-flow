@@ -54,10 +54,10 @@ const sections = [
 const ShopSection = () => {
   return (
     <section className="bg-blush">
-      {sections.map((item, i) => (
+      {sections.map((item) => (
         <div
           key={item.title}
-          className={`grid grid-cols-1 md:grid-cols-2`}
+          className="grid grid-cols-1 md:grid-cols-2"
         >
           {/* Text Side */}
           <motion.div
@@ -65,30 +65,30 @@ const ShopSection = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className={`flex flex-col justify-center px-10 md:px-16 lg:px-20 xl:px-24 py-6 md:py-8 ${
+            className={`flex flex-col justify-center px-5 sm:px-8 md:px-16 lg:px-20 xl:px-24 py-6 md:py-8 ${
               item.reverse ? "md:order-2" : "md:order-1"
             }`}
           >
-            <p className="font-body text-crimson/60 text-xs md:text-sm uppercase tracking-widest mb-2">
+            <p className="font-body text-crimson/60 text-[10px] sm:text-xs md:text-sm uppercase tracking-widest mb-1.5 sm:mb-2">
               {item.subtitle}
             </p>
-            <h2 className="font-display text-crimson text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide mb-4">
+            <h2 className="font-display text-crimson text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold uppercase tracking-wide mb-3 sm:mb-4">
               {item.title}
             </h2>
-            <p className="font-body text-charcoal/70 text-sm md:text-base leading-relaxed mb-5 text-justify">
+            <p className="font-body text-charcoal/70 text-xs sm:text-sm md:text-base leading-relaxed mb-4 sm:mb-5 text-justify">
               {item.desc}
             </p>
-            <ul className="font-body text-charcoal/70 text-sm md:text-base space-y-2 mb-6 max-w-md">
+            <ul className="font-body text-charcoal/70 text-xs sm:text-sm md:text-base space-y-1.5 sm:space-y-2 mb-4 sm:mb-6 max-w-md">
               {item.details.map((detail) => (
-                <li key={detail} className="flex items-center gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-crimson/40 flex-shrink-0" />
-                  {detail}
+                <li key={detail} className="flex items-start gap-2 sm:gap-2.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-crimson/40 flex-shrink-0 mt-1.5" />
+                  <span>{detail}</span>
                 </li>
               ))}
             </ul>
             <a
               href={item.cta === "Explore Drinks" ? "/menu" : item.cta === "Shop Merch" ? "/shop#merch" : "/shop#matcha"}
-              className="inline-block border-2 border-crimson text-crimson font-display text-xs md:text-sm font-bold uppercase tracking-widest px-6 py-3 hover:bg-crimson hover:text-blush transition-colors w-fit"
+              className="inline-block border-2 border-crimson text-crimson font-display text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-widest px-5 sm:px-6 py-2.5 sm:py-3 hover:bg-crimson hover:text-blush transition-colors w-fit"
             >
               {item.cta}
             </a>
@@ -107,7 +107,9 @@ const ShopSection = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover aspect-square md:aspect-auto md:min-h-[420px] lg:min-h-[480px]"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-cover aspect-[4/3] sm:aspect-square md:aspect-auto md:min-h-[420px] lg:min-h-[480px]"
             />
           </motion.div>
         </div>
