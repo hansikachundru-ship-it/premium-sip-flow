@@ -60,12 +60,12 @@ const Menu = () => {
             {activeTab === "classic" && (
               <MenuCard
                 key="classic"
-                variant="blush"
+                variant="crimson"
                 title="Classic Iced Matcha Lattes"
                 subtitle="Handcrafted with premium grade matcha"
                 priceLine="3G Matcha  ·  Regular @ ₹349  ·  Oat Milk @ ₹399"
                 items={classicLattes}
-                itemVariant="light"
+                itemVariant="dark"
                 footer={
                   <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-matcha/10 rounded-xl border border-matcha/20 text-center">
                     <p className="text-xs sm:text-sm font-semibold text-matcha-dark font-display">Extra Matcha Shot – Add On</p>
