@@ -7,7 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 
 const Cafe = lazy(() => import("./pages/Cafe.tsx"));
-
+const Menu = lazy(() => import("./pages/Menu.tsx"));
 const Shop = lazy(() => import("./pages/Shop.tsx"));
 const Account = lazy(() => import("./pages/Account.tsx"));
 const Checkout = lazy(() => import("./pages/Checkout.tsx"));
@@ -25,7 +25,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/cafe" element={<Cafe />} />
-            
+            <Route path="/menu" element={<Menu />} />
             <Route path="/shop" element={<Shop />} />
             <Route path="/account" element={<Account />} />
             <Route path="/checkout" element={<Checkout />} />
