@@ -97,7 +97,7 @@ const Menu = () => {
                 items={softServes}
                 itemVariant="dark"
                 footer={
-                  <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-matcha/10 rounded-xl border border-matcha/20 text-center">
+                  <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-blush/30 rounded-xl border border-matcha/20 text-center">
                     <p className="text-xs sm:text-sm font-semibold text-matcha-dark font-display">Matcha Affogato – Add On @ ₹80</p>
                     <p className="text-[10px] sm:text-xs text-matcha-dark/70 font-body mt-1" style={{ fontFamily: "var(--font-handwriting)" }}>
                       Add 2G of premium grade matcha whisk on top of our premium soft serves
