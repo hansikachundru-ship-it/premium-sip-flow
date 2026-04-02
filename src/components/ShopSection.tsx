@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import heroProduct from "@/assets/hero-product.png";
 import heroDrinks from "@/assets/hero-drinks.png";
-import heroHampers from "@/assets/hero-hampers.png";
 
 const sections = [
   {
@@ -33,21 +32,6 @@ const sections = [
     image: heroDrinks,
     cta: "Explore Drinks",
     reverse: true,
-  },
-  {
-    title: "MERCH",
-    subtitle: "Curated for Every Occasion",
-    desc: "The perfect matcha gift for every occasion. Our curated hampers bring together premium matcha, accessories, and treats, beautifully packed and ready to impress. Give the gift of good matcha. Whether it's a birthday, anniversary, or just because, our hampers are designed to make someone's day a whole lot greener.",
-    details: [
-      "Premium packaging included",
-      "Personalised gift notes",
-      "Multiple hamper sizes available",
-      "Accessories and treats included",
-      "Perfect for any celebration",
-    ],
-    image: heroHampers,
-    cta: "Shop Merch",
-    reverse: false,
   },
 ];
 
