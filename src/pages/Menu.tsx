@@ -147,7 +147,7 @@ const MenuCard = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.35 }}
-      className="max-w-3xl mx-auto"
+      className="max-w-5xl mx-auto"
     >
       <div
         className={`relative rounded-2xl sm:rounded-3xl border-2 overflow-hidden shadow-2xl ${
