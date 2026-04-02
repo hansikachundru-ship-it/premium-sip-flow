@@ -107,29 +107,6 @@ const Menu = () => {
               />
             )}
 
-            {activeTab === "desserts" && (
-              <MenuCard
-                key="desserts"
-                variant="crimson"
-                title="Desserts"
-                subtitle="Matcha-infused sweet treats"
-                priceLine=""
-                items={desserts}
-                itemVariant="dark"
-              />
-            )}
-
-            {activeTab === "savoury" && (
-              <MenuCard
-                key="savoury"
-                variant="blush"
-                title="Savoury Treats"
-                subtitle="Light bites with bold flavours"
-                priceLine=""
-                items={savouryTreats}
-                itemVariant="light"
-              />
-            )}
           </AnimatePresence>
         </div>
       </main>
