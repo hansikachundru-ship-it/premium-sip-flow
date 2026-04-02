@@ -11,9 +11,6 @@ import { supabase } from "@/integrations/supabase/client";
 const navLinks = [
   { label: "Shop", href: "/shop" },
   { label: "Matcha", href: "/shop#matcha" },
-  { label: "Accessories", href: "/shop#accessories" },
-  { label: "Merch", href: "/shop#merch" },
-  { label: "Menu", href: "/menu" },
   { label: "Café", href: "/cafe" },
 ];
 

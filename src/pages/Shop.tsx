@@ -47,24 +47,6 @@ const shopData: ShopCategory[] = [
       { id: "b3", name: "Ultimate Matcha Experience", price: 4499, priceDisplay: "Rs. 4,499" },
     ],
   },
-  {
-    id: "accessories",
-    title: "Shop Accessories",
-    products: [
-      { id: "a1", name: "Bamboo Chasen Whisk", price: 899, priceDisplay: "Rs. 899" },
-      { id: "a2", name: "Ceramic Chawan Bowl", price: 1199, priceDisplay: "Rs. 1,199" },
-      { id: "a3", name: "Bamboo Chashaku Scoop", price: 499, priceDisplay: "Rs. 499" },
-    ],
-  },
-  {
-    id: "merch",
-    title: "Shop Merch",
-    products: [
-      { id: "r1", name: "Latcha Signature Tote Bag", price: 699, priceDisplay: "Rs. 699" },
-      { id: "r2", name: "Latcha Ceramic Tumbler", price: 1099, priceDisplay: "Rs. 1,099" },
-      { id: "r3", name: "Latcha Matcha Sticker Pack", price: 299, priceDisplay: "Rs. 299" },
-    ],
-  },
 ];
 
 const ProductCard = ({ product, index }: { product: Product; index: number }) => {
