@@ -90,12 +90,12 @@ const Menu = () => {
             {activeTab === "soft" && (
               <MenuCard
                 key="soft"
-                variant="blush"
+                variant="crimson"
                 title="Premium Soft Serves"
                 subtitle=""
                 priceLine="Any standard flavor @ ₹249"
                 items={softServes}
-                itemVariant="light"
+                itemVariant="dark"
                 footer={
                   <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-matcha/10 rounded-xl border border-matcha/20 text-center">
                     <p className="text-xs sm:text-sm font-semibold text-matcha-dark font-display">Matcha Affogato – Add On @ ₹80</p>
