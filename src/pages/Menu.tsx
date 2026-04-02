@@ -12,8 +12,6 @@ const tabs = [
   { id: "classic", label: "Iced Matcha Lattes" },
   { id: "cloud", label: "Cloud Lattes" },
   { id: "soft", label: "Soft Serves" },
-  { id: "desserts", label: "Desserts" },
-  { id: "savoury", label: "Savoury Treats" },
 ] as const;
 
 type TabId = (typeof tabs)[number]["id"];
