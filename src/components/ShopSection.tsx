@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import heroProduct from "@/assets/hero-product.png";
 import heroDrinks from "@/assets/hero-drinks.png";
-import heroHampers from "@/assets/hero-hampers.png";
+
 
 const sections = [
   {
