@@ -68,7 +68,10 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
           {item.desc}
         </p>
         {item.sweetness && (
-          <p className={`text-[10px] md:text-xs mt-1 font-body font-semibold ${isDark ? "text-blush/50" : "text-crimson/50"}`}>
+          <p
+            className={`text-xs md:text-sm mt-1 ${isDark ? "text-blush/60" : "text-crimson/60"}`}
+            style={{ fontFamily: "var(--font-handwriting)" }}
+          >
             Sweetness: {item.sweetness}
           </p>
         )}
