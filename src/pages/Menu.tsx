@@ -37,7 +37,7 @@ const Menu = () => {
 
         {/* Tab Navigation */}
         <div className="sticky top-0 z-30" style={{ backgroundImage: `url(${patternBlushLight})`, backgroundSize: "300px", backgroundColor: "hsl(var(--blush))" }}>
-          <div className="max-w-4xl mx-auto flex gap-1 sm:gap-2 px-2 sm:px-4 py-3 sm:py-4 overflow-x-auto no-scrollbar">
+          <div className="max-w-5xl mx-auto flex gap-1 sm:gap-2 px-2 sm:px-4 py-3 sm:py-4 overflow-x-auto no-scrollbar">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
