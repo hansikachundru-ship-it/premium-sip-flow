@@ -5,15 +5,13 @@ import Footer from "@/components/Footer";
 import patternBlushLight from "@/assets/pattern-blush-hearts.png";
 import patternCrimson from "@/assets/pattern-crimson-new.png";
 import MenuItemCard from "@/components/menu/MenuItemCard";
-import { classicLattes, cloudLattes, softServes, desserts, savouryTreats } from "@/components/menu/MenuData";
+import { classicLattes, cloudLattes, softServes } from "@/components/menu/MenuData";
 import { motion, AnimatePresence } from "framer-motion";
 
 const tabs = [
   { id: "classic", label: "Iced Matcha Lattes" },
   { id: "cloud", label: "Cloud Lattes" },
   { id: "soft", label: "Soft Serves" },
-  { id: "desserts", label: "Desserts" },
-  { id: "savoury", label: "Savoury Treats" },
 ] as const;
 
 type TabId = (typeof tabs)[number]["id"];
@@ -62,12 +60,12 @@ const Menu = () => {
             {activeTab === "classic" && (
               <MenuCard
                 key="classic"
-                variant="blush"
+                variant="crimson"
                 title="Classic Iced Matcha Lattes"
                 subtitle="Handcrafted with premium grade matcha"
                 priceLine="3G Matcha  ·  Regular @ ₹349  ·  Oat Milk @ ₹399"
                 items={classicLattes}
-                itemVariant="light"
+                itemVariant="dark"
                 footer={
                   <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-matcha/10 rounded-xl border border-matcha/20 text-center">
                     <p className="text-xs sm:text-sm font-semibold text-matcha-dark font-display">Extra Matcha Shot – Add On</p>
@@ -92,12 +90,12 @@ const Menu = () => {
             {activeTab === "soft" && (
               <MenuCard
                 key="soft"
-                variant="blush"
+                variant="crimson"
                 title="Premium Soft Serves"
                 subtitle=""
                 priceLine="Any standard flavor @ ₹249"
                 items={softServes}
-                itemVariant="light"
+                itemVariant="dark"
                 footer={
                   <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-matcha/10 rounded-xl border border-matcha/20 text-center">
                     <p className="text-xs sm:text-sm font-semibold text-matcha-dark font-display">Matcha Affogato – Add On @ ₹80</p>
@@ -109,29 +107,6 @@ const Menu = () => {
               />
             )}
 
-            {activeTab === "desserts" && (
-              <MenuCard
-                key="desserts"
-                variant="crimson"
-                title="Desserts"
-                subtitle="Matcha-infused sweet treats"
-                priceLine=""
-                items={desserts}
-                itemVariant="dark"
-              />
-            )}
-
-            {activeTab === "savoury" && (
-              <MenuCard
-                key="savoury"
-                variant="blush"
-                title="Savoury Treats"
-                subtitle="Light bites with bold flavours"
-                priceLine=""
-                items={savouryTreats}
-                itemVariant="light"
-              />
-            )}
           </AnimatePresence>
         </div>
       </main>
