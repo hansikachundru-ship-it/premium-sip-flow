@@ -71,7 +71,7 @@ const MatchaBenefits = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.08 }}
-                  className="bg-crimson text-blush font-display font-bold text-xs sm:text-sm md:text-base uppercase tracking-wider px-3 sm:px-5 py-2 sm:py-2.5 rounded-full"
+                  className="bg-crimson text-blush font-display font-bold text-sm sm:text-base md:text-lg uppercase tracking-wider px-4 sm:px-6 py-2.5 sm:py-3 rounded-full"
                 >
                   {benefit}
                 </motion.span>
