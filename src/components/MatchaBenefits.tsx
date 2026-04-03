@@ -48,7 +48,7 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-5 leading-tight"
+              className="font-display text-crimson text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight"
             >
               More Than a Drink.<br />It's Latcha
             </motion.h2>
