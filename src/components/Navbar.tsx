@@ -91,7 +91,7 @@ const Navbar = () => {
       <nav className="bg-blush sticky top-0 z-50 border-t border-crimson/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           {/* Mobile toggle */}
-          <div className="md:hidden flex items-center justify-center h-10">
+          <div className="md:hidden flex items-center justify-center h-12">
             <button
               className="text-crimson"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -102,12 +102,12 @@ const Navbar = () => {
           </div>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center justify-center gap-8 h-10">
+          <div className="hidden md:flex items-center justify-center gap-8 h-12">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="text-crimson text-[12px] font-medium uppercase tracking-[0.2em] hover:text-crimson-dark transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1.5px] after:bg-crimson after:transition-all hover:after:w-full font-display"
+                className="text-crimson text-[14px] font-medium uppercase tracking-[0.2em] hover:text-crimson-dark transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1.5px] after:bg-crimson after:transition-all hover:after:w-full font-display"
               >
                 {link.label}
               </a>

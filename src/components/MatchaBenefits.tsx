@@ -38,7 +38,7 @@ const MatchaBenefits = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-matcha text-[10px] sm:text-xs tracking-[0.3em] mb-2 sm:mb-3"
+              className="text-matcha text-xs sm:text-sm tracking-[0.3em] mb-2 sm:mb-3"
               style={{ fontFamily: "'General Sans', sans-serif" }}
             >
               The Matcha Upgrade You've Been Missing
@@ -48,7 +48,7 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-crimson text-xl sm:text-2xl md:text-3xl font-extrabold mb-3 sm:mb-5 leading-tight"
+              className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-5 leading-tight"
             >
               More Than a Drink.<br />It's Latcha
             </motion.h2>
@@ -57,7 +57,7 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="font-body text-charcoal/70 text-xs sm:text-sm md:text-base mb-5 sm:mb-8 leading-relaxed sm:leading-loose"
+              className="font-body text-charcoal/70 text-sm sm:text-base md:text-lg mb-5 sm:mb-8 leading-relaxed sm:leading-loose"
             >
               <p>Most matcha is bitter, dull, and grown for volume. Ours isn't. Latcha sources exclusively from the Uji region of Japan — where the world's finest matcha has been grown for centuries. — blending two native cultivars, Okumidori and Samidori, for a cup that's layered, silk-smooth, with perfect Umami depth.</p>
             </motion.div>
@@ -71,7 +71,7 @@ const MatchaBenefits = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.08 }}
-                  className="bg-crimson text-blush font-display font-bold text-[10px] sm:text-xs md:text-sm uppercase tracking-wider px-3 sm:px-5 py-2 sm:py-2.5 rounded-full"
+                  className="bg-crimson text-blush font-display font-bold text-xs sm:text-sm md:text-base uppercase tracking-wider px-3 sm:px-5 py-2 sm:py-2.5 rounded-full"
                 >
                   {benefit}
                 </motion.span>
