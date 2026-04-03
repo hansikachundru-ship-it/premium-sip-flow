@@ -88,7 +88,7 @@ const InstagramSection = () => {
               href={reel.link}
               target="_blank"
               rel="noopener noreferrer"
-              className={`${allColors[i % allColors.length]} rounded-xl sm:rounded-2xl w-32 h-44 sm:w-44 sm:h-60 md:w-52 md:h-72 lg:w-56 lg:h-80 flex-shrink-0 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300 overflow-hidden relative`}
+              className={`${allColors[i % allColors.length]} rounded-xl sm:rounded-2xl w-40 h-56 sm:w-52 sm:h-72 md:w-60 md:h-80 lg:w-64 lg:h-[22rem] flex-shrink-0 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300 overflow-hidden relative`}
             >
               {reel.video ? (
                 <video
