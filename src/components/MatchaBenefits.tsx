@@ -38,7 +38,7 @@ const MatchaBenefits = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-matcha text-xs sm:text-sm tracking-[0.3em] mb-2 sm:mb-3"
+              className="text-matcha text-sm sm:text-base md:text-lg tracking-[0.3em] mb-2 sm:mb-3"
               style={{ fontFamily: "'General Sans', sans-serif" }}
             >
               The Matcha Upgrade You've Been Missing
@@ -48,7 +48,7 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl font-extrabold mb-3 sm:mb-5 leading-tight"
+              className="font-display text-crimson text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight"
             >
               More Than a Drink.<br />It's Latcha
             </motion.h2>
@@ -57,9 +57,9 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="font-body text-charcoal/70 text-sm sm:text-base md:text-lg mb-5 sm:mb-8 leading-relaxed sm:leading-loose"
+              className="font-body text-charcoal/70 text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 leading-relaxed sm:leading-loose text-justify"
             >
-              <p>Most matcha is bitter, dull, and grown for volume. Ours isn't. Latcha sources exclusively from the Uji region of Japan — where the world's finest matcha has been grown for centuries. — blending two native cultivars, Okumidori and Samidori, for a cup that's layered, silk-smooth, with perfect Umami depth.</p>
+              <p>Most matcha is bitter, dull, and grown for volume. Ours isn't. Latcha sources exclusively from the Uji region of Japan — where the world's finest matcha has been grown for centuries — blending two native cultivars, Okumidori and Samidori, for a cup that's layered, silk-smooth, with perfect Umami depth.</p>
             </motion.div>
 
             {/* Benefit Pills */}
@@ -71,7 +71,7 @@ const MatchaBenefits = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.08 }}
-                  className="bg-crimson text-blush font-display font-bold text-xs sm:text-sm md:text-base uppercase tracking-wider px-3 sm:px-5 py-2 sm:py-2.5 rounded-full"
+                  className="bg-crimson text-blush font-display font-bold text-sm sm:text-base md:text-lg uppercase tracking-wider px-4 sm:px-6 py-2.5 sm:py-3 rounded-full"
                 >
                   {benefit}
                 </motion.span>
@@ -84,7 +84,7 @@ const MatchaBenefits = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.7 }}
               href="/shop#matcha"
-              className="inline-block border-2 border-crimson text-crimson font-display font-bold text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3 sm:py-3.5 rounded-full hover:bg-crimson hover:text-blush transition-colors"
+              className="inline-block border-2 border-crimson text-crimson font-display font-bold text-sm sm:text-base uppercase tracking-wider px-7 sm:px-10 py-3.5 sm:py-4 rounded-full hover:bg-crimson hover:text-blush transition-colors"
             >
               Shop Matcha
             </motion.a>
