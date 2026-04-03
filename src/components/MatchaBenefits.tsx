@@ -57,7 +57,7 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="font-body text-charcoal/70 text-xs sm:text-sm md:text-base mb-5 sm:mb-8 leading-relaxed sm:leading-loose"
+              className="font-body text-charcoal/70 text-sm sm:text-base md:text-lg mb-5 sm:mb-8 leading-relaxed sm:leading-loose"
             >
               <p>Most matcha is bitter, dull, and grown for volume. Ours isn't. Latcha sources exclusively from the Uji region of Japan — where the world's finest matcha has been grown for centuries. — blending two native cultivars, Okumidori and Samidori, for a cup that's layered, silk-smooth, with perfect Umami depth.</p>
             </motion.div>
