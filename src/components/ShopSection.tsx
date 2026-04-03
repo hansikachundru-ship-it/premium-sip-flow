@@ -72,7 +72,7 @@ const ShopSection = () => {
             </ul>
             <a
               href={item.cta === "Explore Drinks" ? "/menu" : item.cta === "Shop Merch" ? "/shop#merch" : "/shop#matcha"}
-              className="inline-block border-2 border-crimson text-crimson font-display text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-widest px-5 sm:px-6 py-2.5 sm:py-3 hover:bg-crimson hover:text-blush transition-colors w-fit"
+              className="inline-block border-2 border-crimson text-crimson font-display text-sm sm:text-base md:text-lg font-bold uppercase tracking-widest px-5 sm:px-6 py-2.5 sm:py-3 hover:bg-crimson hover:text-blush transition-colors w-fit"
             >
               {item.cta}
             </a>
