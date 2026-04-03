@@ -91,7 +91,7 @@ const Navbar = () => {
       <nav className="bg-blush sticky top-0 z-50 border-t border-crimson/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           {/* Mobile toggle */}
-          <div className="md:hidden flex items-center justify-center h-12">
+          <div className="md:hidden flex items-center justify-center h-14">
             <button
               className="text-crimson"
               onClick={() => setMobileOpen(!mobileOpen)}
