@@ -12,9 +12,9 @@ const benefits = [
 
 const MatchaBenefits = () => {
   return (
-    <section className="py-10 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-blush">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-6 sm:gap-10 md:gap-16">
+    <section className="py-10 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-blush">
+      <div className="max-w-[1400px] mx-auto">
+        <div className="flex flex-col md:flex-row items-stretch gap-6 sm:gap-8 md:gap-10">
           {/* Image - Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -23,17 +23,17 @@ const MatchaBenefits = () => {
             transition={{ duration: 0.6 }}
             className="w-full md:w-1/2"
           >
-            <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl">
+            <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl h-full">
               <img
                 src={matchaTins}
                 alt="Latcha Matcha Powder tins"
-                className="w-full h-[280px] sm:h-[350px] md:h-[520px] object-cover"
+                className="w-full h-[280px] sm:h-[350px] md:h-full object-cover"
               />
             </div>
           </motion.div>
 
           {/* Text - Right Side */}
-          <div className="w-full md:w-1/2">
+          <div className="w-full md:w-1/2 flex flex-col justify-center">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -48,9 +48,9 @@ const MatchaBenefits = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="font-display text-crimson text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight"
+              className="font-display text-crimson text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight whitespace-nowrap"
             >
-              More Than a Drink.<br />It's Latcha
+              More Than a Drink. It's Latcha
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 15 }}
