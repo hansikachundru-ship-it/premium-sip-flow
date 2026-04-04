@@ -3,7 +3,7 @@ const pureImg = matchaLatteDefault;
 const honeyImg = matchaLatteDefault;
 const vanillaSilkImg = matchaLatteDefault;
 import strawberryImg from "@/assets/menu/strawberry.png";
-import blueberryImg from "@/assets/menu/blueberry.png";
+import blueberryImg from "@/assets/blueberry-vanilla-matcha.png";
 import raspberryImg from "@/assets/menu/raspberry.png";
 import mangoImg from "@/assets/menu/mango.png";
 import caramelToffeeImg from "@/assets/menu/caramel-toffee.png";
