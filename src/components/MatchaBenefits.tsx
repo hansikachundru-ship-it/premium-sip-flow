@@ -38,10 +38,9 @@ const MatchaBenefits = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-matcha text-sm sm:text-base md:text-lg tracking-[0.3em] mb-2 sm:mb-3"
-              style={{ fontFamily: "'General Sans', sans-serif" }}
+              className="font-body text-matcha text-sm sm:text-base md:text-lg uppercase tracking-widest mb-2 sm:mb-3"
             >
-              The Matcha Upgrade You've Been Missing
+              THE MATCHA UPGRADE YOU'VE BEEN MISSING
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
