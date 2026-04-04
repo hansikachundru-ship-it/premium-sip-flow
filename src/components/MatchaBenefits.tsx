@@ -83,7 +83,7 @@ const MatchaBenefits = () => {
               viewport={{ once: true }}
               transition={{ delay: 0.7 }}
               href="/shop#matcha"
-              className="inline-block border-2 border-crimson text-crimson font-display font-bold text-sm sm:text-base uppercase tracking-wider px-7 sm:px-10 py-3.5 sm:py-4 rounded-full hover:bg-crimson hover:text-blush transition-colors"
+              className="inline-block border-2 border-crimson text-crimson font-display font-bold text-sm sm:text-base uppercase tracking-widest px-5 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-crimson hover:text-blush transition-colors"
             >
               Shop Matcha
             </motion.a>
