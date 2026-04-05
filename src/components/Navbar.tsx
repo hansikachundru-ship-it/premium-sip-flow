@@ -48,9 +48,9 @@ const Navbar = () => {
     <>
       {/* Hero Header Band */}
       <div className="bg-crimson relative overflow-hidden">
-        <div className="px-8 py-6 sm:py-7 md:py-8 flex items-center justify-between relative">
+        <div className="px-12 md:px-16 lg:px-20 py-6 sm:py-7 md:py-8 flex items-center justify-between relative">
           {/* Left text */}
-          <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[160px] font-light">
+          <p className="hidden md:block text-blush/70 text-[12px] uppercase tracking-[0.2em] leading-snug font-body max-w-[200px] font-light">
             India's 1st Premium Matcha<br />& Café Chain
           </p>
 
@@ -65,18 +65,18 @@ const Navbar = () => {
 
           {/* Right - icons + text */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light">
+            <p className="hidden md:block text-blush/70 text-[12px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[200px] font-light">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
-            <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="flex items-center gap-3 sm:gap-4">
               <button onClick={() => setSearchOpen(true)} className="text-blush/70 hover:text-blush transition-colors" aria-label="Search">
-                <Search className="w-4 h-4" />
+                <Search className="w-5 h-5" />
               </button>
               <button onClick={handleProfileClick} className="text-blush/70 hover:text-blush transition-colors hidden md:block" aria-label="Account">
-                <User className="w-4 h-4" />
+                <User className="w-5 h-5" />
               </button>
               <button onClick={openCart} className="text-blush/70 hover:text-blush transition-colors relative" aria-label="Cart">
-                <ShoppingBag className="w-4 h-4" />
+                <ShoppingBag className="w-5 h-5" />
                 {itemCount > 0 && (
                   <span className="absolute -top-1.5 -right-1.5 bg-blush text-crimson text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center animate-in zoom-in-50 duration-200">
                     {itemCount}
