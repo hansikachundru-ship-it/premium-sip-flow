@@ -101,7 +101,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
 
         {/* Image area */}
         <div className="relative">
-          <div className="aspect-square overflow-hidden relative flex items-center justify-center">
+          <Link to={`/product/${product.id}`} className="aspect-square overflow-hidden relative flex items-center justify-center cursor-pointer">
             <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
             {images && images.length > 0 ? (
               <img
@@ -114,7 +114,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
             ) : (
               <span className="relative font-display text-blush/70 text-xs sm:text-sm uppercase tracking-widest font-bold">Product Image</span>
             )}
-          </div>
+          </Link>
 
           {hasMultipleImages && (
             <>
