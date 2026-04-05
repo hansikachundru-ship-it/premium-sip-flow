@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className="bg-crimson relative overflow-hidden">
         <div className="px-12 md:px-16 lg:px-20 py-6 sm:py-7 md:py-8 flex items-center justify-between relative">
           {/* Left text */}
-          <p className="hidden md:block text-blush/70 text-[12px] uppercase tracking-[0.2em] leading-snug font-body max-w-[200px] font-light">
+          <p className="hidden md:block text-blush/70 text-[13px] uppercase tracking-[0.2em] leading-snug font-body max-w-[200px] font-light">
             India's 1st Premium Matcha<br />& Café Chain
           </p>
 
