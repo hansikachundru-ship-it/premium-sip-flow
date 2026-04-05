@@ -67,7 +67,7 @@ const ProductDetail = () => {
           <ChevronRight className="w-3.5 h-3.5" />
           <Link to="/shop" className="hover:text-crimson transition-colors">Shop Matcha</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-crimson font-medium">Latcha Matcha Powder</span>
+          <span className="text-crimson font-medium">Matcha Powder</span>
         </nav>
 
         {/* Two-column layout */}
@@ -138,7 +138,7 @@ const ProductDetail = () => {
           {/* Right: Product info */}
           <div className="flex flex-col">
             <h1 className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
-              Latcha Matcha Powder
+              Matcha Powder
             </h1>
 
             <p className="font-body text-crimson text-xl sm:text-2xl font-semibold mt-3">
