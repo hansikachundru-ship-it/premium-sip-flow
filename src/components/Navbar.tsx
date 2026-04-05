@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import latchaLogoHero from "@/assets/latcha-logo-hero.png";
+import latchaLogoNav from "@/assets/latcha-logo-nav.png";
 import { useCartStore } from "@/stores/cartStore";
 import SearchOverlay from "@/components/SearchOverlay";
 import CartDrawer from "@/components/CartDrawer";
@@ -47,24 +48,24 @@ const Navbar = () => {
     <>
       {/* Hero Header Band */}
       <div className="bg-crimson relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 py-2.5 sm:py-3 md:py-4 flex items-end justify-between">
+        <div className="px-8 py-2.5 sm:py-3 md:py-4 flex items-center justify-between relative">
           {/* Left text */}
-          <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[160px] font-light pb-1">
+          <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[160px] font-light">
             India's 1st Premium Matcha<br />& Café Chain
           </p>
 
           {/* Center logo */}
-          <a href="/" className="flex items-center justify-center -mt-1 sm:-mt-2">
+          <a href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
             <img
-              src={latchaLogoHero}
+              src={latchaLogoNav}
               alt="Latcha"
-              className="h-10 sm:h-14 md:h-20 lg:h-24 w-auto object-contain mix-blend-lighten"
+              className="h-8 sm:h-10 md:h-14 lg:h-16 w-auto object-contain"
             />
           </a>
 
           {/* Right - icons + text */}
-          <div className="flex items-end gap-2 sm:gap-4 pb-0.5 sm:pb-1">
-            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light pb-0">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[160px] font-light">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
             <div className="flex items-center gap-2.5 sm:gap-3">
