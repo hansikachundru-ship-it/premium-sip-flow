@@ -14,11 +14,6 @@ const images = [matchaProduct1, matchaProduct2, matchaProduct3];
 
 const accordionData = [
   {
-    title: "Description",
-    content:
-      "From the historic, legendary farms of Shirakawa, Uji — Japan's most revered matcha terroir — this matcha reflects centuries of quiet mastery. Blended from native Uji cultivars — Okumidori × Samidori — this matcha is slow stone-milled to an ultra-fine 5–7 microns crafted for purity, depth and silk-smooth texture.",
-  },
-  {
     title: "Whisking Instructions",
     content:
       "Sift 1–2g of matcha into a bowl. Add 70ml of water at 80°C. Whisk briskly in a W-motion using a chasen (bamboo whisk) until frothy. For an iced latte, whisk with 30ml hot water, then pour over ice and milk of your choice.",
