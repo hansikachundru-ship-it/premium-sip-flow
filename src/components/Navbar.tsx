@@ -48,9 +48,9 @@ const Navbar = () => {
     <>
       {/* Hero Header Band */}
       <div className="bg-crimson relative overflow-hidden">
-        <div className="px-12 md:px-16 lg:px-20 py-6 sm:py-7 md:py-8 flex items-center justify-between relative">
+        <div className="px-16 md:px-20 lg:px-28 py-6 sm:py-7 md:py-8 flex items-center justify-between relative">
           {/* Left text */}
-          <p className="hidden md:block text-blush/70 text-[12px] uppercase tracking-[0.2em] leading-snug font-body max-w-[200px] font-light">
+          <p className="hidden md:block text-blush/70 text-[13px] uppercase tracking-[0.2em] leading-snug font-body max-w-[200px] font-light">
             India's 1st Premium Matcha<br />& Café Chain
           </p>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
 
           {/* Right - icons + text */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <p className="hidden md:block text-blush/70 text-[12px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[200px] font-light">
+            <p className="hidden md:block text-blush/70 text-[13px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[200px] font-light">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
             <div className="flex items-center gap-3 sm:gap-4">
