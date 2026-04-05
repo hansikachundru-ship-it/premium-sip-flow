@@ -65,7 +65,7 @@ const Navbar = () => {
 
           {/* Right - icons + text */}
           <div className="flex items-center gap-2 sm:gap-4">
-            <p className="hidden md:block text-blush/70 text-[12px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[200px] font-light">
+            <p className="hidden md:block text-blush/70 text-[13px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[200px] font-light">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
             <div className="flex items-center gap-3 sm:gap-4">
