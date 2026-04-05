@@ -48,7 +48,7 @@ const Navbar = () => {
     <>
       {/* Hero Header Band */}
       <div className="bg-crimson relative overflow-hidden">
-        <div className="px-8 py-2.5 sm:py-3 md:py-4 flex items-center justify-between relative">
+        <div className="px-8 py-4 sm:py-5 md:py-6 flex items-center justify-between relative">
           {/* Left text */}
           <p className="hidden md:block text-blush/70 text-[10px] uppercase tracking-[0.2em] leading-snug font-body max-w-[160px] font-light">
             India's 1st Premium Matcha<br />& Café Chain
