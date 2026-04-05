@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -147,7 +147,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
 
         {/* Bottom blush section */}
         <div className="relative bg-blush rounded-t-xl sm:rounded-t-2xl p-3 sm:p-4 md:p-5 flex flex-col items-center flex-1">
-          <h3 className="font-display text-crimson font-bold text-xs sm:text-sm md:text-base leading-tight text-center min-h-[2rem] sm:min-h-[2.5rem] flex items-center">{product.name}</h3>
+          <Link to={`/product/${product.id}`} className="font-display text-crimson font-bold text-xs sm:text-sm md:text-base leading-tight text-center min-h-[2rem] sm:min-h-[2.5rem] flex items-center hover:underline">{product.name}</Link>
           <p className="font-body text-crimson/80 text-xs sm:text-sm mt-0.5 sm:mt-1">{product.priceDisplay}</p>
 
           <button
