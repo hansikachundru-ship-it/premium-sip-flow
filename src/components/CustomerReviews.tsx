@@ -12,58 +12,58 @@ interface Review {
 const reviews: Review[] = [
   {
     name: "Vivin",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=750&fit=crop&crop=face",
     rating: 5,
     text: "Outstanding quality and value. I've recommended this to all my friends and family.",
     verified: true,
   },
   {
     name: "Vikas Khanna",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=600&h=750&fit=crop&crop=face",
     rating: 5,
     text: "Smoother than any matcha I've tried. No bitterness, just a clean taste.",
     verified: true,
   },
   {
     name: "Roni Sinha",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=750&fit=crop&crop=face",
     rating: 5,
     text: "I'm new to matcha and this didn't intimidate me at all. Very beginner-friendly.",
     verified: true,
   },
   {
     name: "Christy",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&h=750&fit=crop&crop=face",
     rating: 5,
     text: "No grainy texture at all — a big issue with other brands. Love this.",
     verified: true,
   },
   {
     name: "Arjun",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&h=750&fit=crop&crop=face",
     rating: 5,
     text: "Vibrant color and incredibly smooth taste. Best matcha I've had in India.",
     verified: true,
   },
   {
     name: "Priya M.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&h=750&fit=crop&crop=face",
     rating: 5,
     text: "My morning ritual is now complete. The froth is unreal with a bamboo whisk.",
     verified: true,
   },
   {
     name: "Karan S.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&h=750&fit=crop&crop=face",
     rating: 5,
-    text: "Switched from coffee to this — the energy is calm and sustained. No jitters.",
+    text: "Switched from coffee — the energy is calm and sustained. No jitters.",
     verified: true,
   },
   {
-    name: "Ananya R.",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face",
+    name: "Kezia Abrahams",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600&h=750&fit=crop&crop=face",
     rating: 5,
-    text: "Packaging is gorgeous and the matcha tastes even better. Premium quality.",
+    text: "I'm so impressed with the attention to detail. This has become my go-to brand!",
     verified: true,
   },
 ];
@@ -73,9 +73,7 @@ const CustomerReviews = () => {
   const [paused, setPaused] = useState(false);
   const animRef = useRef<number>(0);
   const posRef = useRef(0);
-  const speedRef = useRef(0.5);
 
-  // Duplicate cards for seamless loop
   const duplicated = [...reviews, ...reviews];
 
   useEffect(() => {
@@ -86,7 +84,7 @@ const CustomerReviews = () => {
 
     const step = () => {
       if (!paused) {
-        posRef.current += speedRef.current;
+        posRef.current += 0.4;
         if (posRef.current >= singleSetWidth) {
           posRef.current -= singleSetWidth;
         }
@@ -100,12 +98,12 @@ const CustomerReviews = () => {
   }, [paused]);
 
   return (
-    <section className="py-8 md:py-10 bg-blush overflow-hidden">
+    <section className="pt-6 pb-10 md:pt-8 md:pb-14 bg-blush overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 mb-6">
         <h2 className="font-display text-crimson text-xl sm:text-2xl md:text-3xl font-extrabold text-center uppercase tracking-wide">
           What Our Customers Say
         </h2>
-        <p className="font-body text-crimson/50 text-xs sm:text-sm text-center mt-1">
+        <p className="font-body text-crimson/45 text-xs sm:text-sm text-center mt-1">
           Hear from our happy customers
         </p>
       </div>
@@ -117,15 +115,16 @@ const CustomerReviews = () => {
       >
         <div
           ref={trackRef}
-          className="flex gap-4 w-max will-change-transform"
+          className="flex gap-5 w-max will-change-transform"
           style={{ paddingLeft: "16px" }}
         >
           {duplicated.map((review, i) => (
             <div
               key={i}
-              className="w-[260px] sm:w-[280px] md:w-[300px] flex-shrink-0 bg-crimson rounded-2xl p-5 flex flex-col items-center text-center shadow-md"
+              className="w-[280px] sm:w-[300px] md:w-[320px] flex-shrink-0 bg-crimson rounded-3xl overflow-hidden shadow-lg flex flex-col"
             >
-              <div className="w-16 h-16 rounded-full overflow-hidden mb-3 border-2 border-blush/30">
+              {/* Large image */}
+              <div className="mx-4 mt-4 rounded-2xl overflow-hidden aspect-[4/5]">
                 <img
                   src={review.image}
                   alt={review.name}
@@ -133,22 +132,26 @@ const CustomerReviews = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-display text-blush text-sm font-bold leading-tight">
-                {review.name}
-              </h3>
-              {review.verified && (
-                <span className="text-blush/40 text-[10px] font-body mt-0.5 uppercase tracking-wider">
-                  Verified Buyer
-                </span>
-              )}
-              <div className="flex gap-0.5 mt-2 mb-2">
-                {Array.from({ length: review.rating }).map((_, s) => (
-                  <Star key={s} className="w-3.5 h-3.5 fill-blush/80 text-blush/80" />
-                ))}
+
+              {/* Content */}
+              <div className="px-5 pt-4 pb-5 flex flex-col items-center text-center">
+                <h3 className="font-display text-blush text-base font-bold leading-tight">
+                  {review.name}
+                </h3>
+                <div className="flex gap-0.5 mt-2 mb-2">
+                  {Array.from({ length: review.rating }).map((_, s) => (
+                    <Star key={s} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                  ))}
+                </div>
+                <p className="font-body text-blush/70 text-xs leading-relaxed line-clamp-2">
+                  {review.text}
+                </p>
+                {review.verified && (
+                  <span className="text-blush/35 text-[9px] font-body mt-2 uppercase tracking-widest">
+                    Verified Buyer
+                  </span>
+                )}
               </div>
-              <p className="font-body text-blush/70 text-xs leading-relaxed">
-                {review.text}
-              </p>
             </div>
           ))}
         </div>
