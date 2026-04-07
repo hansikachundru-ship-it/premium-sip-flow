@@ -100,10 +100,10 @@ const CustomerReviews = () => {
           {duplicated.map((review, i) => (
             <div
               key={i}
-              className="w-[280px] sm:w-[300px] flex-shrink-0 bg-blush border-2 border-[#1a6b3c]/50 rounded-2xl p-5 flex flex-col items-center text-center shadow-sm"
+              className="w-[280px] sm:w-[300px] flex-shrink-0 bg-crimson rounded-2xl p-4 pb-5 flex flex-col items-center text-center shadow-md"
             >
               {/* Square image */}
-              <div className="w-[65%] aspect-square rounded-xl overflow-hidden mb-4">
+              <div className="w-[calc(100%-16px)] aspect-square rounded-xl overflow-hidden mb-4">
                 <img
                   src={review.image}
                   alt={review.name}
@@ -113,7 +113,7 @@ const CustomerReviews = () => {
               </div>
 
               {/* Name */}
-              <h3 className="font-display text-[#1a6b3c] text-base font-bold leading-tight">
+              <h3 className="font-display text-blush text-base font-bold leading-tight">
                 {review.name}
               </h3>
 
@@ -125,7 +125,7 @@ const CustomerReviews = () => {
               </div>
 
               {/* Review text */}
-              <p className="font-body text-[#1a6b3c]/70 text-sm leading-relaxed italic">
+              <p className="font-body text-blush/75 text-sm leading-relaxed italic">
                 {review.text}
               </p>
             </div>
