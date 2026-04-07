@@ -69,7 +69,7 @@ const InstagramSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
-          className="font-body text-blush text-xs sm:text-sm md:text-base lg:text-lg"
+          className="font-body text-crimson text-xs sm:text-sm md:text-base lg:text-lg"
         >
           Join our community to stay updated with our creations
         </motion.p>

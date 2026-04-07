@@ -83,7 +83,7 @@ const CustomerReviews = () => {
   return (
     <section className="pt-6 pb-10 md:pt-8 md:pb-12 bg-blush overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 mb-6">
-        <h2 className="font-display text-crimson text-xl sm:text-2xl md:text-3xl font-extrabold text-center tracking-wide">
+        <h2 className="font-display text-crimson text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center tracking-wide">
           What Our Customers Say
         </h2>
         <p className="font-body text-crimson/45 text-xs sm:text-sm text-center mt-1">
