@@ -86,7 +86,7 @@ const CustomerReviews = () => {
         <h2 className="font-display text-crimson text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center tracking-wide">
           What Our Customers Say
         </h2>
-        <p className="font-body text-crimson/45 text-xs sm:text-sm text-center mt-1">
+        <p className="font-body text-crimson text-xs sm:text-sm md:text-base lg:text-lg text-center mt-1">
           Hear from our happy customers
         </p>
       </div>
