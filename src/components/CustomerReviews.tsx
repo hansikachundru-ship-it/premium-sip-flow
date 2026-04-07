@@ -9,48 +9,48 @@ interface Review {
 const reviews: Review[] = [
   {
     name: "Vivin",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    text: "Outstanding quality and value. I've recommended this to all my friends and family. The taste is unlike anything else.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face",
+    text: "Outstanding quality and value. I've recommended this to all my friends and family.",
   },
   {
     name: "Vikas Khanna",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop&crop=face",
-    text: "Smoother than any matcha I've tried before. No strong bitterness, just a clean and delicate taste every single time.",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop&crop=face",
+    text: "Smoother than any matcha I've tried. No strong bitterness, just a clean taste.",
   },
   {
     name: "Roni Sinha",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
-    text: "I'm completely new to matcha and this didn't intimidate me at all. Very beginner-friendly and easy to prepare.",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop&crop=face",
+    text: "I'm new to matcha and this didn't intimidate me at all. Very beginner-friendly.",
   },
   {
     name: "Christy",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-    text: "No grainy texture at all — that was always a big issue with other brands I tried. Absolutely love this.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=face",
+    text: "No grainy texture at all — a big issue with other brands I tried. Love this.",
   },
   {
     name: "Arjun",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-    text: "The color is so vibrant and the taste is incredibly smooth. Easily the best matcha I've had in India.",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop&crop=face",
+    text: "Vibrant color and incredibly smooth taste. Best matcha I've had in India.",
   },
   {
-    name: "Priya M.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop&crop=face",
-    text: "My morning ritual is now complete. The froth you get with a bamboo whisk is absolutely unreal.",
+    name: "Maleka Ramchandani",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop&crop=face",
+    text: "Best purchase I've made this year. The customer service was exceptional and delivery was fast.",
   },
   {
     name: "Karan S.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    text: "Switched from coffee to this and haven't looked back. The energy is calm and sustained with zero jitters.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=face",
+    text: "Switched from coffee — the energy is calm and sustained. No jitters at all.",
   },
   {
     name: "Kezia Abrahams",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop&crop=face",
-    text: "I'm so impressed with the attention to detail — from packaging to taste. This has become my go-to brand!",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&h=500&fit=crop&crop=face",
+    text: "I'm so impressed with the attention to detail. This has become my go-to brand!",
   },
 ];
 
-const StarIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-blush/80">
+const YellowStar = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
   </svg>
 );
@@ -82,7 +82,7 @@ const CustomerReviews = () => {
 
   return (
     <section className="pt-6 pb-10 md:pt-8 md:pb-12 bg-blush overflow-hidden">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 mb-5">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 md:px-10 mb-6">
         <h2 className="font-display text-crimson text-xl sm:text-2xl md:text-3xl font-extrabold text-center uppercase tracking-wide">
           What Our Customers Say
         </h2>
@@ -96,14 +96,14 @@ const CustomerReviews = () => {
         onMouseEnter={() => setPaused(true)}
         onMouseLeave={() => setPaused(false)}
       >
-        <div ref={trackRef} className="flex gap-4 w-max will-change-transform pl-4">
+        <div ref={trackRef} className="flex gap-5 w-max will-change-transform pl-4">
           {duplicated.map((review, i) => (
             <div
               key={i}
-              className="w-[340px] sm:w-[370px] flex-shrink-0 bg-crimson rounded-2xl shadow-md p-4 flex items-center gap-4"
+              className="w-[280px] sm:w-[300px] flex-shrink-0 bg-blush border-2 border-[#1a6b3c]/50 rounded-2xl p-5 flex flex-col items-center text-center shadow-sm"
             >
               {/* Square image */}
-              <div className="w-16 h-16 flex-shrink-0 rounded-xl overflow-hidden">
+              <div className="w-[65%] aspect-square rounded-xl overflow-hidden mb-4">
                 <img
                   src={review.image}
                   alt={review.name}
@@ -112,20 +112,22 @@ const CustomerReviews = () => {
                 />
               </div>
 
-              {/* Content */}
-              <div className="flex-1 min-w-0">
-                <div className="flex gap-[2px] mb-1.5">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <StarIcon key={s} />
-                  ))}
-                </div>
-                <p className="font-body text-blush/75 text-[11px] leading-[1.5] line-clamp-3">
-                  {review.text}
-                </p>
-                <p className="font-display text-blush text-xs font-semibold mt-2">
-                  {review.name}
-                </p>
+              {/* Name */}
+              <h3 className="font-display text-[#1a6b3c] text-base font-bold leading-tight">
+                {review.name}
+              </h3>
+
+              {/* Stars */}
+              <div className="flex gap-0.5 mt-2 mb-3">
+                {Array.from({ length: 5 }).map((_, s) => (
+                  <YellowStar key={s} />
+                ))}
               </div>
+
+              {/* Review text */}
+              <p className="font-body text-[#1a6b3c]/70 text-sm leading-relaxed italic">
+                {review.text}
+              </p>
             </div>
           ))}
         </div>
