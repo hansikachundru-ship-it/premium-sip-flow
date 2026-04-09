@@ -20,7 +20,7 @@ const Footer = () => {
 
       <div className="text-blush py-12 sm:py-16 lg:py-20 px-6 sm:px-10 lg:px-16 xl:px-20" style={{ backgroundColor: '#B22F36' }}>
         <div className="max-w-[1280px] mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 lg:gap-12 mb-12 sm:mb-16">
             {/* Brand */}
             <div className="col-span-2 md:col-span-1">
               <img src={latchaLogoFooter} alt="Latcha" className="h-12 sm:h-14 md:h-16 w-auto object-contain mb-4 sm:mb-5" />
