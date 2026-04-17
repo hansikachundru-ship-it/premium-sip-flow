@@ -1,4 +1,5 @@
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import latchaLogoFooter from "@/assets/latcha-logo-footer.png";
 
 const Footer = () => {
@@ -33,9 +34,14 @@ const Footer = () => {
             <div>
               <h4 className="font-display text-[13px] sm:text-sm font-bold uppercase tracking-[0.2em] mb-4 sm:mb-5">About</h4>
               <ul className="space-y-2 sm:space-y-2.5">
-                {["Shop", "Matcha", "Accessories", "Hampers", "Menu", "Café"].map((link) => (
-                  <li key={link}>
-                    <a href="#" className="font-body text-blush/70 text-sm sm:text-[15px] hover:text-blush transition-colors">{link}</a>
+                {[
+                  { label: "Shop", to: "/shop" },
+                  { label: "Matcha", to: "/shop#matcha" },
+                  { label: "Menu", to: "/menu" },
+                  { label: "Café", to: "/cafe" },
+                ].map((link) => (
+                  <li key={link.label}>
+                    <Link to={link.to} className="font-body text-blush/70 text-sm sm:text-[15px] hover:text-blush transition-colors">{link.label}</Link>
                   </li>
                 ))}
               </ul>
