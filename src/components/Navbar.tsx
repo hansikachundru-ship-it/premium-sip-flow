@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import latchaLogoHero from "@/assets/latcha-logo-hero.png";
 import latchaLogoNav from "@/assets/latcha-logo-nav.png";
 import { useCartStore } from "@/stores/cartStore";
@@ -55,13 +55,13 @@ const Navbar = () => {
           </p>
 
           {/* Center logo */}
-          <a href="/" className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
+          <Link to="/" aria-label="Latcha home" className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center">
             <img
               src={latchaLogoNav}
               alt="Latcha"
               className="h-8 sm:h-10 md:h-14 lg:h-16 w-auto object-contain"
             />
-          </a>
+          </Link>
 
           {/* Right - icons + text */}
           <div className="flex items-center gap-2 sm:gap-4">
