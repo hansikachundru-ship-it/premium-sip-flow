@@ -51,7 +51,7 @@ const CartDrawer = () => {
                     <div key={item.id} className="flex gap-4 py-3 border-b border-crimson/10">
                       <div className="w-16 h-16 rounded-lg bg-crimson/10 flex items-center justify-center flex-shrink-0 overflow-hidden">
                         {item.image ? (
-                          <img src={item.image} alt={item.name} className="w-full h-full object-cover rounded-lg" />
+                          <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="w-full h-full object-cover rounded-lg" />
                         ) : (
                           <ShoppingBag className="w-6 h-6 text-crimson/30" />
                         )}
