@@ -97,12 +97,12 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       </AnimatePresence>
 
       <div className="rounded-2xl sm:rounded-3xl overflow-hidden bg-crimson relative shadow-lg shadow-crimson/20 flex flex-col h-full">
-        <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+        <img src={shopCardTexture} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover opacity-80" />
 
         {/* Image area */}
         <div className="relative">
           <Link to={`/product/${product.id}`} className="aspect-square overflow-hidden relative flex items-center justify-center cursor-pointer">
-            <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
+            <img src={shopCardTexture} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover opacity-60" />
             {images && images.length > 0 ? (
               <img
                 src={images[currentImage]}
