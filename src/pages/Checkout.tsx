@@ -172,7 +172,7 @@ const Checkout = () => {
                   <div key={item.id} className="flex gap-2.5 sm:gap-3 py-1.5 sm:py-2 border-b border-crimson/5">
                     <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden bg-crimson/10 flex-shrink-0">
                       {item.image ? (
-                        <img src={item.image} alt={item.name} loading="lazy" decoding="async" className="w-full h-full object-cover" />
+                        <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center"><ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-crimson/30" /></div>
                       )}

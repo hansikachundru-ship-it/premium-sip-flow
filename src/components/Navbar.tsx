@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import { useNavigate, Link } from "react-router-dom";
-import latchaLogoHero from "@/assets/latcha-logo-hero.webp";
-import latchaLogoNav from "@/assets/latcha-logo-nav.webp";
+import latchaLogoHero from "@/assets/latcha-logo-hero.png";
+import latchaLogoNav from "@/assets/latcha-logo-nav.png";
 import { useCartStore } from "@/stores/cartStore";
 import SearchOverlay from "@/components/SearchOverlay";
 import CartDrawer from "@/components/CartDrawer";

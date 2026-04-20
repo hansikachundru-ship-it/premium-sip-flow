@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import heroProduct from "@/assets/hero-product.webp";
-import heroDrinks from "@/assets/hero-drinks.webp";
-import heroHampers from "@/assets/hero-hampers.webp";
+import heroProduct from "@/assets/hero-product.png";
+import heroDrinks from "@/assets/hero-drinks.png";
+import heroHampers from "@/assets/hero-hampers.png";
 
 const ProductVisual = () => {
   return (

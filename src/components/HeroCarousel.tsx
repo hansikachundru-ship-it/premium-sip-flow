@@ -1,4 +1,4 @@
-import heroLanding from "@/assets/hero-landing.webp";
+import heroLanding from "@/assets/hero-landing.png";
 
 const HeroCarousel = () => {
   return (
@@ -6,9 +6,6 @@ const HeroCarousel = () => {
       <img
         src={heroLanding}
         alt="Latcha hero"
-        loading="eager"
-        fetchPriority="high"
-        decoding="async"
         className="w-full h-auto block md:h-[80vh] md:object-cover"
       />
     </section>

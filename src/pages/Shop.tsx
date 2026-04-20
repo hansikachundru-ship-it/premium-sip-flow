@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import shopCardTexture from "@/assets/shop-card-texture.webp";
-import matchaProduct1 from "@/assets/matcha-product-1.webp";
-import matchaProduct2 from "@/assets/matcha-product-2.webp";
-import matchaProduct3 from "@/assets/matcha-product-3.webp";
+import shopCardTexture from "@/assets/shop-card-texture.png";
+import matchaProduct1 from "@/assets/matcha-product-1.png";
+import matchaProduct2 from "@/assets/matcha-product-2.png";
+import matchaProduct3 from "@/assets/matcha-product-3.png";
 import { useCartStore } from "@/stores/cartStore";
 
 interface Product {
@@ -97,12 +97,12 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       </AnimatePresence>
 
       <div className="rounded-2xl sm:rounded-3xl overflow-hidden bg-crimson relative shadow-lg shadow-crimson/20 flex flex-col h-full">
-        <img src={shopCardTexture} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover opacity-80" />
+        <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-80" />
 
         {/* Image area */}
         <div className="relative">
           <Link to={`/product/${product.id}`} className="aspect-square overflow-hidden relative flex items-center justify-center cursor-pointer">
-            <img src={shopCardTexture} alt="" loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover opacity-60" />
+            <img src={shopCardTexture} alt="" className="absolute inset-0 w-full h-full object-cover opacity-60" />
             {images && images.length > 0 ? (
               <img
                 src={images[currentImage]}

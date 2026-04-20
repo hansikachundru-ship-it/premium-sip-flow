@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import heroProduct from "@/assets/hero-product.webp";
-import heroDrinks from "@/assets/hero-drinks.webp";
+import heroProduct from "@/assets/hero-product.png";
+import heroDrinks from "@/assets/hero-drinks.png";
 
 const sections = [
   {
