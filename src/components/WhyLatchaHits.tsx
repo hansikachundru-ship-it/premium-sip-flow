@@ -50,10 +50,10 @@ const WhyLatchaHits = () => {
           viewport={{ once: true }}
           className="text-center mb-10 sm:mb-14"
         >
-          <h2 className="font-display text-crimson text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center tracking-wide whitespace-nowrap">
-            Discover The Benefits Of Latcha
+          <h2 className="font-display text-crimson text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold mb-3 sm:mb-4 leading-tight">
+            Why Latcha hits different
           </h2>
-          <p className="font-body text-crimson text-xs sm:text-sm md:text-base lg:text-lg text-center mt-1">
+          <p className="font-body text-crimson/70 text-base sm:text-lg md:text-xl">
             Every sip is doing more than you think
           </p>
         </motion.div>
