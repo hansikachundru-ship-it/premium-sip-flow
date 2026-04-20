@@ -1,6 +1,6 @@
 import { Instagram, Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import latchaLogoFooter from "@/assets/latcha-logo-footer.png";
+import latchaLogoFooter from "@/assets/latcha-logo-footer.webp";
 
 const Footer = () => {
   return (

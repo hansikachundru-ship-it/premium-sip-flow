@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import matchaTins from "@/assets/matcha-tins.png";
+import matchaTins from "@/assets/matcha-tins.webp";
 
 const benefits = [
   "Pesticide-free",
