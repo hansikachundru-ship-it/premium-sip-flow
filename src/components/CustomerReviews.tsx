@@ -4,56 +4,101 @@ interface Review {
   name: string;
   image: string;
   text: string;
+  rating: number;
 }
 
 const reviews: Review[] = [
   {
-    name: "Vivin",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face",
-    text: "Outstanding quality and value. I've recommended this to all my friends and family.",
-  },
-  {
-    name: "Vikas Khanna",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop&crop=face",
-    text: "Smoother than any matcha I've tried. No strong bitterness, just a clean taste.",
-  },
-  {
-    name: "Roni Sinha",
+    name: "Priya R.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop&crop=face",
-    text: "I'm new to matcha and this didn't intimidate me at all. Very beginner-friendly.",
+    text: "honestly was so skeptical at first because I've tried so many matchas and they're always so bitter?? but this one is actually smooth and creamy. i make it every morning now and my whole routine has changed lol. also the packaging is so cute i keep it on my desk",
+    rating: 5,
   },
   {
-    name: "Christy",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=face",
-    text: "No grainy texture at all — a big issue with other brands I tried. Love this.",
-  },
-  {
-    name: "Arjun",
+    name: "Arjun M.",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop&crop=face",
-    text: "Vibrant color and incredibly smooth taste. Best matcha I've had in India.",
+    text: "Good product. Taste is very different from what I expected, in a good way. I usually drink coffee but my girlfriend got me into this. Only thing is I wish they had smaller pack to try first before buying full size. Will order again though",
+    rating: 4,
   },
   {
-    name: "Maleka Ramchandani",
+    name: "Sneha K.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=face",
+    text: "OBSESSED. I visited the JP nagar cafe first and then ordered online because I couldn't stop thinking about it. the powder mixes so well no lumps nothing. worth every rupee honestly",
+    rating: 5,
+  },
+  {
+    name: "Rahul T.",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop&crop=face",
+    text: "taste is authentic, you can tell its good quality matcha. I've had japanese matcha before when i travelled and this is very close to that. delivery was also fast. minus one star only because i spilled it opening the tin lol that's my fault not theirs",
+    rating: 4,
+  },
+  {
+    name: "Ananya S.",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop&crop=face",
-    text: "Best purchase I've made this year. The customer service was exceptional and delivery was fast.",
+    text: "okay so I started drinking this because of the instagram reels and I don't regret it at all. No sugar no additives and it actually tastes good?? I make iced matcha latte every day with oat milk. my skin has also been better but that might be coincidence haha. 10/10 would recommend",
+    rating: 5,
   },
   {
-    name: "Karan S.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=face",
-    text: "Switched from coffee — the energy is calm and sustained. No jitters at all.",
+    name: "Vikram D.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face",
+    text: "Very good matcha. I am not big reviewer but felt like writing this because quality is genuinely surprising for Indian brand. Stone milled you can feel the difference in texture. My wife also likes it now she was not interested before. Half star less only because tin is little hard to open",
+    rating: 4.5,
   },
   {
-    name: "Kezia Abrahams",
+    name: "Meghna P.",
     image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&h=500&fit=crop&crop=face",
-    text: "I'm so impressed with the attention to detail. This has become my go-to brand!",
+    text: "i gift this to everyone now. bought it for myself first then bought for my mom, my best friend, my cousin's birthday. everyone loves it. the red tin is also so pretty as a gift. latcha please never discontinue this i will cry",
+    rating: 5,
+  },
+  {
+    name: "Karthik N.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=face",
+    text: "Solid product. Was comparing with some international brands and honestly this holds up well. Price is reasonable for the quality. I make usucha with it mostly. Would be 5 stars if they bring more variants like a deeper umami one. Overall happy with purchase",
+    rating: 4,
   },
 ];
 
-const YellowStar = () => (
-  <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623" xmlns="http://www.w3.org/2000/svg">
+const YellowStar = ({ half = false }: { half?: boolean }) => {
+  if (half) {
+    return (
+      <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="halfStarGrad">
+            <stop offset="50%" stopColor="#F5A623" />
+            <stop offset="50%" stopColor="transparent" stopOpacity="1" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+          fill="url(#halfStarGrad)"
+          stroke="#F5A623"
+          strokeWidth="1"
+        />
+      </svg>
+    );
+  }
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="#F5A623" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+    </svg>
+  );
+};
+
+const EmptyStar = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#F5A623" strokeWidth="1" xmlns="http://www.w3.org/2000/svg">
     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
   </svg>
 );
+
+const renderStars = (rating: number) => {
+  const stars = [];
+  for (let i = 1; i <= 5; i++) {
+    if (rating >= i) stars.push(<YellowStar key={i} />);
+    else if (rating >= i - 0.5) stars.push(<YellowStar key={i} half />);
+    else stars.push(<EmptyStar key={i} />);
+  }
+  return stars;
+};
 
 const CustomerReviews = () => {
   const trackRef = useRef<HTMLDivElement>(null);
