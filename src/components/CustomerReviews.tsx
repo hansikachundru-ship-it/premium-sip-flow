@@ -9,7 +9,7 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    name: "Priya R.",
+    name: "Priya Ramesh",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop&crop=face",
     text: "honestly was so skeptical at first because I've tried so many matchas and they're always so bitter?? but this one is actually smooth and creamy. i make it every morning now and my whole routine has changed lol. also the packaging is so cute i keep it on my desk",
     rating: 5,
@@ -21,7 +21,7 @@ const reviews: Review[] = [
     rating: 4,
   },
   {
-    name: "Sneha K.",
+    name: "Sneha Krishnan",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=face",
     text: "OBSESSED. I visited the JP nagar cafe first and then ordered online because I couldn't stop thinking about it. the powder mixes so well no lumps nothing. worth every rupee honestly",
     rating: 5,
@@ -33,7 +33,7 @@ const reviews: Review[] = [
     rating: 4,
   },
   {
-    name: "Ananya S.",
+    name: "Ananya Sharma",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop&crop=face",
     text: "okay so I started drinking this because of the instagram reels and I don't regret it at all. No sugar no additives and it actually tastes good?? I make iced matcha latte every day with oat milk. my skin has also been better but that might be coincidence haha. 10/10 would recommend",
     rating: 5,
@@ -43,18 +43,6 @@ const reviews: Review[] = [
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face",
     text: "Very good matcha. I am not big reviewer but felt like writing this because quality is genuinely surprising for Indian brand. Stone milled you can feel the difference in texture. My wife also likes it now she was not interested before. Half star less only because tin is little hard to open",
     rating: 4.5,
-  },
-  {
-    name: "Meghna P.",
-    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&h=500&fit=crop&crop=face",
-    text: "i gift this to everyone now. bought it for myself first then bought for my mom, my best friend, my cousin's birthday. everyone loves it. the red tin is also so pretty as a gift. latcha please never discontinue this i will cry",
-    rating: 5,
-  },
-  {
-    name: "Karthik N.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=500&h=500&fit=crop&crop=face",
-    text: "Solid product. Was comparing with some international brands and honestly this holds up well. Price is reasonable for the quality. I make usucha with it mostly. Would be 5 stars if they bring more variants like a deeper umami one. Overall happy with purchase",
-    rating: 4,
   },
 ];
 
@@ -145,10 +133,10 @@ const CustomerReviews = () => {
           {duplicated.map((review, i) => (
             <div
               key={i}
-              className="w-[280px] sm:w-[300px] flex-shrink-0 bg-crimson rounded-2xl p-4 pb-5 flex flex-col items-center text-center shadow-md"
+              className="w-[280px] sm:w-[300px] h-[300px] sm:h-[320px] flex-shrink-0 bg-crimson rounded-2xl p-4 flex flex-col items-center text-center shadow-md"
             >
-              {/* Square image */}
-              <div className="w-[calc(100%-16px)] aspect-square rounded-xl overflow-hidden mb-4">
+              {/* Avatar image */}
+              <div className="w-20 h-20 rounded-full overflow-hidden mb-2 flex-shrink-0">
                 <img
                   src={review.image}
                   alt={review.name}
@@ -158,17 +146,17 @@ const CustomerReviews = () => {
               </div>
 
               {/* Name */}
-              <h3 className="font-display text-blush text-base font-bold leading-tight">
+              <h3 className="font-display text-blush text-sm font-bold leading-tight">
                 {review.name}
               </h3>
 
               {/* Stars */}
-              <div className="flex gap-0.5 mt-2 mb-3">
+              <div className="flex gap-0.5 mt-1.5 mb-2">
                 {renderStars(review.rating)}
               </div>
 
               {/* Review text */}
-              <p className="font-body text-blush/75 text-sm leading-relaxed italic">
+              <p className="font-body text-blush/75 text-xs leading-snug italic line-clamp-5">
                 {review.text}
               </p>
             </div>
