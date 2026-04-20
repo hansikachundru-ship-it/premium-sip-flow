@@ -164,9 +164,7 @@ const CustomerReviews = () => {
 
               {/* Stars */}
               <div className="flex gap-0.5 mt-2 mb-3">
-                {Array.from({ length: 5 }).map((_, s) => (
-                  <YellowStar key={s} />
-                ))}
+                {renderStars(review.rating)}
               </div>
 
               {/* Review text */}
