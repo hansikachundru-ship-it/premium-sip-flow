@@ -10,6 +10,7 @@ import matchaProduct2 from "@/assets/matcha-product-2.png";
 import matchaProduct3 from "@/assets/matcha-product-3.png";
 import { useCartStore } from "@/stores/cartStore";
 import CustomerReviews from "@/components/CustomerReviews";
+import WhyLatchaHits from "@/components/WhyLatchaHits";
 
 const images = [matchaProduct1, matchaProduct2, matchaProduct3];
 
@@ -232,6 +233,7 @@ const ProductDetail = () => {
           </div>
         </div>
       </main>
+      <WhyLatchaHits />
       <CustomerReviews />
       <Footer />
     </div>
