@@ -43,17 +43,17 @@ const benefits = [
 const WhyLatchaHits = () => {
   return (
     <section className="pt-4 sm:pt-6 md:pt-8 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-blush">
-      <div className="max-w-[1400px] mx-auto">
+      <div className="max-w-[1400px] mx-auto bg-crimson rounded-3xl px-4 sm:px-8 md:px-12 lg:px-16 py-12 sm:py-16 md:py-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-10 sm:mb-14"
         >
-          <h2 className="font-display text-crimson text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-tight tracking-wide">
+          <h2 className="font-display text-blush text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-tight tracking-wide">
             Why Latcha Hits Different
           </h2>
-          <p className="font-body text-crimson/70 text-base sm:text-lg md:text-xl">
+          <p className="font-body text-blush/80 text-base sm:text-lg md:text-xl">
             Every sip is doing more than you think
           </p>
         </motion.div>
@@ -68,7 +68,7 @@ const WhyLatchaHits = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.08, duration: 0.5 }}
-                className="bg-blush border border-crimson/15 rounded-2xl p-6 sm:p-7 md:p-8 hover:border-crimson/40 hover:shadow-lg transition-all duration-300"
+                className="bg-blush border border-crimson/15 rounded-2xl p-6 sm:p-7 md:p-8 hover:shadow-lg transition-all duration-300"
               >
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-crimson/10 flex items-center justify-center mb-4 sm:mb-5">
                   <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-crimson" strokeWidth={2} />
