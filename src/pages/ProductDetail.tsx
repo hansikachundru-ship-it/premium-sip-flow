@@ -59,7 +59,7 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-blush">
       <Navbar />
-      <main className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-6 pb-16">
+      <main className="max-w-[1400px] mx-auto px-8 sm:px-14 md:px-20 lg:px-28 xl:px-32 pt-6 pb-16">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm font-body text-crimson/60 mb-8 justify-center">
           <Link to="/" className="hover:text-crimson transition-colors">Home</Link>
