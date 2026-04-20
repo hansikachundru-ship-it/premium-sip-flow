@@ -133,10 +133,10 @@ const CustomerReviews = () => {
           {duplicated.map((review, i) => (
             <div
               key={i}
-              className="w-[280px] sm:w-[300px] flex-shrink-0 bg-crimson rounded-2xl p-4 pb-5 flex flex-col items-center text-center shadow-md"
+              className="w-[280px] sm:w-[300px] h-[300px] sm:h-[320px] flex-shrink-0 bg-crimson rounded-2xl p-4 flex flex-col items-center text-center shadow-md"
             >
-              {/* Square image */}
-              <div className="w-[calc(100%-16px)] aspect-square rounded-xl overflow-hidden mb-4">
+              {/* Avatar image */}
+              <div className="w-20 h-20 rounded-full overflow-hidden mb-2 flex-shrink-0">
                 <img
                   src={review.image}
                   alt={review.name}
@@ -146,17 +146,17 @@ const CustomerReviews = () => {
               </div>
 
               {/* Name */}
-              <h3 className="font-display text-blush text-base font-bold leading-tight">
+              <h3 className="font-display text-blush text-sm font-bold leading-tight">
                 {review.name}
               </h3>
 
               {/* Stars */}
-              <div className="flex gap-0.5 mt-2 mb-3">
+              <div className="flex gap-0.5 mt-1.5 mb-2">
                 {renderStars(review.rating)}
               </div>
 
               {/* Review text */}
-              <p className="font-body text-blush/75 text-sm leading-relaxed italic">
+              <p className="font-body text-blush/75 text-xs leading-snug italic line-clamp-5">
                 {review.text}
               </p>
             </div>
