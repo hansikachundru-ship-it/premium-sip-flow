@@ -1,4 +1,4 @@
-import heroLanding from "@/assets/hero-landing.png";
+import heroLanding from "@/assets/hero-landing.webp";
 
 const HeroCarousel = () => {
   return (

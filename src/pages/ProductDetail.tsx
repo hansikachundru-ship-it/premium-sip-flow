@@ -5,9 +5,9 @@ import { ChevronLeft, ChevronRight, ChevronDown, Minus, Plus } from "lucide-reac
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import matchaProduct1 from "@/assets/matcha-product-1.png";
-import matchaProduct2 from "@/assets/matcha-product-2.png";
-import matchaProduct3 from "@/assets/matcha-product-3.png";
+import matchaProduct1 from "@/assets/matcha-product-1.webp";
+import matchaProduct2 from "@/assets/matcha-product-2.webp";
+import matchaProduct3 from "@/assets/matcha-product-3.webp";
 import { useCartStore } from "@/stores/cartStore";
 import CustomerReviews from "@/components/CustomerReviews";
 import WhyLatchaHits from "@/components/WhyLatchaHits";

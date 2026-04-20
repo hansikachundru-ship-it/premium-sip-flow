@@ -2,8 +2,8 @@ import { useState } from "react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import patternBlushLight from "@/assets/pattern-blush-hearts.png";
-import patternCrimson from "@/assets/pattern-crimson-new.png";
+import patternBlushLight from "@/assets/pattern-blush-hearts.webp";
+import patternCrimson from "@/assets/pattern-crimson-new.webp";
 import MenuItemCard from "@/components/menu/MenuItemCard";
 import { classicLattes, cloudLattes, softServes } from "@/components/menu/MenuData";
 import { motion, AnimatePresence } from "framer-motion";
