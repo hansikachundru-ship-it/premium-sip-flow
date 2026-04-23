@@ -78,7 +78,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
-      className="group flex flex-col w-full max-w-[340px] sm:max-w-[400px] md:max-w-[420px]"
+      className="group flex flex-col w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.334rem)] max-w-[420px]"
     >
       {/* Toast notification */}
       <AnimatePresence>
