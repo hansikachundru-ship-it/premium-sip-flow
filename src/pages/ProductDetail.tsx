@@ -42,9 +42,9 @@ const ProductDetail = () => {
     for (let i = 0; i < quantity; i++) {
       addItem({
         id: "m1",
-        name: "Latcha Matcha Powder",
-        price: 1499,
-        priceDisplay: "Rs. 1,499",
+        name: "Latcha Reserve Matcha",
+        price: 1899,
+        priceDisplay: "Rs. 1,899/-",
         image: images[0],
       });
     }
