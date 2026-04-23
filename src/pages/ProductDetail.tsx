@@ -23,7 +23,7 @@ const accordionData = [
   {
     title: "Storage & Care",
     content:
-      "Store in a cool, dark place away from direct sunlight. Keep the tin tightly sealed after each use. For best freshness, consume within 4 weeks of opening. Refrigeration is recommended in warm climates.",
+      "Store in a cool, dark place away from direct sunlight. Keep the tin tightly sealed after each use. For best freshness, consume within 90 weeks of opening. Refrigeration is recommended in warm and humid climates.",
   },
 ];
 
