@@ -194,7 +194,7 @@ const Shop = () => {
   return (
     <div className="min-h-screen bg-blush">
       <Navbar />
-      <main className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 sm:px-6 md:px-12 lg:px-20 xl:px-28 max-w-7xl mx-auto">
+      <main className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-[1400px] mx-auto">
         {shopData.map((category) => (
           <ShopCategorySection key={category.id} category={category} />
         ))}
