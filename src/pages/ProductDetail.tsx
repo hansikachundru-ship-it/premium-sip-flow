@@ -144,7 +144,7 @@ const ProductDetail = () => {
               Rs. 1,899/-
             </p>
 
-            <p className="font-body text-crimson/60 text-sm sm:text-base mt-4 leading-relaxed">
+            <p className="font-body text-crimson/60 text-sm sm:text-base mt-4 leading-relaxed text-justify">
               Latcha Reserve is our signature matcha we make in our stores. It is sourced from Uji,
               Japan The region that set the standard for matcha. Latcha Reserve is a first-spring
               harvest matcha blending Okumdori and Samidori cultivars.
