@@ -30,7 +30,7 @@ const accordionData = [
 const ProductDetail = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [selectedSize] = useState("25g");
+  const [selectedSize] = useState("30g");
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
   const addItem = useCartStore((s) => s.addItem);
   const openCart = useCartStore((s) => s.openCart);
@@ -42,9 +42,9 @@ const ProductDetail = () => {
     for (let i = 0; i < quantity; i++) {
       addItem({
         id: "m1",
-        name: "Latcha Matcha Powder",
-        price: 1499,
-        priceDisplay: "Rs. 1,499",
+        name: "Latcha Reserve Matcha",
+        price: 1899,
+        priceDisplay: "Rs. 1,899/-",
         image: images[0],
       });
     }
@@ -66,7 +66,7 @@ const ProductDetail = () => {
           <ChevronRight className="w-3.5 h-3.5" />
           <Link to="/shop" className="hover:text-crimson transition-colors">Shop Matcha</Link>
           <ChevronRight className="w-3.5 h-3.5" />
-          <span className="text-crimson font-medium">Matcha Powder</span>
+          <span className="text-crimson font-medium">Latcha Reserve Matcha</span>
         </nav>
 
         {/* Two-column layout */}
@@ -137,25 +137,28 @@ const ProductDetail = () => {
           {/* Right: Product info */}
           <div className="flex flex-col">
             <h1 className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl font-extrabold leading-tight">
-              Matcha Powder
+              Latcha Reserve Matcha
             </h1>
 
             <p className="font-body text-crimson text-xl sm:text-2xl font-semibold mt-3">
-              Rs. 1,499.00
+              Rs. 1,899/-
             </p>
 
             <p className="font-body text-crimson/60 text-sm sm:text-base mt-4 leading-relaxed">
-              From the historic, legendary farms of Shirakawa, Uji — Japan's most revered matcha
-              terroir — this matcha reflects centuries of quiet mastery. Blended from native Uji
-              cultivars — Okumidori × Samidori — this matcha is slow stone-milled to an ultra-fine 5–7
-              microns crafted for purity, depth and silk-smooth texture.
+              Latcha Reserve is our signature matcha we make in our stores. It is sourced from Uji,
+              Japan The region that set the standard for matcha. Latcha Reserve is a first-spring
+              harvest matcha blending Okumdori and Samidori cultivars.
+              <br />
+              <br />
+              It's creamy, naturally sweet, and just umami enough. Not loud. Not sharp. The kind of
+              cup that feels easy from the very first sip.
             </p>
 
             {/* Size selector */}
             <div className="mt-6">
               <p className="font-body text-crimson text-sm font-medium mb-2">Size: {selectedSize}</p>
               <button className="px-4 py-2 rounded-lg bg-crimson text-blush font-body text-sm font-medium">
-                25g
+                30g
               </button>
             </div>
 
