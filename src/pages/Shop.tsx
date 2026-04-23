@@ -31,9 +31,9 @@ const shopData: ShopCategory[] = [
     products: [
       {
         id: "m1",
-        name: "Latcha Matcha Powder",
-        price: 1499,
-        priceDisplay: "Rs. 1,499",
+        name: "Latcha Reserve Matcha",
+        price: 1899,
+        priceDisplay: "Rs. 1,899/-",
         images: [matchaProduct1, matchaProduct2, matchaProduct3],
       },
     ],
