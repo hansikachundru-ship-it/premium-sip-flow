@@ -58,13 +58,29 @@
     @apply border-border;
   }
 
-  body {
+  html, body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Better mobile readability */
+  @media (max-width: 640px) {
+    body {
+      text-rendering: optimizeLegibility;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+  }
+
+  /* Improve image rendering by default */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 

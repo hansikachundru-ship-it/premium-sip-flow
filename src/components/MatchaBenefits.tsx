@@ -49,7 +49,7 @@ const MatchaBenefits = () => {
               transition={{ delay: 0.1 }}
               className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold mb-4 sm:mb-6 leading-tight"
             >
-              <span className="whitespace-nowrap">More Than a Drink.</span><br />
+              <span className="sm:whitespace-nowrap">More Than a Drink.</span><br />
               <span>It's Latcha</span>
             </motion.h2>
             <motion.div
