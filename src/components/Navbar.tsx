@@ -48,7 +48,7 @@ const Navbar = () => {
     <>
       {/* Hero Header Band */}
       <div className="bg-crimson relative overflow-hidden">
-        <div className="px-4 sm:px-10 md:px-20 lg:px-28 py-4 sm:py-6 md:py-8 flex items-center justify-between relative">
+        <div className="px-4 sm:px-10 md:px-20 lg:px-28 py-7 sm:py-8 md:py-8 flex items-center justify-between relative">
           {/* Left - mobile menu toggle / desktop tagline */}
           <button
             className="md:hidden text-blush/80 hover:text-blush transition-colors p-1.5 -m-1.5"
