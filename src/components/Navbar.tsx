@@ -129,14 +129,14 @@ const Navbar = () => {
         {mobileOpen && (
           <div className="md:hidden bg-blush border-t border-crimson/15 px-6 py-4 space-y-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 onClick={() => setMobileOpen(false)}
                 className="block text-crimson text-sm font-medium uppercase tracking-[0.15em] hover:text-crimson-dark transition-colors font-display py-1"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <button
               onClick={() => { handleProfileClick(); setMobileOpen(false); }}
