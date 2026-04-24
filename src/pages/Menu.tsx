@@ -37,12 +37,12 @@ const Menu = () => {
 
         {/* Tab Navigation */}
         <div className="sticky top-0 z-30" style={{ backgroundImage: `url(${patternBlushLight})`, backgroundSize: "300px", backgroundColor: "hsl(var(--blush))" }}>
-          <div className="max-w-5xl mx-auto flex gap-1 sm:gap-2 px-2 sm:px-4 py-3 sm:py-4 overflow-x-auto no-scrollbar">
+          <div className="max-w-5xl mx-auto flex gap-1.5 sm:gap-2 px-3 sm:px-4 py-3 sm:py-4 overflow-x-auto no-scrollbar">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex-shrink-0 sm:flex-1 px-3 sm:px-2 md:px-5 py-2.5 sm:py-3 md:py-4 text-[9px] sm:text-[11px] md:text-sm font-display font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap ${
+                className={`flex-shrink-0 sm:flex-1 px-3 sm:px-2 md:px-5 py-2.5 sm:py-3 md:py-4 text-[11px] sm:text-[12px] md:text-sm font-display font-bold uppercase tracking-wider transition-all duration-300 whitespace-nowrap rounded-md ${
                   activeTab === tab.id
                     ? "bg-crimson text-blush"
                     : "bg-crimson/5 text-crimson/60 hover:text-crimson hover:bg-crimson/10"

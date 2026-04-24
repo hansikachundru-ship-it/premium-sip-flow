@@ -84,13 +84,13 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-blush">
       <Navbar />
-      <main className="max-w-[1400px] mx-auto px-8 sm:px-14 md:px-20 lg:px-28 xl:px-32 pt-6 pb-16">
+      <main className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-20 lg:px-28 xl:px-32 pt-4 sm:pt-6 pb-12 sm:pb-16">
         {/* Breadcrumb */}
-        <nav className="flex items-center gap-2 text-sm font-body text-crimson/60 mb-8 justify-center">
+        <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-body text-crimson/60 mb-6 sm:mb-8 justify-center flex-wrap">
           <Link to="/" className="hover:text-crimson transition-colors">Home</Link>
-          <ChevronRight className="w-3.5 h-3.5" />
+          <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
           <Link to="/shop" className="hover:text-crimson transition-colors">Shop Matcha</Link>
-          <ChevronRight className="w-3.5 h-3.5" />
+          <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
           <span className="text-crimson font-medium">Latcha Reserve Matcha</span>
         </nav>
 
@@ -161,13 +161,13 @@ const ProductDetail = () => {
 
           {/* Right: Product info */}
           <div className="flex flex-col">
-            <h1 className="font-display text-crimson text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
+            <h1 className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
               <span className="whitespace-nowrap">Latcha Reserve</span>
               <br />
               Matcha
             </h1>
 
-            <p className="font-body text-crimson text-xl sm:text-2xl font-semibold mt-3">
+            <p className="font-body text-crimson text-xl sm:text-2xl font-semibold mt-2 sm:mt-3">
               Rs. 1,899/-
             </p>
 
