@@ -238,9 +238,20 @@ const ProductDetail = () => {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden"
                       >
-                        <p className="font-body text-crimson/60 text-sm leading-relaxed pb-4">
-                          {item.content}
-                        </p>
+                        {Array.isArray(item.content) ? (
+                          <div className="space-y-4 pb-4">
+                            {item.content.map((sub, j) => (
+                              <div key={j}>
+                                <p className="font-body text-crimson text-sm font-semibold mb-1">{sub.heading}</p>
+                                <p className="font-body text-crimson/60 text-sm leading-relaxed">{sub.body}</p>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="font-body text-crimson/60 text-sm leading-relaxed pb-4">
+                            {item.content}
+                          </p>
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
