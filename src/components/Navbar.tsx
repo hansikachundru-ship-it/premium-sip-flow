@@ -68,17 +68,17 @@ const Navbar = () => {
             <p className="hidden md:block text-blush/70 text-[13px] uppercase tracking-[0.2em] leading-snug font-body text-right max-w-[200px] font-light">
               Sourced from Uji,<br />Japan. AAA Grade.
             </p>
-            <div className="flex items-center gap-3 sm:gap-4">
-              <button onClick={() => setSearchOpen(true)} className="text-blush/70 hover:text-blush transition-colors" aria-label="Search">
+            <div className="flex items-center gap-2 sm:gap-4">
+              <button onClick={() => setSearchOpen(true)} className="text-blush/70 hover:text-blush transition-colors p-1.5 -m-1.5" aria-label="Search">
                 <Search className="w-5 h-5" />
               </button>
-              <button onClick={handleProfileClick} className="text-blush/70 hover:text-blush transition-colors hidden md:block" aria-label="Account">
+              <button onClick={handleProfileClick} className="text-blush/70 hover:text-blush transition-colors hidden md:block p-1.5 -m-1.5" aria-label="Account">
                 <User className="w-5 h-5" />
               </button>
-              <button onClick={openCart} className="text-blush/70 hover:text-blush transition-colors relative" aria-label="Cart">
+              <button onClick={openCart} className="text-blush/70 hover:text-blush transition-colors relative p-1.5 -m-1.5" aria-label="Cart">
                 <ShoppingBag className="w-5 h-5" />
                 {itemCount > 0 && (
-                  <span className="absolute -top-1.5 -right-1.5 bg-blush text-crimson text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center animate-in zoom-in-50 duration-200">
+                  <span className="absolute top-0 right-0 bg-blush text-crimson text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center animate-in zoom-in-50 duration-200">
                     {itemCount}
                   </span>
                 )}
@@ -94,11 +94,11 @@ const Navbar = () => {
           {/* Mobile toggle */}
           <div className="md:hidden flex items-center justify-center h-14">
             <button
-              className="text-crimson"
+              className="text-crimson p-3 -m-3"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
 
