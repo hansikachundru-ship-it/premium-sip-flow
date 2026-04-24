@@ -137,7 +137,7 @@ const ProductDetail = () => {
           {/* Right: Product info */}
           <div className="flex flex-col">
             <h1 className="font-display text-crimson text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
-              Latcha Reserve
+              <span className="whitespace-nowrap">Latcha Reserve</span>
               <br />
               Matcha
             </h1>
