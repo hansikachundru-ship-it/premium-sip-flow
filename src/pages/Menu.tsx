@@ -30,7 +30,7 @@ const Menu = () => {
           <h1 className="text-[18px] sm:text-[24px] md:text-[36px] lg:text-[48px] font-display font-extrabold text-crimson tracking-wide">
               <span className="border-2 border-crimson/30 px-4 sm:px-6 py-1.5 sm:py-2 inline-block rounded-lg">Our Menu</span>
             </h1>
-          <p className="text-xs sm:text-sm text-crimson/70 mt-2 sm:mt-3 font-body font-normal tracking-wide">
+          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-crimson/60 mt-2 sm:mt-3 font-body font-normal tracking-wide">
             Handcrafted matcha drinks made with premium Japanese matcha
           </p>
         </div>
