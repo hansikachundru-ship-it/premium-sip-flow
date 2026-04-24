@@ -17,8 +17,20 @@ const images = [matchaProduct1, matchaProduct2, matchaProduct3];
 const accordionData = [
   {
     title: "Whisking Instructions",
-    content:
-      "Sift 1–2g of matcha into a bowl. Add 70ml of water at 80°C. Whisk briskly in a W-motion using a chasen (bamboo whisk) until frothy. For an iced latte, whisk with 30ml hot water, then pour over ice and milk of your choice.",
+    content: [
+      {
+        heading: "Matcha Latte",
+        body: "Add 3g to a small amount of hot water. Whisk until smooth. Pour over steamed or cold milk. Done.",
+      },
+      {
+        heading: "Usucha",
+        body: "Whisk 2g in 80 ml of water at 70–75°C. The cleanest way to taste what Uji really feels like.",
+      },
+      {
+        heading: "Everything Else",
+        body: "Overnight oats, smoothies, bakes—it works anywhere you want a little depth without overpowering everything else.",
+      },
+    ],
   },
   {
     title: "Storage & Care",
@@ -226,9 +238,20 @@ const ProductDetail = () => {
                         transition={{ duration: 0.2 }}
                         className="overflow-hidden"
                       >
-                        <p className="font-body text-crimson/60 text-sm leading-relaxed pb-4">
-                          {item.content}
-                        </p>
+                        {Array.isArray(item.content) ? (
+                          <div className="space-y-4 pb-4">
+                            {item.content.map((sub, j) => (
+                              <div key={j}>
+                                <p className="font-body text-crimson text-sm font-semibold mb-1">{sub.heading}</p>
+                                <p className="font-body text-crimson/60 text-sm leading-relaxed">{sub.body}</p>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="font-body text-crimson/60 text-sm leading-relaxed pb-4">
+                            {item.content}
+                          </p>
+                        )}
                       </motion.div>
                     )}
                   </AnimatePresence>
