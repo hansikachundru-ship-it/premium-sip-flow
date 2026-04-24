@@ -27,7 +27,7 @@ const Menu = () => {
       <main>
         {/* "Our Menu" Header */}
         <div className="text-center py-6 sm:py-8 md:py-12 px-4">
-          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-display font-extrabold text-crimson tracking-wide">
+          <h1 className="text-[18px] sm:text-[24px] md:text-[36px] lg:text-[48px] font-display font-extrabold text-crimson tracking-wide">
               <span className="border-2 border-crimson/30 px-4 sm:px-6 py-1.5 sm:py-2 inline-block rounded-lg">Our Menu</span>
             </h1>
           <p className="text-xs sm:text-sm text-crimson/70 mt-2 sm:mt-3 font-body font-normal tracking-wide">
