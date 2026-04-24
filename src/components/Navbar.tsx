@@ -101,26 +101,26 @@ const Navbar = () => {
           {/* Mobile links */}
           <div className="md:hidden flex items-center justify-center gap-6 h-12">
             {navLinks.filter((l) => l.label !== "Matcha").map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="text-crimson text-[13px] font-medium uppercase tracking-[0.2em] hover:text-crimson-dark transition-colors font-display"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center justify-center gap-10 h-14">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="text-crimson text-[16px] font-medium uppercase tracking-[0.2em] hover:text-crimson-dark transition-colors relative after:content-[''] after:absolute after:bottom-[-2px] after:left-0 after:w-0 after:h-[1.5px] after:bg-crimson after:transition-all hover:after:w-full font-display"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -129,14 +129,14 @@ const Navbar = () => {
         {mobileOpen && (
           <div className="md:hidden bg-blush border-t border-crimson/15 px-6 py-4 space-y-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 onClick={() => setMobileOpen(false)}
                 className="block text-crimson text-sm font-medium uppercase tracking-[0.15em] hover:text-crimson-dark transition-colors font-display py-1"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <button
               onClick={() => { handleProfileClick(); setMobileOpen(false); }}
