@@ -119,7 +119,7 @@ const CustomerReviews = () => {
         <h2 className="font-display text-crimson text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold text-center tracking-wide">
           Welcome To The Latcha Club
         </h2>
-        <p className="font-body text-crimson text-xs sm:text-sm md:text-base lg:text-lg text-center mt-1">
+        <p className="font-body text-crimson/60 text-xs sm:text-sm md:text-base lg:text-lg text-center mt-1">
           Hear from our happy customers
         </p>
       </div>

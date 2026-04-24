@@ -53,7 +53,7 @@ const WhyLatchaHits = () => {
           <h2 className="font-display text-blush text-lg sm:text-2xl md:text-4xl lg:text-5xl font-extrabold mb-3 sm:mb-4 leading-tight tracking-wide">
             Why Latcha Hits Different
           </h2>
-          <p className="font-body text-blush/80 text-base sm:text-lg md:text-xl">
+          <p className="font-body text-blush/60 text-xs sm:text-sm md:text-base lg:text-lg">
             Every sip is doing more than you think
           </p>
         </motion.div>
