@@ -16,6 +16,19 @@ const images = [matchaProduct1, matchaProduct2, matchaProduct3];
 
 const accordionData = [
   {
+    title: "Origin and Craft",
+    content: [
+      {
+        heading: "Origin and Craft",
+        body: "Sourced from Uji, Japan — the heart of matcha tradition. First spring harvest, when the leaves are at their most vibrant and nutrient-rich. A curated blend of Okumidori and Samidori cultivars. Slowly stone-ground using traditional methods to preserve depth, color, and character.",
+      },
+      {
+        heading: "Taste Profile",
+        body: "Silk-smooth and creamy, layered with rich umami. A gentle, natural sweetness unfolds on the palate, finishing clean — without a trace of bitterness.",
+      },
+    ],
+  },
+  {
     title: "Whisking Instructions",
     content: [
       {
