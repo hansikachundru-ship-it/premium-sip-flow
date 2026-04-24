@@ -98,15 +98,17 @@ const Navbar = () => {
       {/* Navigation Bar */}
       <nav className="bg-blush sticky top-0 z-50 border-t border-crimson/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
-          {/* Mobile toggle */}
-          <div className="md:hidden flex items-center justify-center h-14">
-            <button
-              className="text-crimson p-3 -m-3"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
-            >
-              {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+          {/* Mobile links */}
+          <div className="md:hidden flex items-center justify-center gap-6 h-12">
+            {navLinks.filter((l) => l.label !== "Matcha").map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-crimson text-[13px] font-medium uppercase tracking-[0.2em] hover:text-crimson-dark transition-colors font-display"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
           {/* Desktop links */}
