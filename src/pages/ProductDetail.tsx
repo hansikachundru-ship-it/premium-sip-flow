@@ -19,7 +19,7 @@ const accordionData = [
     title: "Origin and Craft",
     content: [
       {
-        heading: "Origin and Craft",
+        heading: "",
         body: "Sourced from Uji, Japan — the heart of matcha tradition. First spring harvest, when the leaves are at their most vibrant and nutrient-rich. A curated blend of Okumidori and Samidori cultivars. Slowly stone-ground using traditional methods to preserve depth, color, and character.",
       },
       {
@@ -255,7 +255,9 @@ const ProductDetail = () => {
                           <div className="space-y-4 pb-4">
                             {item.content.map((sub, j) => (
                               <div key={j}>
-                                <p className="font-body text-crimson text-sm font-semibold mb-1">{sub.heading}</p>
+                                {sub.heading && (
+                                  <p className="font-body text-crimson text-sm font-semibold mb-1">{sub.heading}</p>
+                                )}
                                 <p className="font-body text-crimson/60 text-sm leading-relaxed">{sub.body}</p>
                               </div>
                             ))}
