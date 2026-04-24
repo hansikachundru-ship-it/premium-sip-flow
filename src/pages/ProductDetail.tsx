@@ -19,7 +19,7 @@ const accordionData = [
     title: "Origin and Craft",
     content: [
       {
-        heading: "Origin and Craft",
+        heading: "",
         body: "Sourced from Uji, Japan — the heart of matcha tradition. First spring harvest, when the leaves are at their most vibrant and nutrient-rich. A curated blend of Okumidori and Samidori cultivars. Slowly stone-ground using traditional methods to preserve depth, color, and character.",
       },
       {
