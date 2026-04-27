@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import matchaTins from "@/assets/matcha-tins.png";
 
 const benefits = [
   "Pesticide-free",
@@ -14,8 +15,25 @@ const MatchaBenefits = () => {
     <section className="py-10 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 bg-blush">
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row items-stretch gap-6 sm:gap-8 md:gap-10">
-          {/* Text - Full Width */}
-          <div className="w-full flex flex-col justify-center">
+          {/* Image - Left Side */}
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="w-full md:w-1/2"
+          >
+            <div className="rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl h-full">
+              <img
+                src={matchaTins}
+                alt="Latcha Matcha Powder tins"
+                className="w-full h-[280px] sm:h-[350px] md:h-full object-cover"
+              />
+            </div>
+          </motion.div>
+
+          {/* Text - Right Side */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
