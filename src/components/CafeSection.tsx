@@ -143,7 +143,7 @@ const CafeSection = () => {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-4 sm:mb-6 text-center font-display text-xl sm:text-2xl font-extrabold text-crimson md:text-3xl"
+          className="mb-6 sm:mb-8 text-center font-display text-xl sm:text-2xl font-extrabold text-crimson md:text-4xl"
         >
           Order Online
         </motion.h2>
