@@ -17,6 +17,7 @@ import ubeCloudImg from "@/assets/menu/ube-cloud.png";
 import blueSkyCloudImg from "@/assets/menu/blue-sky-cloud.png";
 import ubeSoftServeImg from "@/assets/menu/ube-soft-serve.png";
 import matchaSoftServeImg from "@/assets/menu/matcha-soft-serve.png";
+import pickYourSwirlImg from "@/assets/menu/pick-your-swirl.png";
 
 export interface MenuItem {
   num: number;
