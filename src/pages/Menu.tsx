@@ -84,6 +84,14 @@ const Menu = () => {
                 priceLine="3G Matcha  ·  Regular @ ₹375  ·  Oat Milk @ ₹445"
                 items={cloudLattes}
                 itemVariant="dark"
+                footer={
+                  <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-blush rounded-xl border border-matcha/40 text-center shadow-sm">
+                    <p className="text-xs sm:text-sm font-bold text-matcha-dark font-display">Milk Options</p>
+                    <p className="text-[10px] sm:text-xs text-matcha-dark font-body mt-1" style={{ fontFamily: "var(--font-handwriting)" }}>
+                      Oat Milk (Recommended)  ·  Full Cream Milk
+                    </p>
+                  </div>
+                }
               />
             )}
 
