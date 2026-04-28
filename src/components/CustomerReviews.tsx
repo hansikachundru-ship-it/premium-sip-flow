@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import shaneezImage from "@/assets/review-shaneez.png";
 import sahanaImage from "@/assets/review-sahana.png";
 import tanishiImage from "@/assets/review-tanishi.png";
+import anushaImage from "@/assets/review-anusha.png";
 
 interface Review {
   name: string;
@@ -24,9 +25,9 @@ const reviews: Review[] = [
     rating: 4,
   },
   {
-    name: "Sneha Krishnan",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=500&h=500&fit=crop&crop=face",
-    text: "OBSESSED. I visited the JP nagar cafe first and then ordered online because I couldn't stop thinking about it. the powder mixes so well no lumps nothing. worth every rupee honestly",
+    name: "Anusha Shivanna",
+    image: anushaImage,
+    text: "Matcha has a smooth, earthy flavor with a mild natural sweetness. It gives calm and long-lasting energy without the jitters of coffee. The taste feels refreshing and clean",
     rating: 5,
   },
   {
