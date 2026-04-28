@@ -145,7 +145,7 @@ const CafeSection = () => {
           viewport={{ once: true }}
           className="mb-6 sm:mb-8 text-center font-display text-xl sm:text-2xl font-extrabold text-crimson md:text-4xl"
         >
-          Order Online
+          Order Your Latcha Favorites
         </motion.h2>
         <div className="flex flex-wrap justify-center gap-5 sm:gap-8">
           <a
