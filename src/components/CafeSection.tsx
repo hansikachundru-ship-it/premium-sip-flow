@@ -13,6 +13,8 @@ import cafeGallery15 from "@/assets/cafe-gallery-15.png";
 import cafeGallery17 from "@/assets/cafe-gallery-17.png";
 import cafeGallery18 from "@/assets/cafe-gallery-18.png";
 import cafeGallery20 from "@/assets/cafe-gallery-20.png";
+import swiggyLogo from "@/assets/swiggy-logo.png";
+import zomatoLogo from "@/assets/zomato-logo.png";
 
 const galleryImages = [
   { src: cafeGallery12, alt: "Barista whisking matcha" },
@@ -132,6 +134,48 @@ const CafeSection = () => {
               aria-label="Open directions in Google Maps"
             />
           </div>
+        </div>
+      </div>
+
+      {/* Order Online */}
+      <div className="mx-auto max-w-7xl px-3 sm:px-4 pt-2 pb-4 md:pt-4 md:pb-6">
+        <motion.h2
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-4 sm:mb-6 text-center font-display text-xl sm:text-2xl font-extrabold text-crimson md:text-3xl"
+        >
+          Order Online
+        </motion.h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+          <a
+            href="https://www.swiggy.com/city/bangalore/latcha-speciality-matcha-arekere-rest1365346"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 rounded-2xl bg-crimson p-4 sm:p-5 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+          >
+            <div className="h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-2">
+              <img src={swiggyLogo} alt="Swiggy" className="max-h-full max-w-full object-contain" />
+            </div>
+            <div className="min-w-0">
+              <p className="font-body text-[10px] sm:text-xs uppercase tracking-wider text-blush/70">Order on Swiggy</p>
+              <h3 className="font-display text-base sm:text-lg font-bold text-blush truncate">Latcha Cafe</h3>
+            </div>
+          </a>
+          <a
+            href="https://www.zomato.com/bangalore/latcha-speciality-matcha-jp-nagar-bangalore?amp=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 rounded-2xl bg-crimson p-4 sm:p-5 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+          >
+            <div className="h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-2">
+              <img src={zomatoLogo} alt="Zomato" className="max-h-full max-w-full object-contain" />
+            </div>
+            <div className="min-w-0">
+              <p className="font-body text-[10px] sm:text-xs uppercase tracking-wider text-blush/70">Order on Zomato</p>
+              <h3 className="font-display text-base sm:text-lg font-bold text-blush truncate">Latcha Cafe</h3>
+            </div>
+          </a>
         </div>
       </div>
 
