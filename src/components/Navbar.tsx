@@ -7,6 +7,7 @@ import { useCartStore } from "@/stores/cartStore";
 import SearchOverlay from "@/components/SearchOverlay";
 import CartDrawer from "@/components/CartDrawer";
 import AuthModal from "@/components/AuthModal";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import { supabase } from "@/integrations/supabase/client";
 
 const navLinks = [
@@ -46,6 +47,7 @@ const Navbar = () => {
 
   return (
     <>
+      <AnnouncementBar />
       {/* Hero Header Band */}
       <div className="bg-crimson relative overflow-hidden">
         <div className="px-4 sm:px-10 md:px-20 lg:px-28 py-7 sm:py-8 md:py-8 flex items-center justify-between relative">
