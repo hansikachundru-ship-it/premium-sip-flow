@@ -8,6 +8,7 @@ import shopCardTexture from "@/assets/shop-card-texture.png";
 import matchaProduct1 from "@/assets/matcha-product-1.png";
 import matchaProduct2 from "@/assets/matcha-product-2.png";
 import matchaProduct3 from "@/assets/matcha-product-3.png";
+import latchaReserveDuo from "@/assets/latcha-reserve-duo.png";
 import { useCartStore } from "@/stores/cartStore";
 
 interface Product {
@@ -42,7 +43,7 @@ const shopData: ShopCategory[] = [
     id: "bundles",
     title: "Shop Bundles",
     products: [
-      { id: "b1", name: "Latcha Reserve - Duo", price: 3500, priceDisplay: "Rs. 3,500/-" },
+      { id: "b1", name: "Latcha Reserve - Duo", price: 3500, priceDisplay: "Rs. 3,500/-", images: [latchaReserveDuo] },
       { id: "b2", name: "Latcha Reserve - Trio", price: 4500, priceDisplay: "Rs. 4,500/-" },
     ],
   },
