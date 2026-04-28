@@ -171,8 +171,6 @@ const CafeSection = () => {
             <span className="font-display text-sm sm:text-base font-bold text-blush">Latcha Cafe</span>
           </a>
         </div>
-          </a>
-        </div>
       </div>
 
       {/* Auto-scrolling Gallery */}
