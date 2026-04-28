@@ -3,6 +3,7 @@ import shaneezImage from "@/assets/review-shaneez.png";
 import sahanaImage from "@/assets/review-sahana.png";
 import tanishiImage from "@/assets/review-tanishi.png";
 import anushaImage from "@/assets/review-anusha.png";
+import arjunImage from "@/assets/review-arjun.png";
 
 interface Review {
   name: string;
@@ -19,12 +20,6 @@ const reviews: Review[] = [
     rating: 5,
   },
   {
-    name: "Arjun M.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&h=500&fit=crop&crop=face",
-    text: "Good product. Taste is very different from what I expected, in a good way. I usually drink coffee but my girlfriend got me into this. Only thing is I wish they had smaller pack to try first before buying full size. Will order again though",
-    rating: 4,
-  },
-  {
     name: "Anusha Shivanna",
     image: anushaImage,
     text: "Matcha has a smooth, earthy flavor with a mild natural sweetness. It gives calm and long-lasting energy without the jitters of coffee. The taste feels refreshing and clean",
@@ -37,8 +32,8 @@ const reviews: Review[] = [
     rating: 5,
   },
   {
-    name: "Ananya Sharma",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&h=500&fit=crop&crop=face",
+    name: "Arjun",
+    image: arjunImage,
     text: "okay so I started drinking this because of the instagram reels and I don't regret it at all. No sugar no additives and it actually tastes good?? I make iced matcha latte every day with oat milk. my skin has also been better but that might be coincidence haha. 10/10 would recommend",
     rating: 5,
   },
