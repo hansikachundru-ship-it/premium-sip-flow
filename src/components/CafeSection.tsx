@@ -168,8 +168,8 @@ const CafeSection = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-5 sm:gap-6 rounded-2xl bg-crimson p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
           >
-            <div className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0 rounded-2xl bg-blush flex items-center justify-center p-3">
-              <img src={zomatoLogo} alt="Zomato" className="max-h-full max-w-full object-contain" />
+            <div className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0">
+              <img src={zomatoLogo} alt="Zomato" className="h-full w-full object-contain" />
             </div>
             <div className="min-w-0">
               <p className="font-body text-xs sm:text-sm uppercase tracking-wider text-blush/70">Order on Zomato</p>
