@@ -9,7 +9,7 @@ const HeroCarousel = () => {
         alt="Latcha hero"
         className="w-full h-auto block md:h-[80vh] md:object-cover"
       />
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div className="absolute inset-x-0 bottom-6 sm:bottom-10 md:bottom-14 flex justify-center pointer-events-none">
         <Link
           to="/shop"
           className="pointer-events-auto bg-blush text-crimson font-display uppercase tracking-[0.2em] text-[12px] sm:text-sm md:text-base px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 rounded-full hover:bg-crimson hover:text-blush transition-colors duration-300 shadow-lg"
