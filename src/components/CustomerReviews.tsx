@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import shaneezImage from "@/assets/review-shaneez.png";
 
 interface Review {
   name: string;
@@ -9,9 +10,9 @@ interface Review {
 
 const reviews: Review[] = [
   {
-    name: "Priya Ramesh",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500&h=500&fit=crop&crop=face",
-    text: "honestly was so skeptical at first because I've tried so many matchas and they're always so bitter?? but this one is actually smooth and creamy. i make it every morning now and my whole routine has changed lol. also the packaging is so cute i keep it on my desk",
+    name: "Shaneez Halim",
+    image: shaneezImage,
+    text: "Absolutely loved this place. I tried the cloud matcha latte and the matcha soft serve, and both were fantastic. The matcha flavor is smooth, rich, and not overly sweet—clearly high quality. The cloud latte was super creamy and comforting, and the soft serve was perfectly balanced and refreshing. If you're a matcha fan, this spot is a must. I'll definitely be back.",
     rating: 5,
   },
   {
