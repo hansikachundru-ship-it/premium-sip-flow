@@ -147,33 +147,33 @@ const CafeSection = () => {
         >
           Order Your Latcha Favorites
         </motion.h2>
-        <div className="flex flex-wrap justify-center gap-6 sm:gap-10">
+        <div className="flex flex-wrap justify-center gap-5 sm:gap-8">
           <a
             href="https://www.swiggy.com/city/bangalore/latcha-speciality-matcha-arekere-rest1365346"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-6 rounded-2xl bg-crimson px-9 py-7 sm:px-12 sm:py-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-5 rounded-2xl bg-crimson px-7 py-6 sm:px-10 sm:py-7 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
           >
-            <div className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-3">
+            <div className="h-16 w-16 sm:h-20 sm:w-20 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-2.5">
               <img src={swiggyLogo} alt="Swiggy" className="max-h-full max-w-full object-contain" />
             </div>
             <div>
-              <p className="font-body text-sm sm:text-base uppercase tracking-wider text-blush/70">Order on Swiggy</p>
-              <h3 className="font-display text-2xl sm:text-3xl font-bold text-blush">Latcha Cafe</h3>
+              <p className="font-body text-xs sm:text-sm uppercase tracking-wider text-blush/70">Order on Swiggy</p>
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-blush">Latcha Cafe</h3>
             </div>
           </a>
           <a
             href="https://www.zomato.com/bangalore/latcha-speciality-matcha-jp-nagar-bangalore?amp=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-6 rounded-2xl bg-crimson px-9 py-7 sm:px-12 sm:py-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+            className="inline-flex items-center gap-5 rounded-2xl bg-crimson px-7 py-6 sm:px-10 sm:py-7 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
           >
-            <div className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-3">
+            <div className="h-16 w-16 sm:h-20 sm:w-20 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-2.5">
               <img src={zomatoLogo} alt="Zomato" className="max-h-full max-w-full object-contain" />
             </div>
             <div>
-              <p className="font-body text-sm sm:text-base uppercase tracking-wider text-blush/70">Order on Zomato</p>
-              <h3 className="font-display text-2xl sm:text-3xl font-bold text-blush">Latcha Cafe</h3>
+              <p className="font-body text-xs sm:text-sm uppercase tracking-wider text-blush/70">Order on Zomato</p>
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-blush">Latcha Cafe</h3>
             </div>
           </a>
         </div>
