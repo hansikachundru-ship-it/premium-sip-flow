@@ -44,7 +44,7 @@ export const cloudLattes: MenuItem[] = [
   { num: 3, name: "Rosy Cloud Iced Matcha Latte", desc: "Delicate rose notes cloud layered over smooth Uji Reserve Matcha.", sweetness: "3/5 (Mild Sweet)", image: rosyRoseImg },
   { num: 4, name: "Peach Cobbler Cloud Iced Matcha Latte", desc: "Juicy peach cobbler dessert notes layered over Uji Reserve Matcha.", sweetness: "3/5 (Mild Sweet)", image: peachCobblerImg },
   { num: 5, name: "Pistachio Cream Cloud Iced Matcha Latte", desc: "" },
-  { num: 6, name: "Ube Cloud Iced Matcha Latte", desc: "" },
+  { num: 6, name: "Ube Cloud Iced Matcha Latte", desc: "", image: ubeCloudImg },
   { num: 7, name: "Blue Sky Cloud Iced Matcha Latte", desc: "" },
 ];
 
