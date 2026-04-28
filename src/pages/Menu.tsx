@@ -67,7 +67,7 @@ const Menu = () => {
                 items={classicLattes}
                 itemVariant="dark"
                 footer={
-                  <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-blush rounded-xl border-2 border-matcha-dark text-center shadow-md">
+                  <div className="mt-4 sm:mt-6 px-4 sm:px-5 py-2.5 sm:py-3 bg-blush rounded-xl border border-matcha/40 text-center shadow-sm">
                     <p className="text-xs sm:text-sm font-bold text-matcha-dark font-display">Extra Matcha Shot – Add On</p>
                     <p className="text-[10px] sm:text-xs text-matcha-dark font-body">2G of premium grade matcha @ ₹80</p>
                   </div>
