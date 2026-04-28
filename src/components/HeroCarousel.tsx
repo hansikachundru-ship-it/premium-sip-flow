@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import heroLanding from "@/assets/hero-landing.jpeg";
+import heroLanding from "@/assets/hero-landing.png";
 
 const HeroCarousel = () => {
   return (
