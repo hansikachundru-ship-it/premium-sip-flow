@@ -42,9 +42,8 @@ const shopData: ShopCategory[] = [
     id: "bundles",
     title: "Shop Bundles",
     products: [
-      { id: "b1", name: "Matcha Starter Kit", price: 2499, priceDisplay: "Rs. 2,499" },
-      { id: "b2", name: "Matcha Lover's Bundle", price: 3299, priceDisplay: "Rs. 3,299" },
-      { id: "b3", name: "Ultimate Matcha Experience", price: 4499, priceDisplay: "Rs. 4,499" },
+      { id: "b1", name: "Latcha Reserve - Duo", price: 3500, priceDisplay: "Rs. 3,500/-" },
+      { id: "b2", name: "Latcha Reserve - Trio", price: 4500, priceDisplay: "Rs. 4,500/-" },
     ],
   },
 ];
