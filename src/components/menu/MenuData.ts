@@ -57,7 +57,7 @@ export const softServes: MenuItem[] = [
   { num: 2, name: "Strawberry Crush Premium Soft Serve", desc: "Creamy perfectly balanced fruity strawberry milk soft serve.", sweetness: "4/5 (Sweet)", image: strawberrySoftServeImg },
   { num: 3, name: "Ube Soft Serve", desc: "", image: ubeSoftServeImg },
   { num: 4, name: "Matcha Soft Serve", desc: "", image: matchaSoftServeImg },
-  { num: 5, name: "Pick Your Swirl", desc: "" },
+  { num: 5, name: "Pick Your Swirl", desc: "", image: pickYourSwirlImg },
 
 ];
 
