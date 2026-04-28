@@ -143,37 +143,37 @@ const CafeSection = () => {
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-4 sm:mb-6 text-center font-display text-xl sm:text-2xl font-extrabold text-crimson md:text-3xl"
+          className="mb-6 sm:mb-8 text-center font-display text-xl sm:text-2xl font-extrabold text-crimson md:text-4xl"
         >
           Order Online
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           <a
             href="https://www.swiggy.com/city/bangalore/latcha-speciality-matcha-arekere-rest1365346"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 rounded-2xl bg-crimson p-4 sm:p-5 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+            className="flex items-center gap-5 sm:gap-6 rounded-2xl bg-crimson p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
           >
-            <div className="h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-2">
+            <div className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0 rounded-2xl bg-blush flex items-center justify-center p-3">
               <img src={swiggyLogo} alt="Swiggy" className="max-h-full max-w-full object-contain" />
             </div>
             <div className="min-w-0">
-              <p className="font-body text-[10px] sm:text-xs uppercase tracking-wider text-blush/70">Order on Swiggy</p>
-              <h3 className="font-display text-base sm:text-lg font-bold text-blush truncate">Latcha Cafe</h3>
+              <p className="font-body text-xs sm:text-sm uppercase tracking-wider text-blush/70">Order on Swiggy</p>
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-blush truncate">Latcha Cafe</h3>
             </div>
           </a>
           <a
             href="https://www.zomato.com/bangalore/latcha-speciality-matcha-jp-nagar-bangalore?amp=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 rounded-2xl bg-crimson p-4 sm:p-5 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
+            className="flex items-center gap-5 sm:gap-6 rounded-2xl bg-crimson p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
           >
-            <div className="h-14 w-14 sm:h-16 sm:w-16 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-2">
+            <div className="h-20 w-20 sm:h-24 sm:w-24 flex-shrink-0 rounded-2xl bg-blush flex items-center justify-center p-3">
               <img src={zomatoLogo} alt="Zomato" className="max-h-full max-w-full object-contain" />
             </div>
             <div className="min-w-0">
-              <p className="font-body text-[10px] sm:text-xs uppercase tracking-wider text-blush/70">Order on Zomato</p>
-              <h3 className="font-display text-base sm:text-lg font-bold text-blush truncate">Latcha Cafe</h3>
+              <p className="font-body text-xs sm:text-sm uppercase tracking-wider text-blush/70">Order on Zomato</p>
+              <h3 className="font-display text-xl sm:text-2xl font-bold text-blush truncate">Latcha Cafe</h3>
             </div>
           </a>
         </div>
