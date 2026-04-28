@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import shaneezImage from "@/assets/review-shaneez.png";
+import sahanaImage from "@/assets/review-sahana.png";
 
 interface Review {
   name: string;
@@ -40,10 +41,10 @@ const reviews: Review[] = [
     rating: 5,
   },
   {
-    name: "Vikram D.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop&crop=face",
-    text: "Very good matcha. I am not big reviewer but felt like writing this because quality is genuinely surprising for Indian brand. Stone milled you can feel the difference in texture. My wife also likes it now she was not interested before. Half star less only because tin is little hard to open",
-    rating: 4.5,
+    name: "Sahana M",
+    image: sahanaImage,
+    text: "This matcha place has got a clean, aesthetic vibe that's perfect for a quick catch-up or a solo chill session. Their matcha is smooth, well-balanced, and not overly bitter, which shows good quality powder. The menu keeps it simple with classic and fun matcha-based drinks that are easy to love. Definitely worth checking out if you're craving a calm cafe experience with great matcha then this place is worth it",
+    rating: 5,
   },
 ];
 
