@@ -13,6 +13,8 @@ import cafeGallery15 from "@/assets/cafe-gallery-15.png";
 import cafeGallery17 from "@/assets/cafe-gallery-17.png";
 import cafeGallery18 from "@/assets/cafe-gallery-18.png";
 import cafeGallery20 from "@/assets/cafe-gallery-20.png";
+import swiggyLogo from "@/assets/swiggy-logo.png";
+import zomatoLogo from "@/assets/zomato-logo.png";
 
 const galleryImages = [
   { src: cafeGallery12, alt: "Barista whisking matcha" },
