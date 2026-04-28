@@ -15,6 +15,7 @@ import vanillaSoftServeImg from "@/assets/menu/vanilla-soft-serve.png";
 import strawberrySoftServeImg from "@/assets/menu/strawberry-soft-serve.png";
 import ubeCloudImg from "@/assets/menu/ube-cloud.png";
 import blueSkyCloudImg from "@/assets/menu/blue-sky-cloud.png";
+import ubeSoftServeImg from "@/assets/menu/ube-soft-serve.png";
 
 export interface MenuItem {
   num: number;
