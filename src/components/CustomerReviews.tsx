@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import shaneezImage from "@/assets/review-shaneez.png";
 import sahanaImage from "@/assets/review-sahana.png";
+import tanishiImage from "@/assets/review-tanishi.png";
 
 interface Review {
   name: string;
@@ -29,10 +30,10 @@ const reviews: Review[] = [
     rating: 5,
   },
   {
-    name: "Rahul T.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&h=500&fit=crop&crop=face",
-    text: "taste is authentic, you can tell its good quality matcha. I've had japanese matcha before when i travelled and this is very close to that. delivery was also fast. minus one star only because i spilled it opening the tin lol that's my fault not theirs",
-    rating: 4,
+    name: "Tanishi Chugh",
+    image: tanishiImage,
+    text: "The place was all cute and pink. Tried their matcha monster and raspberry matcha latte, and both were too good. Also tried their matcha soft serve and it was so yummmm. Gonna go there again for sure to try their famous cookie butter matcha",
+    rating: 5,
   },
   {
     name: "Ananya Sharma",
