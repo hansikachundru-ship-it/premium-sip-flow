@@ -47,9 +47,10 @@ export const cloudLattes: MenuItem[] = [
   { num: 2, name: "Cookie Butter Cloud Iced Matcha Latte", desc: "Buttery cookie cream swirled with smooth Uji Reserve Matcha.", sweetness: "5/5 (Sweet)", badge: "Best Seller", image: cookieButterImg },
   { num: 3, name: "Rosy Cloud Iced Matcha Latte", desc: "Delicate rose notes cloud layered over smooth Uji Reserve Matcha.", sweetness: "3/5 (Mild Sweet)", image: rosyRoseImg },
   { num: 4, name: "Peach Cobbler Cloud Iced Matcha Latte", desc: "Juicy peach cobbler dessert notes layered over Uji Reserve Matcha.", sweetness: "3/5 (Mild Sweet)", image: peachCobblerImg },
-  { num: 5, name: "Pistachio Cream Cloud Iced Matcha Latte", desc: "" },
-  { num: 6, name: "Ube Cloud Iced Matcha Latte", desc: "", image: ubeCloudImg },
+  { num: 5, name: "Pistachio Cream Cloud Iced Matcha Latte", desc: "Pistachio cream cloud, paired with Latcha Reserve Uji Matcha. Rich, nutty, and creamy.", sweetness: "4/5" },
+  { num: 6, name: "Ube Cloud Iced Matcha Latte", desc: "Ube cloud cream, paired with Latcha Reserve Uji Matcha and ube milk. Sweet, earthy and creamy.", sweetness: "3/5", image: ubeCloudImg },
   { num: 7, name: "Blue Sky Cloud Iced Matcha Latte", desc: "", image: blueSkyCloudImg },
+  { num: 8, name: "Vanilla Sea Salt Cloud Iced Matcha Latte", desc: "Vanilla sea salt cold foam, paired with Latcha Reserve Uji Matcha. Creamy, subtly sweet, and lightly salted.", sweetness: "4/5" },
 ];
 
 export const softServes: MenuItem[] = [
