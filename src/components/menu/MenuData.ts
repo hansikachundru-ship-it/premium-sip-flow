@@ -59,9 +59,9 @@ export const cloudLattes: MenuItem[] = [
 export const softServes: MenuItem[] = [
   { num: 1, name: "Vanilla Silk Premium Soft Serve", desc: "Creamy perfectly balanced vanilla soft serve.", sweetness: "3/5 (Mild Sweet)", image: vanillaSoftServeImg },
   { num: 2, name: "Strawberry Crush Premium Soft Serve", desc: "Creamy perfectly balanced fruity strawberry milk soft serve.", sweetness: "4/5 (Sweet)", image: strawberrySoftServeImg },
-  { num: 3, name: "Ube Soft Serve", desc: "", image: ubeSoftServeImg },
-  { num: 4, name: "Matcha Soft Serve", desc: "", image: matchaSoftServeImg },
-  { num: 5, name: "Pick Your Swirl", desc: "", image: pickYourSwirlImg },
+  { num: 3, name: "Ube Soft Serve", desc: "Nutty, vanilla-kissed, and rooted in Filipino tradition — ube is the Philippines' most beloved flavour.", sweetness: "3.5/5 (Medium Sweet)", image: ubeSoftServeImg },
+  { num: 4, name: "Matcha Soft Serve", desc: "Earthy and umami-rich with a gentle, subtle sweetness — a refined treat for green tea lovers.", sweetness: "3/5 (Mild Sweet)", image: matchaSoftServeImg },
+  { num: 5, name: "Pick Your Swirl", desc: "Can't choose just one? Mix and match. Pick your swirl from our two live soft serve flavours of the day for a custom combo that's uniquely yours.", image: pickYourSwirlImg },
 
 ];
 
