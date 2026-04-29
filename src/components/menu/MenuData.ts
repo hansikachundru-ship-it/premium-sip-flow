@@ -21,6 +21,7 @@ import pistachioCreamCloudImg from "@/assets/menu/pistachio-cream-cloud.png";
 import pickYourSwirlImg from "@/assets/menu/pick-your-swirl.png";
 import cherryImg from "@/assets/menu/cherry.png";
 import ubeIcedImg from "@/assets/menu/ube.png";
+import toastedCoconutImg from "@/assets/menu/toasted-coconut.png";
 
 export interface MenuItem {
   num: number;
@@ -41,7 +42,7 @@ export const classicLattes: MenuItem[] = [
   { num: 7, name: "Mango Iced Matcha Latte", desc: "A perfect combination of tropical mango paired with Uji Reserve Matcha.", image: mangoImg, badge: "Best Seller", sweetness: "3/5" },
   { num: 8, name: "Caramel Toffee Iced Matcha Latte", desc: "Rich toffee caramel blended with Uji Reserve Matcha.", image: caramelToffeeImg, sweetness: "3/5" },
   { num: 9, name: "Cherry Iced Matcha Latte", desc: "Sweet-tart pop of cherry meets bright, umami Latcha Reserve Uji Matcha.", image: cherryImg, sweetness: "3/5" },
-  { num: 10, name: "Toasted Coconut Iced Matcha Latte", desc: "Warm, nutty coconut paired with our Latcha Reserve Uji Matcha.", sweetness: "3/5" },
+  { num: 10, name: "Toasted Coconut Iced Matcha Latte", desc: "Warm, nutty coconut paired with our Latcha Reserve Uji Matcha.", image: toastedCoconutImg, sweetness: "3/5" },
   { num: 11, name: "Ube Iced Matcha Latte", desc: "Soft, vanilla-nutty Philippines famous ube paired with bright, umami Latcha Reserve Uji Matcha.", image: ubeIcedImg, sweetness: "3/5" },
 ];
 
