@@ -20,6 +20,7 @@ import matchaSoftServeImg from "@/assets/menu/matcha-soft-serve.png";
 import pistachioCreamCloudImg from "@/assets/menu/pistachio-cream-cloud.png";
 import pickYourSwirlImg from "@/assets/menu/pick-your-swirl.png";
 import cherryImg from "@/assets/menu/cherry.png";
+import ubeIcedImg from "@/assets/menu/ube.png";
 
 export interface MenuItem {
   num: number;
