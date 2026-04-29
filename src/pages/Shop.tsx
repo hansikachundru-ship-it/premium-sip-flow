@@ -10,6 +10,7 @@ import matchaProduct2 from "@/assets/matcha-product-2.png";
 import matchaProduct3 from "@/assets/matcha-product-3.png";
 import latchaReserveDuo from "@/assets/latcha-reserve-duo.png";
 import latchaReserveTrio from "@/assets/latcha-reserve-trio.png";
+import latchaReserveKit from "@/assets/latcha-reserve-kit.png";
 import { useCartStore } from "@/stores/cartStore";
 
 interface Product {
@@ -46,7 +47,7 @@ const shopData: ShopCategory[] = [
     products: [
       { id: "b1", name: "Latcha Reserve - Duo", price: 3500, priceDisplay: "Rs. 3,500/-", images: [latchaReserveDuo] },
       { id: "b2", name: "Latcha Reserve - Trio", price: 4500, priceDisplay: "Rs. 4,500/-", images: [latchaReserveTrio] },
-      { id: "b3", name: "Latcha Reserve Kit", price: 3000, priceDisplay: "Rs. 3,000/-", images: [latchaReserveDuo] },
+      { id: "b3", name: "Latcha Reserve Kit", price: 3000, priceDisplay: "Rs. 3,000/-", images: [latchaReserveKit] },
     ],
   },
 ];

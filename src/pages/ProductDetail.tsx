@@ -10,6 +10,7 @@ import matchaProduct2 from "@/assets/matcha-product-2.png";
 import matchaProduct3 from "@/assets/matcha-product-3.png";
 import latchaReserveDuo from "@/assets/latcha-reserve-duo.png";
 import latchaReserveTrio from "@/assets/latcha-reserve-trio.png";
+import latchaReserveKit from "@/assets/latcha-reserve-kit.png";
 import { useCartStore } from "@/stores/cartStore";
 import CustomerReviews from "@/components/CustomerReviews";
 import WhyLatchaHits from "@/components/WhyLatchaHits";
@@ -54,6 +55,16 @@ const products: Record<string, ProductConfig> = {
     priceDisplay: "Rs. 4,500/-",
     size: "90g",
     images: [latchaReserveTrio],
+    breadcrumbCategory: { label: "Shop Bundles", to: "/shop#bundles" },
+  },
+  b3: {
+    id: "b3",
+    name: "Latcha Reserve Kit",
+    nameLines: ["Latcha Reserve", "Kit"],
+    price: 3000,
+    priceDisplay: "Rs. 3,000/-",
+    size: "30g",
+    images: [latchaReserveKit],
     breadcrumbCategory: { label: "Shop Bundles", to: "/shop#bundles" },
   },
 };
