@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { toast } from "sonner";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { ChevronLeft, ChevronRight, ChevronDown, Minus, Plus } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -8,11 +8,55 @@ import Footer from "@/components/Footer";
 import matchaProduct1 from "@/assets/matcha-product-1.png";
 import matchaProduct2 from "@/assets/matcha-product-2.png";
 import matchaProduct3 from "@/assets/matcha-product-3.png";
+import latchaReserveDuo from "@/assets/latcha-reserve-duo.png";
+import latchaReserveTrio from "@/assets/latcha-reserve-trio.png";
 import { useCartStore } from "@/stores/cartStore";
 import CustomerReviews from "@/components/CustomerReviews";
 import WhyLatchaHits from "@/components/WhyLatchaHits";
 
-const images = [matchaProduct1, matchaProduct2, matchaProduct3];
+interface ProductConfig {
+  id: string;
+  name: string;
+  nameLines: [string, string];
+  price: number;
+  priceDisplay: string;
+  size: string;
+  images: string[];
+  breadcrumbCategory: { label: string; to: string };
+}
+
+const products: Record<string, ProductConfig> = {
+  m1: {
+    id: "m1",
+    name: "Latcha Reserve Matcha",
+    nameLines: ["Latcha Reserve", "Matcha"],
+    price: 1899,
+    priceDisplay: "Rs. 1,899/-",
+    size: "30g",
+    images: [matchaProduct1, matchaProduct2, matchaProduct3],
+    breadcrumbCategory: { label: "Shop Matcha", to: "/shop#matcha" },
+  },
+  b1: {
+    id: "b1",
+    name: "Latcha Reserve - Duo",
+    nameLines: ["Latcha Reserve", "Duo"],
+    price: 3500,
+    priceDisplay: "Rs. 3,500/-",
+    size: "60g",
+    images: [latchaReserveDuo],
+    breadcrumbCategory: { label: "Shop Bundles", to: "/shop#bundles" },
+  },
+  b2: {
+    id: "b2",
+    name: "Latcha Reserve - Trio",
+    nameLines: ["Latcha Reserve", "Trio"],
+    price: 4500,
+    priceDisplay: "Rs. 4,500/-",
+    size: "90g",
+    images: [latchaReserveTrio],
+    breadcrumbCategory: { label: "Shop Bundles", to: "/shop#bundles" },
+  },
+};
 
 const accordionData = [
   {
@@ -53,12 +97,17 @@ const accordionData = [
 ];
 
 const ProductDetail = () => {
+  const { id } = useParams<{ id: string }>();
+  const product = (id && products[id]) || products.m1;
+
   const [currentImage, setCurrentImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
-  const [selectedSize] = useState("30g");
   const [openAccordion, setOpenAccordion] = useState<number | null>(null);
   const addItem = useCartStore((s) => s.addItem);
   const openCart = useCartStore((s) => s.openCart);
+
+  const images = product.images;
+  const hasMultipleImages = images.length > 1;
 
   const prevImage = () => setCurrentImage((p) => (p === 0 ? images.length - 1 : p - 1));
   const nextImage = () => setCurrentImage((p) => (p === images.length - 1 ? 0 : p + 1));
@@ -66,10 +115,10 @@ const ProductDetail = () => {
   const handleAddToCart = () => {
     for (let i = 0; i < quantity; i++) {
       addItem({
-        id: "m1",
-        name: "Latcha Reserve Matcha",
-        price: 1899,
-        priceDisplay: "Rs. 1,899/-",
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        priceDisplay: product.priceDisplay,
         image: images[0],
       });
     }
@@ -89,9 +138,9 @@ const ProductDetail = () => {
         <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-body text-crimson/60 mb-6 sm:mb-8 justify-center flex-wrap">
           <Link to="/" className="hover:text-crimson transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-          <Link to="/shop" className="hover:text-crimson transition-colors">Shop Matcha</Link>
+          <Link to={product.breadcrumbCategory.to} className="hover:text-crimson transition-colors">{product.breadcrumbCategory.label}</Link>
           <ChevronRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-          <span className="text-crimson font-medium">Latcha Reserve Matcha</span>
+          <span className="text-crimson font-medium">{product.name}</span>
         </nav>
 
         {/* Two-column layout */}
@@ -103,7 +152,7 @@ const ProductDetail = () => {
                 <motion.img
                   key={currentImage}
                   src={images[currentImage]}
-                  alt={`Latcha Matcha Powder - Image ${currentImage + 1}`}
+                  alt={`${product.name} - Image ${currentImage + 1}`}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
@@ -112,63 +161,66 @@ const ProductDetail = () => {
                 />
               </AnimatePresence>
 
-              {/* Arrows */}
-              <button
-                onClick={prevImage}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/80 border border-crimson/10 text-crimson flex items-center justify-center hover:bg-white transition-colors shadow-sm"
-                aria-label="Previous image"
-              >
-                <ChevronLeft className="w-4 h-4" />
-              </button>
-              <button
-                onClick={nextImage}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/80 border border-crimson/10 text-crimson flex items-center justify-center hover:bg-white transition-colors shadow-sm"
-                aria-label="Next image"
-              >
-                <ChevronRight className="w-4 h-4" />
-              </button>
+              {hasMultipleImages && (
+                <>
+                  <button
+                    onClick={prevImage}
+                    className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/80 border border-crimson/10 text-crimson flex items-center justify-center hover:bg-white transition-colors shadow-sm"
+                    aria-label="Previous image"
+                  >
+                    <ChevronLeft className="w-4 h-4" />
+                  </button>
+                  <button
+                    onClick={nextImage}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/80 border border-crimson/10 text-crimson flex items-center justify-center hover:bg-white transition-colors shadow-sm"
+                    aria-label="Next image"
+                  >
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
 
-              {/* Dots */}
-              <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                {images.map((_, i) => (
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                    {images.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setCurrentImage(i)}
+                        className={`w-2.5 h-2.5 rounded-full transition-all ${
+                          i === currentImage ? "bg-crimson w-6" : "bg-crimson/30"
+                        }`}
+                        aria-label={`Go to image ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
+            {hasMultipleImages && (
+              <div className="flex gap-3 mt-4 justify-center">
+                {images.map((img, i) => (
                   <button
                     key={i}
                     onClick={() => setCurrentImage(i)}
-                    className={`w-2.5 h-2.5 rounded-full transition-all ${
-                      i === currentImage ? "bg-crimson w-6" : "bg-crimson/30"
+                    className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                      i === currentImage ? "border-crimson" : "border-transparent opacity-60 hover:opacity-80"
                     }`}
-                    aria-label={`Go to image ${i + 1}`}
-                  />
+                  >
+                    <img src={img} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
+                  </button>
                 ))}
               </div>
-            </div>
-
-            {/* Thumbnail strip */}
-            <div className="flex gap-3 mt-4 justify-center">
-              {images.map((img, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentImage(i)}
-                  className={`w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                    i === currentImage ? "border-crimson" : "border-transparent opacity-60 hover:opacity-80"
-                  }`}
-                >
-                  <img src={img} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
-                </button>
-              ))}
-            </div>
+            )}
           </div>
 
           {/* Right: Product info */}
           <div className="flex flex-col">
             <h1 className="font-display text-crimson text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold leading-tight">
-              <span className="whitespace-nowrap">Latcha Reserve</span>
+              <span className="whitespace-nowrap">{product.nameLines[0]}</span>
               <br />
-              Matcha
+              {product.nameLines[1]}
             </h1>
 
             <p className="font-body text-crimson text-xl sm:text-2xl font-semibold mt-2 sm:mt-3">
-              Rs. 1,899/-
+              {product.priceDisplay}
             </p>
 
             <p className="font-body text-crimson/60 text-sm sm:text-base mt-4 leading-relaxed text-justify">
@@ -183,9 +235,9 @@ const ProductDetail = () => {
 
             {/* Size selector */}
             <div className="mt-6">
-              <p className="font-body text-crimson text-sm font-medium mb-2">Size: {selectedSize}</p>
+              <p className="font-body text-crimson text-sm font-medium mb-2">Size: {product.size}</p>
               <button className="px-4 py-2 rounded-lg bg-crimson text-blush font-body text-sm font-medium">
-                30g
+                {product.size}
               </button>
             </div>
 
