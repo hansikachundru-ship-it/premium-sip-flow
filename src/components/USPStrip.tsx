@@ -12,11 +12,11 @@ const USPStrip = () => {
 
   return (
     <div className="bg-matcha overflow-hidden py-4">
-      <div className="animate-marquee flex whitespace-nowrap">
+      <div className="animate-marquee flex items-center whitespace-nowrap">
         {items.map((usp, i) => (
-          <span key={i} className="font-display text-blush text-sm md:text-base font-bold tracking-[0.15em] uppercase mx-6 flex items-center gap-3">
+          <span key={i} className="font-display text-blush text-sm md:text-base font-bold tracking-[0.15em] uppercase flex items-center">
             {usp}
-            <span className="text-blush/40">|</span>
+            <span className="text-blush/40 mx-6">|</span>
           </span>
         ))}
       </div>
