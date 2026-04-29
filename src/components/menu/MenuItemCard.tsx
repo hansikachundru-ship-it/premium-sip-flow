@@ -62,7 +62,7 @@ const MenuItemCard = ({ item, index, variant = "light" }: MenuItemCardProps) => 
           )}
         </div>
         <p
-          className={`text-xs md:text-sm mt-0.5 ${isDark ? "text-blush/60" : "text-crimson/60"}`}
+          className={`text-xs md:text-sm mt-0.5 whitespace-pre-line ${isDark ? "text-blush/60" : "text-crimson/60"}`}
           style={{ fontFamily: "var(--font-handwriting)" }}
         >
           {item.desc}
