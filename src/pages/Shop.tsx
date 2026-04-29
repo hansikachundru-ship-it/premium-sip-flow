@@ -46,6 +46,7 @@ const shopData: ShopCategory[] = [
     products: [
       { id: "b1", name: "Latcha Reserve - Duo", price: 3500, priceDisplay: "Rs. 3,500/-", images: [latchaReserveDuo] },
       { id: "b2", name: "Latcha Reserve - Trio", price: 4500, priceDisplay: "Rs. 4,500/-", images: [latchaReserveTrio] },
+      { id: "b3", name: "Latcha Reserve Kit", price: 3000, priceDisplay: "Rs. 3,000/-", images: [latchaReserveDuo] },
     ],
   },
 ];
