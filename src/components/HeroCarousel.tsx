@@ -7,9 +7,6 @@ const HeroCarousel = () => {
       <img
         src={heroLanding}
         alt="Latcha hero"
-        loading="eager"
-        decoding="async"
-        fetchPriority="high"
         className="w-full h-auto block md:h-[80vh] md:object-cover"
       />
       <div className="absolute inset-x-0 bottom-2 sm:bottom-3 md:bottom-4 flex justify-center pointer-events-none">

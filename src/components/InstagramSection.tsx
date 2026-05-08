@@ -26,32 +26,12 @@ const reelColors = [
 ];
 
 const InstagramSection = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
   const trackRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
-  const [inView, setInView] = useState(false);
   const animRef = useRef<number>();
   const speed = 0.5;
 
-  // Only mount videos when section enters viewport
   useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) {
-          setInView(true);
-          obs.disconnect();
-        }
-      },
-      { rootMargin: "200px" }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, []);
-
-  useEffect(() => {
-    if (!inView) return;
     const track = trackRef.current;
     if (!track) return;
 
@@ -68,13 +48,13 @@ const InstagramSection = () => {
     return () => {
       if (animRef.current) cancelAnimationFrame(animRef.current);
     };
-  }, [inView]);
+  }, []);
 
   const allReels = [...reelItems, ...reelItems];
   const allColors = [...reelColors, ...reelColors];
 
   return (
-    <section ref={sectionRef} className="py-10 sm:py-16 md:py-24 bg-blush overflow-hidden">
+    <section className="py-10 sm:py-16 md:py-24 bg-blush overflow-hidden">
       <div className="text-center mb-8 sm:mb-10 md:mb-14 px-4 sm:px-6">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -110,14 +90,13 @@ const InstagramSection = () => {
               rel="noopener noreferrer"
               className={`${allColors[i % allColors.length]} rounded-xl sm:rounded-2xl w-40 h-56 sm:w-52 sm:h-72 md:w-60 md:h-80 lg:w-64 lg:h-[22rem] flex-shrink-0 flex items-center justify-center shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300 overflow-hidden relative`}
             >
-              {reel.video && inView ? (
+              {reel.video ? (
                 <video
                   src={reel.video}
                   muted
                   autoPlay
                   loop
                   playsInline
-                  preload="metadata"
                   className="absolute inset-0 w-full h-full object-cover rounded-xl sm:rounded-2xl"
                 />
               ) : (

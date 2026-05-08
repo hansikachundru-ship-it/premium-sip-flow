@@ -60,7 +60,7 @@ const CafeSection = () => {
                   src={cafeHero}
                   alt="Latcha Cafe JP Nagar"
                   className="w-16 h-16 sm:w-20 sm:h-20 rounded-lg object-cover flex-shrink-0"
-                 loading="lazy" decoding="async" />
+                />
                 <div className="flex-1 min-w-0">
                   <h3 className="font-display text-base sm:text-lg font-bold text-blush">
                     JP Nagar
@@ -155,7 +155,7 @@ const CafeSection = () => {
             className="inline-flex items-center gap-5 rounded-2xl bg-crimson px-7 py-6 sm:px-10 sm:py-7 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
           >
             <div className="h-16 w-16 sm:h-20 sm:w-20 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-2.5">
-              <img src={swiggyLogo} alt="Swiggy" className="max-h-full max-w-full object-contain"  loading="lazy" decoding="async" />
+              <img src={swiggyLogo} alt="Swiggy" className="max-h-full max-w-full object-contain" />
             </div>
             <div>
               <p className="font-body text-xs sm:text-sm uppercase tracking-wider text-blush/70">Order on Swiggy</p>
@@ -169,7 +169,7 @@ const CafeSection = () => {
             className="inline-flex items-center gap-5 rounded-2xl bg-crimson px-7 py-6 sm:px-10 sm:py-7 shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5"
           >
             <div className="h-16 w-16 sm:h-20 sm:w-20 flex-shrink-0 rounded-xl bg-blush flex items-center justify-center p-2.5">
-              <img src={zomatoLogo} alt="Zomato" className="max-h-full max-w-full object-contain"  loading="lazy" decoding="async" />
+              <img src={zomatoLogo} alt="Zomato" className="max-h-full max-w-full object-contain" />
             </div>
             <div>
               <p className="font-body text-xs sm:text-sm uppercase tracking-wider text-blush/70">Order on Zomato</p>
