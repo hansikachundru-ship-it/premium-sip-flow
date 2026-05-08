@@ -215,7 +215,7 @@ const ProductDetail = () => {
                       i === currentImage ? "border-crimson" : "border-transparent opacity-60 hover:opacity-80"
                     }`}
                   >
-                    <img src={img} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover" />
+                    <img src={img} alt={`Thumbnail ${i + 1}`} className="w-full h-full object-cover"  loading="lazy" decoding="async" />
                   </button>
                 ))}
               </div>
