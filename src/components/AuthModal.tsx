@@ -13,6 +13,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
   const [mode, setMode] = useState<"login" | "signup">("login");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,6 +25,17 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
 
     try {
       if (mode === "signup") {
+        if (password !== confirmPassword) {
+          toast({ title: "Passwords don't match", description: "Please make sure both passwords are identical.", variant: "destructive" });
+          setLoading(false);
+          return;
+        }
+        if (password.length < 6) {
+          toast({ title: "Password too short", description: "Use at least 6 characters.", variant: "destructive" });
+          setLoading(false);
+          return;
+        }
+
         const { error } = await supabase.auth.signUp({
           email,
           password,
@@ -33,7 +45,22 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
           },
         });
         if (error) throw error;
-        toast({ title: "Account created!", description: "Check your email to verify your account." });
+
+        // Fire-and-forget welcome email (silent if not configured)
+        try {
+          await supabase.functions.invoke("send-transactional-email", {
+            body: {
+              templateName: "welcome",
+              recipientEmail: email,
+              idempotencyKey: `welcome-${email}-${Date.now()}`,
+              templateData: { name: name || "friend" },
+            },
+          });
+        } catch {
+          // Email infra may not be configured yet — sign-up still succeeds.
+        }
+
+        toast({ title: "Welcome to the Latcha community!", description: "Your account is ready. You can now complete your order." });
         onClose();
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
@@ -51,6 +78,7 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
   const resetForm = () => {
     setEmail("");
     setPassword("");
+    setConfirmPassword("");
     setName("");
     setPhone("");
   };
@@ -69,10 +97,10 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
             initial={{ scale: 0.95, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
-            className="bg-blush rounded-2xl shadow-2xl w-full max-w-md overflow-hidden"
+            className="bg-blush rounded-2xl shadow-2xl w-full max-w-md overflow-hidden max-h-[90vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="flex items-center justify-between px-6 py-5 border-b border-crimson/10">
+            <div className="flex items-center justify-between px-6 py-5 border-b border-crimson/10 sticky top-0 bg-blush z-10">
               <h2 className="font-display text-crimson text-lg font-bold uppercase tracking-wider">
                 {mode === "login" ? "Log In" : "Sign Up"}
               </h2>
@@ -121,7 +149,9 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
               </div>
 
               <div>
-                <label className="font-body text-crimson text-xs uppercase tracking-wider font-medium block mb-1.5">Password</label>
+                <label className="font-body text-crimson text-xs uppercase tracking-wider font-medium block mb-1.5">
+                  {mode === "signup" ? "Create Password" : "Password"}
+                </label>
                 <input
                   type="password"
                   value={password}
@@ -132,6 +162,21 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
                   placeholder="••••••••"
                 />
               </div>
+
+              {mode === "signup" && (
+                <div>
+                  <label className="font-body text-crimson text-xs uppercase tracking-wider font-medium block mb-1.5">Confirm Password</label>
+                  <input
+                    type="password"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    required
+                    minLength={6}
+                    className="w-full bg-blush-light border border-crimson/20 rounded-lg px-4 py-2.5 font-body text-crimson text-sm outline-none focus:border-crimson/50 transition-colors placeholder:text-crimson/30"
+                    placeholder="••••••••"
+                  />
+                </div>
+              )}
 
               <button
                 type="submit"
