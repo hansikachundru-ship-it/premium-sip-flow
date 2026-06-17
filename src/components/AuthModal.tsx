@@ -44,7 +44,20 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
             emailRedirectTo: window.location.origin,
           },
         });
-        if (error) throw error;
+        if (error) {
+          const msg = (error.message || "").toLowerCase();
+          if (msg.includes("already") || msg.includes("registered") || msg.includes("exists")) {
+            toast({
+              title: "Account already exists",
+              description: "You already have an account with this email. Switched you to Log In — just enter your password.",
+            });
+            setMode("login");
+            setConfirmPassword("");
+            setLoading(false);
+            return;
+          }
+          throw error;
+        }
 
         // Fire-and-forget welcome email (silent if not configured)
         try {
@@ -64,7 +77,19 @@ const AuthModal = ({ isOpen, onClose }: AuthModalProps) => {
         onClose();
       } else {
         const { error } = await supabase.auth.signInWithPassword({ email, password });
-        if (error) throw error;
+        if (error) {
+          const msg = (error.message || "").toLowerCase();
+          if (msg.includes("invalid") || msg.includes("credentials")) {
+            toast({
+              title: "Incorrect email or password",
+              description: "Please double-check your details and try again.",
+              variant: "destructive",
+            });
+            setLoading(false);
+            return;
+          }
+          throw error;
+        }
         toast({ title: "Welcome back!" });
         onClose();
       }
