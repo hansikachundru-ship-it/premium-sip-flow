@@ -107,9 +107,9 @@ const About = () => {
       </motion.section>
 
       {/* Our World */}
-      <Section className="py-16 md:py-24">
+      <Section className="pt-0 pb-48">
         <Eyebrow>Our World</Eyebrow>
-        <h2 className="font-display text-crimson text-3xl md:text-5xl font-extrabold uppercase leading-[1.1] mb-8">
+        <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           Soft. Feminine. Calm.
         </h2>
         <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
@@ -123,12 +123,10 @@ const About = () => {
         </div>
       </Section>
 
-      <div className="max-w-[120px] mx-auto h-px bg-crimson/20 my-8 md:my-16" />
-
       {/* What's Next */}
-      <Section className="py-16 md:py-24">
+      <Section className="pt-0 pb-48">
         <Eyebrow>What's Next</Eyebrow>
-        <h2 className="font-display text-crimson text-3xl md:text-5xl font-extrabold uppercase leading-[1.1] mb-8">
+        <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           This is just the beginning.
         </h2>
         <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
@@ -140,7 +138,7 @@ const About = () => {
         </div>
       </Section>
 
-      <div className="h-16 md:h-24" />
+      <div className="h-8" />
 
       <Footer />
     </div>
