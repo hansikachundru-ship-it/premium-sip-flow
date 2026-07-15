@@ -13,6 +13,7 @@ const Account = lazy(() => import("./pages/Account.tsx"));
 const Checkout = lazy(() => import("./pages/Checkout.tsx"));
 const ProductDetail = lazy(() => import("./pages/ProductDetail.tsx"));
 const NotFound = lazy(() => import("./pages/NotFound.tsx"));
+const About = lazy(() => import("./pages/About.tsx"));
 
 const queryClient = new QueryClient();
 
