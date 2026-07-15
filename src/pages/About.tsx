@@ -77,7 +77,7 @@ const About = () => {
       </Section>
 
       {/* Founder Quote */}
-      <motion.section {...fadeUp} className="py-20 md:py-32 px-6 md:px-8">
+      <motion.section {...fadeUp} className="pt-0 pb-48 px-6 md:px-8">
         <div className="max-w-[860px] mx-auto text-center">
           <Eyebrow>A Note From Our Founder</Eyebrow>
           <blockquote className="relative">
@@ -105,8 +105,6 @@ const About = () => {
           </blockquote>
         </div>
       </motion.section>
-
-      <div className="max-w-[120px] mx-auto h-px bg-crimson/20 my-8 md:my-16" />
 
       {/* Our World */}
       <Section className="py-16 md:py-24">
