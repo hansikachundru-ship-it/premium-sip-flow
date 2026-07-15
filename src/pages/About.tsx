@@ -53,9 +53,9 @@ const About = () => {
       </section>
 
       {/* The Aha Moment */}
-      <Section className="py-16 md:py-24">
+      <Section className="pt-0 pb-48">
         <Eyebrow>The Aha Moment</Eyebrow>
-        <h2 className="font-display text-crimson text-3xl md:text-5xl font-extrabold uppercase leading-[1.1] mb-8">
+        <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           One farm changed everything.
         </h2>
         <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
@@ -75,8 +75,6 @@ const About = () => {
           <p className="italic">So we took the risk and brought it all the way to Bangalore.</p>
         </div>
       </Section>
-
-      <div className="max-w-[120px] mx-auto h-px bg-crimson/20 my-8 md:my-16" />
 
       {/* Founder Quote */}
       <motion.section {...fadeUp} className="py-20 md:py-32 px-6 md:px-8">
