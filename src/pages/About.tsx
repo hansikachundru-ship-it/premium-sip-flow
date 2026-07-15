@@ -10,13 +10,13 @@ const fadeUp = {
 };
 
 const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-  <motion.section {...fadeUp} className={`max-w-[760px] mx-auto px-6 md:px-8 ${className}`}>
+  <motion.section {...fadeUp} className={`max-w-[760px] mx-auto px-6 md:px-8 text-center ${className}`}>
     {children}
   </motion.section>
 );
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
-  <p className="font-display text-matcha text-[11px] md:text-xs uppercase tracking-[0.35em] mb-5">
+  <p className="font-display text-matcha text-[21px] md:text-[22px] uppercase tracking-[0.35em] mb-5 text-center">
     {children}
   </p>
 );
