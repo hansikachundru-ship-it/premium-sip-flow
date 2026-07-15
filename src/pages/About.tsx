@@ -38,7 +38,7 @@ const About = () => {
           <h1 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8 md:mb-10">
             Matcha, without the mystery.
           </h1>
-          <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
+          <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed text-center">
             <p>
               Most matcha brands want you to feel like you're missing something. A grade you don't
               understand, a ceremony you're doing wrong, a word you can't pronounce. We think that's
