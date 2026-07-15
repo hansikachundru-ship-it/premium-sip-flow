@@ -112,7 +112,7 @@ const About = () => {
         <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           Soft. Feminine. Calm.
         </h2>
-        <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
+        <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed text-center">
           <p>
             Latcha is built around a soft, feminine, and minimalist universe.
           </p>
