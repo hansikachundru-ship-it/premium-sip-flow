@@ -27,7 +27,7 @@ const About = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 md:px-8">
+      <section className="pt-20 md:pt-32 pb-48 px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,8 +35,8 @@ const About = () => {
           className="max-w-[760px] mx-auto text-center"
         >
           <Eyebrow>About Latcha</Eyebrow>
-          <h1 className="font-display text-crimson text-4xl md:text-6xl lg:text-7xl font-extrabold uppercase leading-[1.05] mb-8 md:mb-10">
-            Matcha, without<br />the mystery.
+          <h1 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8 md:mb-10">
+            Matcha, without the mystery.
           </h1>
           <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
             <p>
@@ -52,13 +52,10 @@ const About = () => {
         </motion.div>
       </section>
 
-      {/* Divider */}
-      <div className="max-w-[120px] mx-auto h-px bg-crimson/20 my-8 md:my-16" />
-
       {/* The Aha Moment */}
-      <Section className="py-16 md:py-24">
+      <Section className="pt-0 pb-48">
         <Eyebrow>The Aha Moment</Eyebrow>
-        <h2 className="font-display text-crimson text-3xl md:text-5xl font-extrabold uppercase leading-[1.1] mb-8">
+        <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           One farm changed everything.
         </h2>
         <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
@@ -79,10 +76,8 @@ const About = () => {
         </div>
       </Section>
 
-      <div className="max-w-[120px] mx-auto h-px bg-crimson/20 my-8 md:my-16" />
-
       {/* Founder Quote */}
-      <motion.section {...fadeUp} className="py-20 md:py-32 px-6 md:px-8">
+      <motion.section {...fadeUp} className="pt-0 pb-48 px-6 md:px-8">
         <div className="max-w-[860px] mx-auto text-center">
           <Eyebrow>A Note From Our Founder</Eyebrow>
           <blockquote className="relative">
@@ -111,12 +106,10 @@ const About = () => {
         </div>
       </motion.section>
 
-      <div className="max-w-[120px] mx-auto h-px bg-crimson/20 my-8 md:my-16" />
-
       {/* Our World */}
-      <Section className="py-16 md:py-24">
+      <Section className="pt-0 pb-48">
         <Eyebrow>Our World</Eyebrow>
-        <h2 className="font-display text-crimson text-3xl md:text-5xl font-extrabold uppercase leading-[1.1] mb-8">
+        <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           Soft. Feminine. Calm.
         </h2>
         <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
@@ -130,12 +123,10 @@ const About = () => {
         </div>
       </Section>
 
-      <div className="max-w-[120px] mx-auto h-px bg-crimson/20 my-8 md:my-16" />
-
       {/* What's Next */}
-      <Section className="py-16 md:py-24">
+      <Section className="pt-0 pb-48">
         <Eyebrow>What's Next</Eyebrow>
-        <h2 className="font-display text-crimson text-3xl md:text-5xl font-extrabold uppercase leading-[1.1] mb-8">
+        <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           This is just the beginning.
         </h2>
         <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
@@ -147,7 +138,7 @@ const About = () => {
         </div>
       </Section>
 
-      <div className="h-16 md:h-24" />
+      <div className="h-8" />
 
       <Footer />
     </div>
