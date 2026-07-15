@@ -27,7 +27,7 @@ const About = () => {
       <Navbar />
 
       {/* Hero */}
-      <section className="pt-20 md:pt-32 pb-16 md:pb-24 px-6 md:px-8">
+      <section className="pt-20 md:pt-32 pb-48 px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -35,8 +35,8 @@ const About = () => {
           className="max-w-[760px] mx-auto text-center"
         >
           <Eyebrow>About Latcha</Eyebrow>
-          <h1 className="font-display text-crimson text-4xl md:text-6xl lg:text-7xl font-extrabold uppercase leading-[1.05] mb-8 md:mb-10">
-            Matcha, without<br />the mystery.
+          <h1 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8 md:mb-10">
+            Matcha, without the mystery.
           </h1>
           <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
             <p>
@@ -51,9 +51,6 @@ const About = () => {
           </div>
         </motion.div>
       </section>
-
-      {/* Divider */}
-      <div className="max-w-[120px] mx-auto h-px bg-crimson/20 my-8 md:my-16" />
 
       {/* The Aha Moment */}
       <Section className="py-16 md:py-24">
