@@ -10,13 +10,13 @@ const fadeUp = {
 };
 
 const Section = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-  <motion.section {...fadeUp} className={`max-w-[760px] mx-auto px-6 md:px-8 ${className}`}>
+  <motion.section {...fadeUp} className={`max-w-[760px] mx-auto px-6 md:px-8 text-center ${className}`}>
     {children}
   </motion.section>
 );
 
 const Eyebrow = ({ children }: { children: React.ReactNode }) => (
-  <p className="font-display text-matcha text-[11px] md:text-xs uppercase tracking-[0.35em] mb-5">
+  <p className="font-display text-matcha text-[21px] md:text-[22px] uppercase tracking-[0.35em] mb-5 text-center">
     {children}
   </p>
 );
@@ -38,7 +38,7 @@ const About = () => {
           <h1 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8 md:mb-10">
             Matcha, without the mystery.
           </h1>
-          <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
+          <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed text-center">
             <p>
               Most matcha brands want you to feel like you're missing something. A grade you don't
               understand, a ceremony you're doing wrong, a word you can't pronounce. We think that's
@@ -58,7 +58,7 @@ const About = () => {
         <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           One farm changed everything.
         </h2>
-        <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
+        <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed text-center">
           <p>
             It happened in the heart of Uji, one of the best matcha-growing regions in the world.
             We tasted hundreds of matcha samples, but one farm stood out.
@@ -112,7 +112,7 @@ const About = () => {
         <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           Soft. Feminine. Calm.
         </h2>
-        <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
+        <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed text-center">
           <p>
             Latcha is built around a soft, feminine, and minimalist universe.
           </p>
@@ -129,7 +129,7 @@ const About = () => {
         <h2 className="font-display text-crimson text-[30px] font-extrabold uppercase leading-[1.1] whitespace-nowrap mb-8">
           This is just the beginning.
         </h2>
-        <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed">
+        <div className="space-y-5 text-charcoal/60 font-body text-base md:text-lg leading-relaxed text-center">
           <p>
             We will be expanding Latcha with new flavours, new accessories, and an ever-growing
             Latcha universe.
