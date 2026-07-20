@@ -198,8 +198,14 @@ const Shop = () => {
 
   return (
     <div className="min-h-screen bg-blush">
+      <SEO
+        title="Shop Matcha & Bundles — Latcha"
+        description="Shop Latcha Reserve Uji matcha powder and curated bundles. AAA grade matcha from Japan, delivered across India."
+        path="/shop"
+      />
       <Navbar />
       <main className="pt-6 sm:pt-8 pb-6 sm:pb-8 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 max-w-[1400px] mx-auto">
+        <h1 className="sr-only">Shop Latcha Reserve Matcha and Bundles</h1>
         {shopData.map((category) => (
           <ShopCategorySection key={category.id} category={category} />
         ))}
