@@ -15,6 +15,7 @@ import { useCartStore } from "@/stores/cartStore";
 import { SHOPIFY_VARIANT_MAP } from "@/lib/shopify";
 import CustomerReviews from "@/components/CustomerReviews";
 import WhyLatchaHits from "@/components/WhyLatchaHits";
+import SEO from "@/components/SEO";
 
 interface ProductConfig {
   id: string;
@@ -145,6 +146,27 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-blush">
+      <SEO
+        title={`${product.name} — Shop Latcha`}
+        description={`${product.name} — premium first-harvest Uji matcha from Japan. ${product.size} · ${product.priceDisplay}. Shop Latcha.`}
+        path={`/product/${product.id}`}
+        type="product"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Product",
+          name: product.name,
+          description: `${product.name} — premium first-harvest Uji matcha. ${product.size}.`,
+          image: `https://www.latcha.in${product.images[0]}`,
+          brand: { "@type": "Brand", name: "Latcha" },
+          offers: {
+            "@type": "Offer",
+            price: product.price,
+            priceCurrency: "INR",
+            availability: "https://schema.org/InStock",
+            url: `https://www.latcha.in/product/${product.id}`,
+          },
+        }}
+      />
       <Navbar />
       <main className="max-w-[1400px] mx-auto px-4 sm:px-8 md:px-20 lg:px-28 xl:px-32 pt-4 sm:pt-6 pb-12 sm:pb-16">
         {/* Breadcrumb */}

@@ -91,11 +91,13 @@ const SearchOverlay = ({ isOpen, onClose }: SearchOverlayProps) => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search products..."
+                aria-label="Search products"
                 className="flex-1 bg-transparent font-body text-crimson text-sm outline-none placeholder:text-crimson/40"
               />
-              <button onClick={onClose} className="text-crimson/50 hover:text-crimson">
+              <button onClick={onClose} aria-label="Close search" className="text-crimson/50 hover:text-crimson">
                 <X className="w-5 h-5" />
               </button>
+
             </div>
 
             {query.length > 0 && (

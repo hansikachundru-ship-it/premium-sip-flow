@@ -2,6 +2,7 @@ import { useState } from "react";
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import patternBlushLight from "@/assets/pattern-blush-hearts.png";
 import patternCrimson from "@/assets/pattern-crimson-new.png";
 import MenuItemCard from "@/components/menu/MenuItemCard";
@@ -21,8 +22,13 @@ const Menu = () => {
 
   return (
     <div className="min-h-screen" style={{ backgroundImage: `url(${patternBlushLight})`, backgroundSize: "300px", backgroundColor: "hsl(var(--blush))" }}>
-      
+      <SEO
+        title="Café Menu — Matcha Lattes, Cloud Lattes & Soft Serves | Latcha"
+        description="Explore the Latcha café menu: iced matcha lattes, cloud lattes, and premium soft serves crafted with AAA grade Uji matcha."
+        path="/menu"
+      />
       <Navbar />
+      <h1 className="sr-only">Latcha Café Menu</h1>
 
       <main>
         {/* "Our Menu" Header */}

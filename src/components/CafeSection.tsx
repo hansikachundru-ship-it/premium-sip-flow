@@ -49,8 +49,10 @@ const CafeSection = () => {
               <input
                 type="text"
                 placeholder="Find a store near you"
+                aria-label="Find a Latcha store near you"
                 className="w-full rounded-full bg-blush/15 border border-blush/20 py-2.5 pl-10 pr-4 font-body text-sm text-blush placeholder:text-blush/50 outline-none focus:border-blush/40 transition-colors"
               />
+
             </div>
 
             {/* Store Card */}

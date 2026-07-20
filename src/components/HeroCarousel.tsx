@@ -6,9 +6,10 @@ const HeroCarousel = () => {
     <section className="relative overflow-hidden bg-crimson">
       <img
         src={heroLanding}
-        alt="Latcha hero"
+        alt="Latcha premium Uji matcha lifestyle scene"
         className="w-full h-auto block md:h-[80vh] md:object-cover"
       />
+
       <div className="absolute inset-x-0 bottom-2 sm:bottom-3 md:bottom-4 flex justify-center pointer-events-none">
         <Link
           to="/shop"
