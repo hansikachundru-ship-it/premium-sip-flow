@@ -25,7 +25,13 @@ const Eyebrow = ({ children }: { children: React.ReactNode }) => (
 const About = () => {
   return (
     <div className="min-h-screen bg-blush">
+      <SEO
+        title="About Latcha — Our Story & Uji Matcha Origin"
+        description="Matcha without the mystery. Learn how Latcha brings first-harvest Uji matcha from Japan to India, and the story behind our specialty café."
+        path="/about"
+      />
       <Navbar />
+
 
       {/* Hero */}
       <section className="pt-20 md:pt-32 pb-48 px-6 md:px-8">
