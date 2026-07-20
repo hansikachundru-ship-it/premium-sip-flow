@@ -8,6 +8,9 @@ const SHOPIFY_STOREFRONT_TOKEN = "15e8c7b732ab2e6dd7a9849a7a062443";
 // Add more entries here as Shopify products are created.
 export const SHOPIFY_VARIANT_MAP: Record<string, string> = {
   m1: "gid://shopify/ProductVariant/48686255505631",
+  b1: "gid://shopify/ProductVariant/50586774110431",
+  b2: "gid://shopify/ProductVariant/50586776207583",
+  b3: "gid://shopify/ProductVariant/50586778534111",
 };
 
 const CART_CREATE_MUTATION = `
