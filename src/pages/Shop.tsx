@@ -12,6 +12,7 @@ import latchaReserveDuo from "@/assets/latcha-reserve-duo.png";
 import latchaReserveTrio from "@/assets/latcha-reserve-trio.png";
 import latchaReserveKit from "@/assets/latcha-reserve-kit.png";
 import { useCartStore } from "@/stores/cartStore";
+import { SHOPIFY_VARIANT_MAP } from "@/lib/shopify";
 
 interface Product {
   id: string;
@@ -70,7 +71,7 @@ const ProductCard = ({ product, index }: { product: Product; index: number }) =>
   };
 
   const handleAddToCart = () => {
-    addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay, image: product.images?.[0] });
+    addItem({ id: product.id, name: product.name, price: product.price, priceDisplay: product.priceDisplay, image: product.images?.[0], variantId: SHOPIFY_VARIANT_MAP[product.id] });
     setShowAdded(true);
     setTimeout(() => setShowAdded(false), 2000);
   };

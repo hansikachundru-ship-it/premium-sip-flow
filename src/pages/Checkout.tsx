@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { useCartStore } from "@/stores/cartStore";
+import { createShopifyCheckout } from "@/lib/shopify";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AuthModal from "@/components/AuthModal";
@@ -75,8 +77,17 @@ const Checkout = () => {
     if (!user || !formValid) return;
     setPlacing(true);
     try {
+      const missing = items.filter((i) => !i.variantId);
+      if (missing.length > 0) {
+        toast.error(
+          `Not available for checkout yet: ${missing.map((i) => i.name).join(", ")}`
+        );
+        return;
+      }
+
       const fullAddress = [form.address, form.apartment].filter(Boolean).join(", ");
-      const { data: order, error: orderError } = await supabase
+      // Record the order locally for the account/orders page.
+      await supabase
         .from("orders")
         .insert({
           user_id: user.id,
@@ -86,30 +97,18 @@ const Checkout = () => {
           delivery_address: fullAddress,
           delivery_city: `${form.city}, ${form.state}`,
           delivery_pincode: form.pincode,
-          payment_method: form.payment,
-        })
-        .select()
-        .single();
+          payment_method: "shopify",
+        });
 
-      if (orderError) throw orderError;
+      const checkoutUrl = await createShopifyCheckout(
+        items.map((i) => ({ variantId: i.variantId as string, quantity: i.quantity }))
+      );
 
-      const orderItems = items.map((item) => ({
-        order_id: order.id,
-        product_id: item.id,
-        product_name: item.name,
-        product_image: item.image || null,
-        quantity: item.quantity,
-        price: item.price,
-      }));
-
-      const { error: itemsError } = await supabase.from("order_items").insert(orderItems);
-      if (itemsError) throw itemsError;
-
-      setConfirmedOrder({ ...order, items: orderItems });
-      setOrderConfirmed(true);
       clearCart();
+      window.location.href = checkoutUrl;
     } catch (err) {
-      console.error("Order error:", err);
+      console.error("Checkout error:", err);
+      toast.error(err instanceof Error ? err.message : "Could not start checkout");
     } finally {
       setPlacing(false);
     }
