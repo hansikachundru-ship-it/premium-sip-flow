@@ -12,6 +12,7 @@ import latchaReserveDuo from "@/assets/latcha-reserve-duo.png";
 import latchaReserveTrio from "@/assets/latcha-reserve-trio.png";
 import latchaReserveKit from "@/assets/latcha-reserve-kit.png";
 import { useCartStore } from "@/stores/cartStore";
+import { SHOPIFY_VARIANT_MAP } from "@/lib/shopify";
 import CustomerReviews from "@/components/CustomerReviews";
 import WhyLatchaHits from "@/components/WhyLatchaHits";
 
@@ -131,6 +132,7 @@ const ProductDetail = () => {
         price: product.price,
         priceDisplay: product.priceDisplay,
         image: images[0],
+        variantId: SHOPIFY_VARIANT_MAP[product.id],
       });
     }
     toast.success("Added to cart! 🛍️");
