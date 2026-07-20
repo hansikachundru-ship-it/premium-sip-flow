@@ -86,19 +86,23 @@ const Checkout = () => {
       }
 
       const fullAddress = [form.address, form.apartment].filter(Boolean).join(", ");
-      // Record the order locally for the account/orders page.
-      await supabase
-        .from("orders")
-        .insert({
-          user_id: user.id,
-          total_amount: totalPrice(),
+      // Record the order via edge function so prices are validated server-side.
+      const { error: orderError } = await supabase.functions.invoke("create-order", {
+        body: {
+          items: items.map((i) => ({
+            product_id: i.id,
+            quantity: i.quantity,
+            product_image: i.image ?? null,
+          })),
           delivery_name: `${form.firstName} ${form.lastName}`.trim(),
           delivery_phone: form.phone,
           delivery_address: fullAddress,
           delivery_city: `${form.city}, ${form.state}`,
           delivery_pincode: form.pincode,
           payment_method: "shopify",
-        });
+        },
+      });
+      if (orderError) throw orderError;
 
       const checkoutUrl = await createShopifyCheckout(
         items.map((i) => ({ variantId: i.variantId as string, quantity: i.quantity }))
