@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight, Check } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import shopCardTexture from "@/assets/shop-card-texture.png";
 import matchaProduct1 from "@/assets/matcha-product-1.png";
 import matchaProduct2 from "@/assets/matcha-product-2.png";
