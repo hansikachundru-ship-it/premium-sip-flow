@@ -9,52 +9,22 @@ const Account = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
-  const [orders, setOrders] = useState<any[]>([]);
 
   useEffect(() => {
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      if (!session) {
-        navigate("/");
-      } else {
-        setUser(session.user);
-        fetchOrders(session.user.id);
-      }
+      if (!session) navigate("/");
+      else setUser(session.user);
       setLoading(false);
     });
 
     supabase.auth.getSession().then(({ data: { session } }) => {
       if (!session) navigate("/");
-      else {
-        setUser(session.user);
-        fetchOrders(session.user.id);
-      }
+      else setUser(session.user);
       setLoading(false);
     });
 
     return () => subscription.unsubscribe();
   }, [navigate]);
-
-  const fetchOrders = async (userId: string) => {
-    const { data: ordersData } = await supabase
-      .from("orders")
-      .select("*")
-      .eq("user_id", userId)
-      .order("created_at", { ascending: false });
-
-    if (ordersData && ordersData.length > 0) {
-      const orderIds = ordersData.map((o: any) => o.id);
-      const { data: itemsData } = await supabase
-        .from("order_items")
-        .select("*")
-        .in("order_id", orderIds);
-
-      const ordersWithItems = ordersData.map((o: any) => ({
-        ...o,
-        items: (itemsData || []).filter((i: any) => i.order_id === o.id),
-      }));
-      setOrders(ordersWithItems);
-    }
-  };
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
