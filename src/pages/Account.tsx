@@ -67,13 +67,15 @@ const Account = () => {
             </p>
           </div>
 
-          {/* Saved Addresses */}
+          {/* Saved Addresses — managed by Shopify at checkout */}
           <div className="bg-blush-light rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-crimson/10">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
               <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-crimson" />
               <h2 className="font-display text-crimson text-sm sm:text-base font-bold uppercase tracking-wider">Saved Addresses</h2>
             </div>
-            <p className="font-body text-crimson/40 text-xs sm:text-sm">No addresses saved yet.</p>
+            <p className="font-body text-crimson/60 text-xs sm:text-sm">
+              Delivery addresses are securely saved by our checkout provider when you place an order. They'll pre-fill automatically the next time you check out using the same email.
+            </p>
           </div>
 
           {/* Logout */}
