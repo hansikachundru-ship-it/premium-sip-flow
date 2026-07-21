@@ -85,47 +85,16 @@ const Account = () => {
             </div>
           </div>
 
-          {/* Order History */}
+          {/* Order History — Shopify is the source of truth. View orders in the confirmation
+              email sent by Shopify after checkout. */}
           <div className="bg-blush-light rounded-xl sm:rounded-2xl p-4 sm:p-6 border border-crimson/10">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
               <Package className="w-4 h-4 sm:w-5 sm:h-5 text-crimson" />
               <h2 className="font-display text-crimson text-sm sm:text-base font-bold uppercase tracking-wider">Order History</h2>
             </div>
-            {orders.length === 0 ? (
-              <p className="font-body text-crimson/40 text-xs sm:text-sm">No orders yet. Start shopping to see your orders here!</p>
-            ) : (
-              <div className="space-y-3 sm:space-y-4">
-                {orders.map((order: any) => (
-                  <div key={order.id} className="border border-crimson/10 rounded-lg sm:rounded-xl p-3 sm:p-4 bg-blush">
-                    <div className="flex justify-between items-start mb-2 sm:mb-3">
-                      <div>
-                        <p className="font-display text-crimson text-[10px] sm:text-xs font-bold uppercase tracking-wider">
-                          Order #{order.id.slice(0, 8)}
-                        </p>
-                        <p className="font-body text-crimson/50 text-[10px] sm:text-xs mt-0.5 sm:mt-1">
-                          {new Date(order.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric" })}
-                        </p>
-                      </div>
-                      <span className="bg-matcha/20 text-matcha-dark font-display text-[8px] sm:text-[10px] font-bold uppercase tracking-wider px-2 sm:px-3 py-0.5 sm:py-1 rounded-full">
-                        {order.status}
-                      </span>
-                    </div>
-                    <div className="space-y-0.5 sm:space-y-1">
-                      {order.items?.map((item: any, i: number) => (
-                        <div key={i} className="flex justify-between font-body text-crimson/70 text-[10px] sm:text-xs">
-                          <span>{item.product_name} × {item.quantity}</span>
-                          <span>Rs. {(item.price * item.quantity).toLocaleString("en-IN")}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <div className="flex justify-between mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-crimson/10 font-display text-crimson text-[10px] sm:text-xs font-bold">
-                      <span>Total</span>
-                      <span>Rs. {Number(order.total_amount).toLocaleString("en-IN")}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
+            <p className="font-body text-crimson/60 text-xs sm:text-sm">
+              Your order history and tracking are managed by our checkout provider. After you complete a purchase, you'll receive an order confirmation email with your order number and tracking details.
+            </p>
           </div>
 
           {/* Saved Addresses */}
